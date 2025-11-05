@@ -123,7 +123,7 @@ export default function Home() {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
                 <span className="text-3xl md:text-4xl">🚗</span>
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>CARRO ZERO</h3>
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>HILUX SRV TOP</h3>
               <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
                 Dirija a <span className="text-secondary font-bold">Hilux dos seus sonhos</span> e impressione a família
               </p>
@@ -214,7 +214,7 @@ export default function Home() {
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                  <span className="text-primary text-sm md:text-base">✓</span>
+                  <span className="text-sm md:text-base" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
                   <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Digo Aguiar</h3>
@@ -235,7 +235,7 @@ export default function Home() {
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                  <span className="text-secondary text-sm md:text-base">✓</span>
+                  <span className="text-sm md:text-base" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
                   <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Anicrer e Família</h3>
@@ -256,7 +256,7 @@ export default function Home() {
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                  <span className="text-accent text-sm md:text-base">✓</span>
+                  <span className="text-sm md:text-base" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
                   <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Fernando de Souza</h3>

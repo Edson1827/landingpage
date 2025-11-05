@@ -68,3 +68,6 @@
 - [ ] Apresentar ao usuário
 - [x] Remover texto "@92.project - Veja mais ganhadores" e emoticon de câmera
 - [x] Alterar "GANHADOR VERIFICADO" para letras azuis em todos os ganhadores
+- [x] Símbolo ✓ de verificado em dourado nos 3 ganhadores
+- [x] Trocar "CARRO ZERO" por "HILUX SRV TOP"
+- [x] Confirmar link em todos os botões: https://92projects.com/kitmudancadevida
