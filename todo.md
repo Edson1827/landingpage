@@ -78,3 +78,7 @@
 - [x] Redimensionar imagem do primeiro ganhador para mostrar rostos
 - [x] Corrigir nome de "Digo" para "Diogo Aguiar"
 - [x] Adicionar seção "Premiação 4ª Edição" no FAQ com detalhes dos prêmios
+- [x] Alterar "Hilux dos seus sonhos" para cor dourada
+- [x] Alterar texto sobre ganhadores para cor dourada
+- [x] Verificar velocidade da landing page
+- [x] Confirmar link em todos os botões de compra

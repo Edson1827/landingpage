@@ -117,7 +117,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>HILUX SRV TOP</h3>
               <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
-                Dirija a <span className="text-secondary font-bold">Hilux dos seus sonhos</span> e impressione a família
+                Dirija a <span className="font-bold" style={{color: 'oklch(0.85 0.15 75)'}}>Hilux dos seus sonhos</span> e impressione a família
               </p>
             </div>
 
@@ -127,7 +127,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>MUDANÇA DE VIDA</h3>
               <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
-                Junte-se aos <span className="text-accent font-bold">3 ganhadores</span> que já transformaram suas vidas
+                Junte-se aos <span className="font-bold" style={{color: 'oklch(0.85 0.15 75)'}}>3 ganhadores</span> que já transformaram suas vidas
               </p>
             </div>
           </div>
