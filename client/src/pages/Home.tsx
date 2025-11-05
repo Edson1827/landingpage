@@ -90,9 +90,9 @@ export default function Home() {
                 href={PURCHASE_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full md:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 transition-transform shadow-lg shadow-primary/30 rounded-lg"
+                className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
               >
-                QUERO PARTICIPAR AGORA
+                PARTICIPAR AGORA
               </a>
             </div>
 
@@ -196,9 +196,9 @@ export default function Home() {
               href={PURCHASE_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 transition-transform shadow-lg shadow-primary/30 rounded-lg"
+              className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
             >
-              QUERO PARTICIPAR AGORA
+              PARTICIPAR AGORA
             </a>
           </div>
         </div>
@@ -355,7 +355,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 mb-6 md:mb-8 rounded-lg"
           >
-            QUERO PARTICIPAR AGORA
+            PARTICIPAR AGORA
           </a>
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground">

@@ -87,3 +87,4 @@
 - [ ] Criar repositório no GitHub "landing-page-matadora" (usuário fará manualmente)
 - [x] Verificar configuração para deploy na Vercel
 - [x] Corrigir botões de compra que não estão abrindo o link
+- [x] Padronizar todos os botões: texto "PARTICIPAR AGORA" e mesmo estilo visual
