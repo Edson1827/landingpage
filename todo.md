@@ -29,12 +29,6 @@
 - [x] Otimizar imagens para web
 - [x] Adicionar lazy loading
 
-## Deploy
-- [ ] Testar responsividade
-- [ ] Verificar performance
-- [ ] Criar checkpoint
-- [ ] Apresentar ao usuário
-
 ## Correções
 - [x] Corrigir overflow horizontal no mobile
 - [x] Unificar cor de fundo (remover diferença preto/cinza)
@@ -61,3 +55,14 @@
 - [x] Atualizar headline para "Kit Mudança de Vida ou 400 Mil na Sua Conta"
 - [x] Atualizar preço para "Pacote promocional a partir de R$ 0,99 por bilhete"
 - [x] Melhorar visibilidade das letras escuras
+- [x] "Você escolhe o prêmio" em letras brancas
+- [x] Atualizar para "+ de 300k entregues"
+- [ ] Instagram apenas símbolo clicável (sem texto)
+- [x] Adicionar "4ª Edição" acima da headline
+- [x] Valores dos prêmios dos ganhadores em letras brancas
+
+## Deploy
+- [ ] Testar responsividade
+- [ ] Verificar performance
+- [ ] Criar checkpoint
+- [ ] Apresentar ao usuário

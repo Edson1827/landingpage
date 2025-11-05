@@ -49,6 +49,10 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
+              <div className="inline-block bg-primary/20 px-4 py-2 rounded-full mb-2">
+                <span className="text-primary font-bold text-sm md:text-base">🏆 4ª EDIÇÃO</span>
+              </div>
+              
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight" style={{color: 'oklch(0.85 0.15 75)'}}>
                 KIT MUDANÇA DE VIDA OU 400 MIL NA SUA CONTA
               </h1>
@@ -57,16 +61,11 @@ export default function Home() {
                 Pacote promocional a partir de <span className="text-primary font-bold">R$ 0,99</span> por bilhete
               </p>
               
-              <p className="text-lg sm:text-xl text-secondary">
+              <p className="text-lg sm:text-xl text-white font-semibold">
                 ✨ Você escolhe o prêmio! ✨
               </p>
 
               <div className="flex flex-wrap gap-3 md:gap-4">
-                <div className="bg-primary/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
-                  <span className="text-xl md:text-2xl">🏆</span>
-                  <span className="font-bold whitespace-nowrap">4ª EDIÇÃO</span>
-                </div>
-                
                 <div className="bg-secondary/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
                   <span className="text-xl md:text-2xl">✅</span>
                   <span className="font-bold whitespace-nowrap">Licença 83.027/2023</span>
@@ -74,7 +73,7 @@ export default function Home() {
                 
                 <div className="bg-accent/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
                   <span className="text-xl md:text-2xl">💰</span>
-                  <span className="font-bold whitespace-nowrap">R$ 250k+ Entregues</span>
+                  <span className="font-bold whitespace-nowrap">+ de 300k Entregues</span>
                 </div>
               </div>
 
@@ -202,7 +201,7 @@ export default function Home() {
           </h2>
           
           <p className="text-center text-lg md:text-xl mb-8 md:mb-12" style={{color: 'oklch(0.75 0.1 75)'}}>
-            Já entregamos R$ 250.000+ em prêmios
+            Já entregamos + de R$ 300.000 em prêmios
           </p>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -220,7 +219,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Digo Aguiar</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Campo Grande - MS | Campanha #1</p>
-                <p className="text-primary font-bold text-xl md:text-2xl mb-3 md:mb-4">Camionete S10</p>
+                <p className="text-white font-bold text-xl md:text-2xl mb-3 md:mb-4">Camionete S10</p>
                 <p className="text-sm md:text-base text-muted-foreground italic">
                   "Sempre sonhei com uma camionete! Agora posso trabalhar e passear com a família!"
                 </p>
@@ -241,7 +240,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Anicrer e Família</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Araçatuba - SP | Campanha #2</p>
-                <p className="text-secondary font-bold text-xl md:text-2xl mb-3 md:mb-4">R$ 80.000 no PIX</p>
+                <p className="text-white font-bold text-xl md:text-2xl mb-3 md:mb-4">R$ 80.000 no PIX</p>
                 <p className="text-sm md:text-base text-muted-foreground italic">
                   "Realizamos o sonho da casa própria! Muito felizes e gratos pela oportunidade!"
                 </p>
@@ -262,7 +261,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Fernando de Souza</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Dourados - MS | Campanha #3</p>
-                <p className="text-accent font-bold text-xl md:text-2xl mb-3 md:mb-4">R$ 90.000 no PIX</p>
+                <p className="text-white font-bold text-xl md:text-2xl mb-3 md:mb-4">R$ 90.000 no PIX</p>
                 <p className="text-sm md:text-base text-muted-foreground italic">
                   "Não acreditei quando vi o dinheiro na conta! Mudou minha vida completamente!"
                 </p>
