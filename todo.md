@@ -34,3 +34,7 @@
 - [ ] Verificar performance
 - [ ] Criar checkpoint
 - [ ] Apresentar ao usuário
+
+## Correções
+- [x] Corrigir overflow horizontal no mobile
+- [x] Unificar cor de fundo (remover diferença preto/cinza)

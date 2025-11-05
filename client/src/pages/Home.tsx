@@ -13,7 +13,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden w-full max-w-[100vw]">
       {/* Header */}
       <header className="fixed top-0 w-full bg-black/95 backdrop-blur-sm z-50">
         <div className="container mx-auto py-4 flex justify-between items-center">
