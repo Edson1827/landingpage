@@ -38,3 +38,4 @@
 ## Correções
 - [x] Corrigir overflow horizontal no mobile
 - [x] Unificar cor de fundo (remover diferença preto/cinza)
+- [x] Corrigir conteúdo cortado (remover overflow-x hidden e ajustar elementos)
