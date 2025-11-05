@@ -197,19 +197,19 @@ export default function Home() {
           </p>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {/* Ganhador 1 - Digo Aguiar */}
+            {/* Ganhador 1 - Diogo Aguiar */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
                 src="/ganhador2.jpg" 
-                alt="Digo Aguiar - Ganhador S10" 
-                className="w-full h-48 md:h-64 object-cover"
+                alt="Diogo Aguiar - Ganhador S10" 
+                className="w-full h-48 md:h-64 object-cover object-top"
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
                   <span className="text-sm md:text-base" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
                   <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
-                <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Digo Aguiar</h3>
+                <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Diogo Aguiar</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Campo Grande - MS | Campanha #1</p>
                 <p className="text-white font-bold text-xl md:text-2xl mb-3 md:mb-4">Camionete S10</p>
                 <p className="text-sm md:text-base text-muted-foreground italic">

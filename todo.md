@@ -75,3 +75,5 @@
 - [x] Trocar logo do site pela nova logo sem fundo
 - [x] Remover botão "PARTICIPAR AGORA" do header
 - [x] Ajustar ícone do Instagram para lateral direita
+- [x] Redimensionar imagem do primeiro ganhador para mostrar rostos
+- [x] Corrigir nome de "Digo" para "Diogo Aguiar"
