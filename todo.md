@@ -53,3 +53,8 @@
 - [x] Adicionar cor dourada sutil nas letras preto/cinza escuro
 - [x] Adicionar foto de maço de dinheiro (notas de 100 BRL) para ganhador 3
 - [x] Corrigir: Ganhador 2 (Anicrer) deve ter a foto original do ganhador 3
+- [x] Atualizar link dos botões de compra para https://92projects.com/kitmudancadevida
+- [x] Adicionar ícone do Instagram (@92.projects) com link
+- [x] Remover todas as menções ao WhatsApp da página
+- [x] Remover menções a cartão e boleto - deixar apenas PIX
+- [x] Atualizar mensagem: números gerados na hora após confirmação do PIX
