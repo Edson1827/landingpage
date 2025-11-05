@@ -73,3 +73,5 @@
 - [x] Confirmar link em todos os botões: https://92projects.com/kitmudancadevida
 - [x] Corrigir FAQ: "Sim, já entregamos mais de R$ 350 mil em prêmios"
 - [x] Trocar logo do site pela nova logo sem fundo
+- [x] Remover botão "PARTICIPAR AGORA" do header
+- [x] Ajustar ícone do Instagram para lateral direita
