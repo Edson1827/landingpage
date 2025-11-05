@@ -289,6 +289,10 @@ export default function Home() {
               {
                 question: "É seguro participar?",
                 answer: "100% seguro! Possuímos licença oficial 83.027/2023 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é fiscalizado pela Loteria Federal."
+              },
+              {
+                question: "Premiação 4ª Edição",
+                answer: `**HILUX SRV TOP (Ano 2013)**\n\n• Pneus Yokohama 285/75/17\n• Lift de Suspensão\n• Difusor de escape gringo\n• Ponteira 5"\n• Stage 2\n• ShiftPower\n• Espaçadores AVM 32mm\n\n**APARTAMENTO 40m² com 1 Quarto**\n\nLocalizado próximo à Avenida Afonso Pena - Campo Grande - MS\nMóveis 100% planejados\n\n**Detalhes do Imóvel:**\n• Sala: Sofá 3 lugares, TV 60", Ar 18.000 BTUs, Wi-fi, LED\n• Cozinha: Mesa 4 cadeiras, Forno grill, Bancada mármore, Micro-ondas, Frigobar, Adega, Geladeira duplex, LED\n• Varanda: Vista dos principais pontos da capital, 2 cadeiras, LED\n• Quarto: Cama King Size, Ar 12.000 BTUs, TV 48", LED\n• Closet: Portas de vidro, Gavetas anti-impacto, LED\n• Lavabo personalizado\n\n**Top Compradores:**\n• 1º lugar: CRF 230cc\n• 2º lugar: iPhone 17 Pro Max\n• 3º lugar: R$ 5.000 no PIX`
               }
             ].map((faq, index) => (
               <div 
@@ -305,7 +309,7 @@ export default function Home() {
                   </span>
                 </button>
                 {openFaq === index && (
-                  <div className="px-4 md:px-6 pb-4 md:pb-6 text-sm md:text-base text-muted-foreground">
+                  <div className="px-4 md:px-6 pb-4 md:pb-6 text-sm md:text-base text-muted-foreground whitespace-pre-line">
                     {faq.answer}
                   </div>
                 )}

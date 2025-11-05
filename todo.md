@@ -77,3 +77,4 @@
 - [x] Ajustar ícone do Instagram para lateral direita
 - [x] Redimensionar imagem do primeiro ganhador para mostrar rostos
 - [x] Corrigir nome de "Digo" para "Diogo Aguiar"
+- [x] Adicionar seção "Premiação 4ª Edição" no FAQ com detalhes dos prêmios
