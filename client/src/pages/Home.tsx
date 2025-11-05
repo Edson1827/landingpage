@@ -18,9 +18,9 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-sm z-50">
         <div className="container py-3 md:py-4 flex justify-between items-center gap-2 md:gap-4">
           <img 
-            src="/logo-92projects.jpg" 
+            src="/logo-92projects.webp" 
             alt="92 Projects" 
-            className="h-8 md:h-12 w-auto rounded flex-shrink-0"
+            className="h-8 md:h-12 w-auto object-contain flex-shrink-0"
           />
           <div className="flex items-center gap-2 md:gap-4">
             <a 

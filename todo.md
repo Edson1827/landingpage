@@ -72,3 +72,4 @@
 - [x] Trocar "CARRO ZERO" por "HILUX SRV TOP"
 - [x] Confirmar link em todos os botões: https://92projects.com/kitmudancadevida
 - [x] Corrigir FAQ: "Sim, já entregamos mais de R$ 350 mil em prêmios"
+- [x] Trocar logo do site pela nova logo sem fundo
