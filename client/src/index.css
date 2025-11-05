@@ -49,6 +49,7 @@
   --secondary: oklch(0.75 0.2 85);
   --secondary-foreground: oklch(0.1 0 0);
   --accent: oklch(0.7 0.25 40);
+  --gold: oklch(0.75 0.15 75);
   --accent-foreground: oklch(0.1 0 0);
   --radius: 0.75rem;
   --background: oklch(0.1 0 0);

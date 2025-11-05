@@ -47,3 +47,8 @@
   - [x] 1º: Digo Aguiar - Campo Grande MS - S10
   - [x] 2º: Anicrer e Família - Araçatuba SP - R$ 80mil
   - [x] 3º: Fernando de Souza - Dourados MS - R$ 90mil
+
+## Ajustes Visuais
+- [x] Trocar foto do ganhador 2 (Anicrer e Família) pela terceira foto
+- [x] Adicionar cor dourada sutil nas letras preto/cinza escuro
+- [x] Adicionar foto de maço de dinheiro (notas de 100 BRL) para ganhador 3

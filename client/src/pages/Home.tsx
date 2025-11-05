@@ -36,7 +36,7 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight" style={{color: 'oklch(0.75 0.15 75)'}}>
                 GANHE HILUX SRV + APÊ OU R$ 400 MIL
               </h1>
               
@@ -88,7 +88,7 @@ export default function Home() {
       {/* Por Que Participar */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20">
         <div className="container">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.75 0.15 75)'}}>
             POR QUE <span className="text-primary">PARTICIPAR?</span>
           </h2>
           
@@ -133,7 +133,7 @@ export default function Home() {
       {/* Como Funciona */}
       <section className="py-12 md:py-16 bg-black">
         <div className="container">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.75 0.15 75)'}}>
             COMO <span className="text-primary">FUNCIONA?</span>
           </h2>
 
@@ -184,7 +184,7 @@ export default function Home() {
       {/* Ganhadores Reais */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20">
         <div className="container">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.75 0.15 75)'}}>
             GANHADORES <span className="text-primary">REAIS</span>
           </h2>
           
@@ -196,7 +196,7 @@ export default function Home() {
             {/* Ganhador 1 - Digo Aguiar */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
-                src="/ganhador3.jpg" 
+                src="/ganhador2.jpg" 
                 alt="Digo Aguiar - Ganhador S10" 
                 className="w-full h-48 md:h-64 object-cover"
               />
@@ -217,7 +217,7 @@ export default function Home() {
             {/* Ganhador 2 - Anicrer e Família */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
-                src="/ganhador2.jpg" 
+                src="/ganhador3.jpg" 
                 alt="Anicrer e Família - Ganhadores R$ 80.000" 
                 className="w-full h-48 md:h-64 object-cover"
               />
@@ -238,7 +238,7 @@ export default function Home() {
             {/* Ganhador 3 - Fernando de Souza */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform sm:col-span-2 md:col-span-1">
               <img 
-                src="/ganhador1.jpg" 
+                src="/dinheiro-100reais.jpg" 
                 alt="Fernando de Souza - Ganhador R$ 90.000" 
                 className="w-full h-48 md:h-64 object-cover"
               />
@@ -274,7 +274,7 @@ export default function Home() {
       {/* FAQ */}
       <section className="py-12 md:py-16 bg-black">
         <div className="container max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.75 0.15 75)'}}>
             PERGUNTAS <span className="text-primary">FREQUENTES</span>
           </h2>
 
@@ -328,7 +328,7 @@ export default function Home() {
       {/* CTA Final */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-black to-primary/5">
         <div className="container text-center max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-tight" style={{color: 'oklch(0.75 0.15 75)'}}>
             SUA CHANCE DE MUDAR DE VIDA ESTÁ AQUI
           </h2>
           
