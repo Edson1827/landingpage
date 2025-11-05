@@ -215,7 +215,7 @@ export default function Home() {
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
                   <span className="text-primary text-sm md:text-base">✓</span>
-                  <span className="text-primary font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
+                  <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Digo Aguiar</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Campo Grande - MS | Campanha #1</p>
@@ -236,7 +236,7 @@ export default function Home() {
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
                   <span className="text-secondary text-sm md:text-base">✓</span>
-                  <span className="text-secondary font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
+                  <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Anicrer e Família</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Araçatuba - SP | Campanha #2</p>
@@ -257,7 +257,7 @@ export default function Home() {
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
                   <span className="text-accent text-sm md:text-base">✓</span>
-                  <span className="text-accent font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
+                  <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
                 <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Fernando de Souza</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Dourados - MS | Campanha #3</p>
@@ -269,17 +269,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-6 md:mt-8">
-            <a 
-              href="https://instagram.com/92.project" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm md:text-base"
-            >
-              <span className="text-xl md:text-2xl">📸</span>
-              @92.project - Veja mais ganhadores
-            </a>
-          </div>
+
         </div>
       </section>
 

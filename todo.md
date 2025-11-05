@@ -66,3 +66,5 @@
 - [ ] Verificar performance
 - [ ] Criar checkpoint
 - [ ] Apresentar ao usuário
+- [x] Remover texto "@92.project - Veja mais ganhadores" e emoticon de câmera
+- [x] Alterar "GANHADOR VERIFICADO" para letras azuis em todos os ganhadores
