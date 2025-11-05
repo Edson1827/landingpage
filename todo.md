@@ -89,3 +89,4 @@
 - [x] Corrigir botões de compra que não estão abrindo o link
 - [x] Padronizar todos os botões: texto "PARTICIPAR AGORA" e mesmo estilo visual
 - [x] Atualizar número da licença para 8543.07/2025 em todo o site
+- [x] Atualizar prêmios Top Compradores: 1º CRF 230cc, 2º iPhone 17 Pro Max, 3º JBL Boombox 4
