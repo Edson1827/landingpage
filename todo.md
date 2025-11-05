@@ -84,3 +84,6 @@
 - [x] Confirmar link em todos os botões de compra
 - [x] Trocar "Loteria Federal" por "credenciadora Lotep" no FAQ
 - [x] Implementar animações sutis ao scroll (fade-in e slide-up)
+- [ ] Criar repositório no GitHub "landing-page-matadora" (usuário fará manualmente)
+- [x] Verificar configuração para deploy na Vercel
+- [x] Corrigir botões de compra que não estão abrindo o link

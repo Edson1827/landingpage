@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -28,9 +27,7 @@ export default function Home() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const scrollToParticipate = () => {
-    window.open('https://92projects.com/kitmudancadevida', '_blank');
-  };
+  const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -89,13 +86,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button 
-                onClick={scrollToParticipate}
-                size="lg"
-                className="w-full md:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 transition-transform shadow-lg shadow-primary/30"
+              <a 
+                href={PURCHASE_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-full md:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 transition-transform shadow-lg shadow-primary/30 rounded-lg"
               >
                 QUERO PARTICIPAR AGORA
-              </Button>
+              </a>
             </div>
 
             <div className="relative">
@@ -194,13 +192,14 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <Button 
-              onClick={scrollToParticipate}
-              size="lg"
-              className="w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 transition-transform shadow-lg shadow-primary/30"
+            <a 
+              href={PURCHASE_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 transition-transform shadow-lg shadow-primary/30 rounded-lg"
             >
               QUERO PARTICIPAR AGORA
-            </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -350,13 +349,14 @@ export default function Home() {
             Não deixe para depois. Participe agora e concorra a prêmios incríveis!
           </p>
 
-          <Button 
-            onClick={scrollToParticipate}
-            size="lg"
-            className="w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 mb-6 md:mb-8"
+          <a 
+            href={PURCHASE_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 mb-6 md:mb-8 rounded-lg"
           >
             QUERO PARTICIPAR AGORA
-          </Button>
+          </a>
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
