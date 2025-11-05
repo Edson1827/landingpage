@@ -77,7 +77,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3 md:gap-4">
                 <div className="bg-secondary/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
                   <span className="text-xl md:text-2xl">✅</span>
-                  <span className="font-bold whitespace-nowrap">Licença 83.027/2023</span>
+                  <span className="font-bold whitespace-nowrap">Licença 8543.07/2025</span>
                 </div>
                 
                 <div className="bg-accent/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
@@ -307,7 +307,7 @@ export default function Home() {
               },
               {
                 question: "É seguro participar?",
-                answer: "100% seguro! Possuímos licença oficial 83.027/2023 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é legalizado pela credenciadora Lotep."
+                answer: "100% seguro! Possuímos licença oficial 8543.07/2025 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é legalizado pela credenciadora Lotep."
               },
               {
                 question: "Premiação 4ª Edição",
@@ -369,7 +369,7 @@ export default function Home() {
             </span>
             <span className="flex items-center gap-2">
               <span className="text-primary">✓</span>
-              Licença 83.027/2023
+              Licença 8543.07/2025
             </span>
           </div>
         </div>
@@ -379,7 +379,7 @@ export default function Home() {
       <footer className="bg-black py-6 md:py-8">
         <div className="container text-center text-muted-foreground text-xs md:text-sm">
           <p className="mb-2">© 2024 92 Projects - Todos os direitos reservados</p>
-          <p>Sorteio autorizado sob licença 83.027/2023</p>
+          <p>Sorteio autorizado sob licença 8543.07/2025</p>
         </div>
       </footer>
     </div>

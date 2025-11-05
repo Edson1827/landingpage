@@ -88,3 +88,4 @@
 - [x] Verificar configuração para deploy na Vercel
 - [x] Corrigir botões de compra que não estão abrindo o link
 - [x] Padronizar todos os botões: texto "PARTICIPAR AGORA" e mesmo estilo visual
+- [x] Atualizar número da licença para 8543.07/2025 em todo o site
