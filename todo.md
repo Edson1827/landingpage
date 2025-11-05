@@ -82,3 +82,4 @@
 - [x] Alterar texto sobre ganhadores para cor dourada
 - [x] Verificar velocidade da landing page
 - [x] Confirmar link em todos os botões de compra
+- [x] Trocar "Loteria Federal" por "credenciadora Lotep" no FAQ

@@ -276,7 +276,7 @@ export default function Home() {
             {[
               {
                 question: "Como funciona o sorteio?",
-                answer: "O sorteio é realizado pela Loteria Federal, garantindo total transparência e legalidade. Seus números são únicos e intransferíveis, vinculados ao seu CPF."
+                answer: "O sorteio é legalizado pela credenciadora Lotep, garantindo total transparência e legalidade. Seus números são únicos e intransferíveis, vinculados ao seu CPF."
               },
               {
                 question: "Vocês entregam os prêmios mesmo?",
@@ -288,7 +288,7 @@ export default function Home() {
               },
               {
                 question: "É seguro participar?",
-                answer: "100% seguro! Possuímos licença oficial 83.027/2023 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é fiscalizado pela Loteria Federal."
+                answer: "100% seguro! Possuímos licença oficial 83.027/2023 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é legalizado pela credenciadora Lotep."
               },
               {
                 question: "Premiação 4ª Edição",
