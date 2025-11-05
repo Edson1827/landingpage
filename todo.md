@@ -83,3 +83,4 @@
 - [x] Verificar velocidade da landing page
 - [x] Confirmar link em todos os botões de compra
 - [x] Trocar "Loteria Federal" por "credenciadora Lotep" no FAQ
+- [x] Implementar animações sutis ao scroll (fade-in e slide-up)

@@ -1,8 +1,28 @@
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-on-scroll');
+        }
+      });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.scroll-animate');
+    elements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -90,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Por Que Participar */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20 scroll-animate">
         <div className="container">
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.85 0.15 75)'}}>
             POR QUE <span className="text-primary">PARTICIPAR?</span>
@@ -135,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Como Funciona */}
-      <section className="py-12 md:py-16 bg-black">
+      <section className="py-12 md:py-16 bg-black scroll-animate">
         <div className="container">
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.85 0.15 75)'}}>
             COMO <span className="text-primary">FUNCIONA?</span>
@@ -186,7 +206,7 @@ export default function Home() {
       </section>
 
       {/* Ganhadores Reais */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20 scroll-animate">
         <div className="container">
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.85 0.15 75)'}}>
             GANHADORES <span className="text-primary">REAIS</span>
@@ -266,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="py-12 md:py-16 bg-black">
+      <section className="py-12 md:py-16 bg-black scroll-animate">
         <div className="container max-w-4xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.85 0.15 75)'}}>
             PERGUNTAS <span className="text-primary">FREQUENTES</span>
@@ -320,7 +340,7 @@ export default function Home() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-primary/5">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-primary/5 scroll-animate">
         <div className="container text-center max-w-3xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-tight" style={{color: 'oklch(0.85 0.15 75)'}}>
             SUA CHANCE DE MUDAR DE VIDA ESTÁ AQUI
