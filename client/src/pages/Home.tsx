@@ -217,7 +217,7 @@ export default function Home() {
             {/* Ganhador 2 - Anicrer e Família */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
-                src="/ganhador3.jpg" 
+                src="/ganhador1.jpg" 
                 alt="Anicrer e Família - Ganhadores R$ 80.000" 
                 className="w-full h-48 md:h-64 object-cover"
               />

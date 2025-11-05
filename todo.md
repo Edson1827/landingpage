@@ -52,3 +52,4 @@
 - [x] Trocar foto do ganhador 2 (Anicrer e Família) pela terceira foto
 - [x] Adicionar cor dourada sutil nas letras preto/cinza escuro
 - [x] Adicionar foto de maço de dinheiro (notas de 100 BRL) para ganhador 3
+- [x] Corrigir: Ganhador 2 (Anicrer) deve ter a foto original do ganhador 3
