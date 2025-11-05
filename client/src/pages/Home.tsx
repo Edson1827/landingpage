@@ -49,12 +49,12 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight" style={{color: 'oklch(0.75 0.15 75)'}}>
-                GANHE HILUX SRV + APÊ OU R$ 400 MIL
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight" style={{color: 'oklch(0.85 0.15 75)'}}>
+                KIT MUDANÇA DE VIDA OU 400 MIL NA SUA CONTA
               </h1>
               
-              <p className="text-xl sm:text-2xl md:text-3xl">
-                Por apenas <span className="text-primary font-bold">R$ 0,99</span> por bilhete
+              <p className="text-xl sm:text-2xl md:text-3xl" style={{color: 'oklch(0.9 0.1 75)'}}>
+                Pacote promocional a partir de <span className="text-primary font-bold">R$ 0,99</span> por bilhete
               </p>
               
               <p className="text-lg sm:text-xl text-secondary">
@@ -101,11 +101,11 @@ export default function Home() {
       {/* Por Que Participar */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20">
         <div className="container">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.75 0.15 75)'}}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.85 0.15 75)'}}>
             POR QUE <span className="text-primary">PARTICIPAR?</span>
           </h2>
           
-          <p className="text-center text-lg md:text-xl mb-8 md:mb-12 text-muted-foreground">
+          <p className="text-center text-lg md:text-xl mb-8 md:mb-12" style={{color: 'oklch(0.75 0.1 75)'}}>
             Sua vida pode mudar com apenas R$ 0,99
           </p>
 
@@ -114,8 +114,8 @@ export default function Home() {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
                 <span className="text-3xl md:text-4xl">🏠</span>
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4">CASA PRÓPRIA</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>CASA PRÓPRIA</h3>
+              <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
                 Realize o sonho da <span className="text-primary font-bold">liberdade financeira</span> com um apartamento quitado
               </p>
             </div>
@@ -124,8 +124,8 @@ export default function Home() {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
                 <span className="text-3xl md:text-4xl">🚗</span>
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4">CARRO ZERO</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>CARRO ZERO</h3>
+              <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
                 Dirija a <span className="text-secondary font-bold">Hilux dos seus sonhos</span> e impressione a família
               </p>
             </div>
@@ -134,8 +134,8 @@ export default function Home() {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
                 <span className="text-3xl md:text-4xl">📈</span>
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4">MUDANÇA DE VIDA</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>MUDANÇA DE VIDA</h3>
+              <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
                 Junte-se aos <span className="text-accent font-bold">3 ganhadores</span> que já transformaram suas vidas
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function Home() {
       {/* Como Funciona */}
       <section className="py-12 md:py-16 bg-black">
         <div className="container">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.75 0.15 75)'}}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.85 0.15 75)'}}>
             COMO <span className="text-primary">FUNCIONA?</span>
           </h2>
 
@@ -155,8 +155,8 @@ export default function Home() {
               <div className="w-14 h-14 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-black">
                 1
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4">Escolha Seus Bilhetes</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>Escolha Seus Bilhetes</h3>
+              <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
                 Selecione quantos bilhetes deseja (10, 25, 50 ou 75). Quanto mais bilhetes, mais chances!
               </p>
             </div>
@@ -165,8 +165,8 @@ export default function Home() {
               <div className="w-14 h-14 md:w-16 md:h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-black">
                 2
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4">Pagamento via PIX</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>Pagamento via PIX</h3>
+              <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
                 Pague com PIX. Após confirmação, seus números são gerados na hora e você já está participando!
               </p>
             </div>
@@ -175,8 +175,8 @@ export default function Home() {
               <div className="w-14 h-14 md:w-16 md:h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-black">
                 3
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4">Aguarde o Sorteio</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>Aguarde o Sorteio</h3>
+              <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
                 Sorteio 100% legal pela Loteria Federal. Números únicos e intransferíveis!
               </p>
             </div>
@@ -197,11 +197,11 @@ export default function Home() {
       {/* Ganhadores Reais */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-black to-muted/20">
         <div className="container">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.75 0.15 75)'}}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-3 md:mb-4" style={{color: 'oklch(0.85 0.15 75)'}}>
             GANHADORES <span className="text-primary">REAIS</span>
           </h2>
           
-          <p className="text-center text-lg md:text-xl mb-8 md:mb-12 text-muted-foreground">
+          <p className="text-center text-lg md:text-xl mb-8 md:mb-12" style={{color: 'oklch(0.75 0.1 75)'}}>
             Já entregamos R$ 250.000+ em prêmios
           </p>
 
@@ -287,7 +287,7 @@ export default function Home() {
       {/* FAQ */}
       <section className="py-12 md:py-16 bg-black">
         <div className="container max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.75 0.15 75)'}}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-8 md:mb-12" style={{color: 'oklch(0.85 0.15 75)'}}>
             PERGUNTAS <span className="text-primary">FREQUENTES</span>
           </h2>
 
@@ -337,11 +337,11 @@ export default function Home() {
       {/* CTA Final */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-black to-primary/5">
         <div className="container text-center max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-tight" style={{color: 'oklch(0.75 0.15 75)'}}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 leading-tight" style={{color: 'oklch(0.85 0.15 75)'}}>
             SUA CHANCE DE MUDAR DE VIDA ESTÁ AQUI
           </h2>
           
-          <p className="text-base md:text-xl mb-6 md:mb-8 text-muted-foreground">
+          <p className="text-base md:text-xl mb-6 md:mb-8" style={{color: 'oklch(0.75 0.1 75)'}}>
             Não deixe para depois. Participe agora e concorra a prêmios incríveis!
           </p>
 

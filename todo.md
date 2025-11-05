@@ -58,3 +58,6 @@
 - [x] Remover todas as menções ao WhatsApp da página
 - [x] Remover menções a cartão e boleto - deixar apenas PIX
 - [x] Atualizar mensagem: números gerados na hora após confirmação do PIX
+- [x] Atualizar headline para "Kit Mudança de Vida ou 400 Mil na Sua Conta"
+- [x] Atualizar preço para "Pacote promocional a partir de R$ 0,99 por bilhete"
+- [x] Melhorar visibilidade das letras escuras
