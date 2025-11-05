@@ -71,3 +71,4 @@
 - [x] Símbolo ✓ de verificado em dourado nos 3 ganhadores
 - [x] Trocar "CARRO ZERO" por "HILUX SRV TOP"
 - [x] Confirmar link em todos os botões: https://92projects.com/kitmudancadevida
+- [x] Corrigir FAQ: "Sim, já entregamos mais de R$ 350 mil em prêmios"

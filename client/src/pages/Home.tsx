@@ -288,7 +288,7 @@ export default function Home() {
               },
               {
                 question: "Vocês entregam os prêmios mesmo?",
-                answer: "Sim! Já entregamos mais de R$ 250.000 em prêmios nas 3 edições anteriores. Todos os ganhadores são verificados e divulgados em nossas redes sociais."
+                answer: "Sim! Já entregamos mais de R$ 350 mil em prêmios. Todos os ganhadores são verificados e divulgados em nossas redes sociais."
               },
               {
                 question: "Como funciona o pagamento?",
