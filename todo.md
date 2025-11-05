@@ -39,3 +39,11 @@
 - [x] Corrigir overflow horizontal no mobile
 - [x] Unificar cor de fundo (remover diferença preto/cinza)
 - [x] Corrigir conteúdo cortado (remover overflow-x hidden e ajustar elementos)
+
+## Correções Profissionais
+- [x] Corrigir rolagem horizontal definitivamente
+- [x] Ajustar todos os textos para enquadrar na tela
+- [x] Atualizar informações dos ganhadores:
+  - [x] 1º: Digo Aguiar - Campo Grande MS - S10
+  - [x] 2º: Anicrer e Família - Araçatuba SP - R$ 80mil
+  - [x] 3º: Fernando de Souza - Dourados MS - R$ 90mil
