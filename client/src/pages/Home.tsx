@@ -138,6 +138,8 @@ export default function Home() {
                 src="/hero-kit.jpg" 
                 alt="Kit Mudança de Vida" 
                 className="rounded-2xl shadow-2xl shadow-primary/20 w-full"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -260,6 +262,8 @@ export default function Home() {
                 src="/ganhador2.jpg" 
                 alt="Diogo Aguiar - Ganhador S10" 
                 className="w-full h-48 md:h-64 object-cover object-top"
+                loading="lazy"
+                decoding="async"
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
@@ -281,6 +285,8 @@ export default function Home() {
                 src="/ganhador1.jpg" 
                 alt="Anicrer e Família - Ganhadores R$ 80.000" 
                 className="w-full h-48 md:h-64 object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
@@ -302,6 +308,8 @@ export default function Home() {
                 src="/dinheiro-100reais.jpg" 
                 alt="Fernando de Souza - Ganhador R$ 90.000" 
                 className="w-full h-48 md:h-64 object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
