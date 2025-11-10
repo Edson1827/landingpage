@@ -90,3 +90,8 @@
 - [x] Padronizar todos os botões: texto "PARTICIPAR AGORA" e mesmo estilo visual
 - [x] Atualizar número da licença para 8543.07/2025 em todo o site
 - [x] Atualizar prêmios Top Compradores: 1º CRF 230cc, 2º iPhone 17 Pro Max, 3º JBL Boombox 4
+
+## Deploy
+- [x] Preparar arquivos de configuração para Vercel
+- [x] Criar guia completo de deploy GitHub + Vercel
+- [x] Verificar se todos os arquivos estão prontos
