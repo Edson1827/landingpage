@@ -98,3 +98,4 @@
 
 ## Melhorias de Conversão
 - [x] Adicionar seção de depoimentos de clientes após Ganhadores Reais
+- [x] Remover seção de depoimentos de clientes
