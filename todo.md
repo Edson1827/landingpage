@@ -99,3 +99,25 @@
 ## Melhorias de Conversão
 - [x] Adicionar seção de depoimentos de clientes após Ganhadores Reais
 - [x] Remover seção de depoimentos de clientes
+
+## Correções para Deploy Vercel
+- [x] Reorganizar estrutura de arquivos para Vercel detectar automaticamente
+- [x] Atualizar vercel.json com configurações corretas
+- [x] Fazer push das correções para GitHub
+
+## Renomear Repositório
+- [ ] Renomear repositório GitHub de "KitMudan-a-de-vida" para "kitao2.0"
+
+## Correção Deploy Vercel - Site Estático
+- [x] Ajustar vercel.json para build estático (sem servidor Node.js)
+- [x] Fazer push e aguardar novo deploy
+- [ ] Verificar se o site está exibindo corretamente
+- [x] Corrigir outputDirectory no vercel.json para "dist/public"
+
+## Análise Completa e Correção Definitiva
+- [x] Verificar estrutura de pastas do projeto
+- [x] Analisar package.json e scripts de build
+- [x] Verificar vite.config.ts
+- [x] Testar build local
+- [x] Corrigir todas as configurações
+- [ ] Deploy final funcionando
