@@ -4,16 +4,6 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    // Facebook Pixel - ViewContent Event
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'ViewContent', {
-        content_name: 'Kit Mudança de Vida',
-        content_category: 'Rifa',
-        value: 0.99,
-        currency: 'BRL'
-      });
-    }
-
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
