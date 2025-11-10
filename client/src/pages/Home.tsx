@@ -37,6 +37,14 @@ export default function Home() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   // Facebook Pixel - InitiateCheckout Event
   const handleParticipateClick = () => {
     if (typeof window !== 'undefined' && (window as any).fbq) {
@@ -56,11 +64,17 @@ export default function Home() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-black/95 backdrop-blur-sm z-50">
         <div className="container py-3 md:py-4 flex justify-between items-center gap-2 md:gap-4">
-          <img 
-            src="/logo-92projects.webp" 
-            alt="92 Projects" 
-            className="h-8 md:h-12 w-auto object-contain flex-shrink-0"
-          />
+          <button
+            onClick={scrollToTop}
+            className="cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0"
+            aria-label="Voltar ao topo"
+          >
+            <img 
+              src="/logo-92projects.webp" 
+              alt="92 Projects" 
+              className="h-8 md:h-12 w-auto object-contain"
+            />
+          </button>
           <a 
             href="https://instagram.com/92.projects" 
             target="_blank" 
