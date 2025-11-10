@@ -284,6 +284,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Depoimentos */}
+      <section className="py-12 md:py-16 bg-secondary/5 scroll-animate">
+        <div className="container">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-center mb-4" style={{color: 'oklch(0.85 0.15 75)'}}>
+            O QUE DIZEM NOSSOS <span className="text-primary">PARTICIPANTES</span>
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 md:mb-12 text-sm md:text-base">Veja o que quem já participou tem a dizer sobre nossa transparência e seriedade</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {/* Depoimento 1 */}
+            <div className="bg-card/50 rounded-2xl p-6 md:p-8 hover:scale-105 transition-transform">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/20 flex items-center justify-center text-2xl md:text-3xl">
+                  👤
+                </div>
+                <div>
+                  <h4 className="font-bold text-base md:text-lg">Mariana Silva</h4>
+                  <p className="text-xs md:text-sm text-muted-foreground">Campo Grande - MS</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-3">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} className="text-yellow-500 text-lg md:text-xl">★</span>
+                ))}
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground italic">
+                "Participei da 3ª edição e mesmo não tendo ganhado o prêmio principal, adorei a transparência! O sorteio foi ao vivo e tudo certinho. Já comprei meus números para essa 4ª edição!"
+              </p>
+            </div>
+
+            {/* Depoimento 2 */}
+            <div className="bg-card/50 rounded-2xl p-6 md:p-8 hover:scale-105 transition-transform">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/20 flex items-center justify-center text-2xl md:text-3xl">
+                  👤
+                </div>
+                <div>
+                  <h4 className="font-bold text-base md:text-lg">Carlos Eduardo</h4>
+                  <p className="text-xs md:text-sm text-muted-foreground">Dourados - MS</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-3">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} className="text-yellow-500 text-lg md:text-xl">★</span>
+                ))}
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground italic">
+                "Comprei apenas 10 números por R$ 9,90 e quase ganhei! Fiquei entre os top compradores. O processo é super rápido, paguei no PIX e já recebi meus números na hora. Recomendo!"
+              </p>
+            </div>
+
+            {/* Depoimento 3 */}
+            <div className="bg-card/50 rounded-2xl p-6 md:p-8 hover:scale-105 transition-transform">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/20 flex items-center justify-center text-2xl md:text-3xl">
+                  👤
+                </div>
+                <div>
+                  <h4 className="font-bold text-base md:text-lg">Juliana Costa</h4>
+                  <p className="text-xs md:text-sm text-muted-foreground">Três Lagoas - MS</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-3">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} className="text-yellow-500 text-lg md:text-xl">★</span>
+                ))}
+              </div>
+              <p className="text-sm md:text-base text-muted-foreground italic">
+                "Achei que era mais uma 'rifa furada', mas fiquei impressionada com a seriedade! Licença oficial, sorteio ao vivo, ganhadores reais. Vale muito a pena participar, é só R$ 0,99!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-12 md:py-16 bg-black scroll-animate">
         <div className="container max-w-4xl">

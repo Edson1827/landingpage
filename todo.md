@@ -95,3 +95,6 @@
 - [x] Preparar arquivos de configuração para Vercel
 - [x] Criar guia completo de deploy GitHub + Vercel
 - [x] Verificar se todos os arquivos estão prontos
+
+## Melhorias de Conversão
+- [x] Adicionar seção de depoimentos de clientes após Ganhadores Reais
