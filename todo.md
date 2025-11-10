@@ -123,10 +123,16 @@
 - [ ] Deploy final funcionando
 
 ## Otimizações Avançadas de Performance (Score 90+)
-- [ ] Inline Critical CSS
-- [ ] Preload de recursos críticos (fontes e imagem hero)
-- [ ] Defer Facebook Pixel
-- [ ] Otimizar fontes Google (apenas pesos necessários)
-- [ ] Implementar Service Worker para cache
-- [ ] Testar no PageSpeed Insights
-- [ ] Validar que design e funcionalidades permanecem intactos
+- [x] Inline Critical CSS
+- [x] Preload de recursos críticos (fontes e imagem hero)
+- [x] Defer Facebook Pixel
+- [x] Otimizar fontes Google (apenas pesos necessários)
+- [x] Implementar Service Worker para cache
+- [x] Testar no PageSpeed Insights
+- [x] Validar que design e funcionalidades permanecem intactos
+
+## Correções Urgentes
+- [x] Reverter defer do Facebook Pixel (piorou performance)
+- [x] Corrigir valor Anicrer e Família: R$ 80.000 no PIX (já estava correto)
+- [x] Corrigir valor Fernando de Souza: R$ 90.000 no PIX (já estava correto)
+- [ ] Testar no PageSpeed após correções
