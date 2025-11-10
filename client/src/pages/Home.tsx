@@ -125,8 +125,8 @@ export default function Home() {
 
             <div className="relative">
               <img 
-                src="/hero-kit.jpg" 
-                alt="Kit Mudança de Vida" 
+                src="/hero-kit-new.webp" 
+                alt="Kit dos Sonhos - Hilux Top + Apzão Completo" 
                 className="rounded-2xl shadow-2xl shadow-primary/20 w-full"
                 fetchPriority="high"
                 decoding="async"
