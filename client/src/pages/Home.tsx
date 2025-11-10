@@ -128,7 +128,7 @@ export default function Home() {
                 src="/hero-kit.jpg" 
                 alt="Kit Mudança de Vida" 
                 className="rounded-2xl shadow-2xl shadow-primary/20 w-full"
-                loading="lazy"
+                fetchPriority="high"
                 decoding="async"
               />
             </div>
