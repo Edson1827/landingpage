@@ -61,7 +61,7 @@ export default function Home() {
           >
             <img 
               src="/logo-92projects.webp" 
-              alt="92 Projects" 
+              alt="92 Projects - Logo da empresa organizadora do Kit Mudança de Vida" 
               className="h-8 md:h-12 w-auto object-contain"
             />
           </button>
@@ -112,11 +112,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <a 
-                href={PURCHASE_LINK}
+              <a
+                href="https://92projects.com/kitmudancadevida"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleParticipateClick}
+                aria-label="Participar agora da rifa Kit Mudança de Vida"
                 className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
               >
                 PARTICIPAR AGORA
@@ -128,7 +129,7 @@ export default function Home() {
                 src="/hero-kit-800.webp" 
                 srcSet="/hero-kit-400.webp 400w, /hero-kit-800.webp 800w, /hero-kit-1200.webp 1200w"
                 sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"
-                alt="Kit dos Sonhos - Hilux Top + Apzão Completo" 
+                alt="Kit Mudança de Vida - Hilux SRV 4x4 Top de Linha + Apartamento Completo, prêmios da 4ª Edição" 
                 className="rounded-2xl shadow-2xl shadow-primary/20 w-full"
                 fetchPriority="high"
                 decoding="async"
@@ -223,11 +224,12 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <a 
-              href={PURCHASE_LINK}
+            <a
+              href="https://92projects.com/kitmudancadevida"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleParticipateClick}
+              aria-label="Participar agora da rifa Kit Mudança de Vida"
               className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
             >
               PARTICIPAR AGORA
@@ -252,7 +254,7 @@ export default function Home() {
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
                 src="/ganhador2.webp" 
-                alt="Diogo Aguiar - Ganhador S10" 
+                alt="Diogo Aguiar, ganhador da Camionete S10 na campanha #1 em Campo Grande - MS" 
                 className="w-full h-48 md:h-64 object-cover object-top"
                 loading="lazy"
                 decoding="async"
@@ -275,7 +277,7 @@ export default function Home() {
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
                 src="/ganhador1.webp" 
-                alt="Anicrer e Família - Ganhadores R$ 80.000" 
+                alt="Anicrer e Família, ganhadores de R$ 80.000 no PIX na campanha #2 em Araçatuba - SP" 
                 className="w-full h-48 md:h-64 object-cover"
                 loading="lazy"
                 decoding="async"
@@ -298,7 +300,7 @@ export default function Home() {
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform sm:col-span-2 md:col-span-1">
               <img 
                 src="/dinheiro-100reais.webp" 
-                alt="Fernando de Souza - Ganhador R$ 90.000" 
+                alt="Fernando de Souza, ganhador de R$ 90.000 no PIX na campanha #3 em Brasília - DF" 
                 className="w-full h-48 md:h-64 object-cover"
                 loading="lazy"
                 decoding="async"
@@ -359,6 +361,8 @@ export default function Home() {
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full p-4 md:p-6 text-left font-bold text-base md:text-lg hover:bg-card/70 transition-colors flex justify-between items-center gap-4"
+                  aria-label={`${openFaq === index ? 'Fechar' : 'Abrir'} pergunta: ${faq.question}`}
+                  aria-expanded={openFaq === index}
                 >
                   <span className="flex-1">{faq.question}</span>
                   <span className="text-primary text-xl md:text-2xl flex-shrink-0">
@@ -387,11 +391,12 @@ export default function Home() {
             Não deixe para depois. Participe agora e concorra a prêmios incríveis!
           </p>
 
-          <a 
-            href={PURCHASE_LINK}
+          <a
+            href="https://92projects.com/kitmudancadevida"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleParticipateClick}
+            aria-label="Participar agora da rifa Kit Mudança de Vida"
             className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 mb-6 md:mb-8 rounded-lg"
           >
             PARTICIPAR AGORA

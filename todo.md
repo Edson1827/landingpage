@@ -135,4 +135,16 @@
 - [x] Reverter defer do Facebook Pixel (piorou performance)
 - [x] Corrigir valor Anicrer e Família: R$ 80.000 no PIX (já estava correto)
 - [x] Corrigir valor Fernando de Souza: R$ 90.000 no PIX (já estava correto)
-- [ ] Testar no PageSpeed após correções
+- [x] Testar no PageSpeed após correções (Score: 76/100)
+
+## Melhorias PageSpeed (Sem Alterar Visual)
+- [ ] Acessibilidade: Adicionar aria-labels em botões e links
+- [ ] Acessibilidade: Melhorar alt text das imagens
+- [ ] SEO: Adicionar meta description
+- [ ] SEO: Adicionar meta tags Open Graph
+- [ ] SEO: Adicionar structured data (JSON-LD)
+- [ ] Práticas: Adicionar meta tags de segurança (CSP, X-Frame-Options)
+- [ ] Práticas: Adicionar HTTPS headers
+- [ ] Desempenho: Comprimir imagens mais agressivamente
+- [ ] Desempenho: Minificar CSS/JS adicional
+- [ ] Testar no PageSpeed após melhorias
