@@ -121,3 +121,12 @@
 - [x] Testar build local
 - [x] Corrigir todas as configurações
 - [ ] Deploy final funcionando
+
+## Otimizações Avançadas de Performance (Score 90+)
+- [ ] Inline Critical CSS
+- [ ] Preload de recursos críticos (fontes e imagem hero)
+- [ ] Defer Facebook Pixel
+- [ ] Otimizar fontes Google (apenas pesos necessários)
+- [ ] Implementar Service Worker para cache
+- [ ] Testar no PageSpeed Insights
+- [ ] Validar que design e funcionalidades permanecem intactos
