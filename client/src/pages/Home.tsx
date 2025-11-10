@@ -4,6 +4,16 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
+    // Facebook Pixel - ViewContent Event
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'ViewContent', {
+        content_name: 'Kit Mudança de Vida',
+        content_category: 'Rifa',
+        value: 0.99,
+        currency: 'BRL'
+      });
+    }
+
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -25,6 +35,18 @@ export default function Home() {
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
+  };
+
+  // Facebook Pixel - InitiateCheckout Event
+  const handleParticipateClick = () => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: 'Kit Mudança de Vida',
+        content_category: 'Rifa',
+        value: 0.99,
+        currency: 'BRL'
+      });
+    }
   };
 
   const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
@@ -90,6 +112,7 @@ export default function Home() {
                 href={PURCHASE_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleParticipateClick}
                 className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
               >
                 PARTICIPAR AGORA
@@ -196,6 +219,7 @@ export default function Home() {
               href={PURCHASE_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleParticipateClick}
               className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
             >
               PARTICIPAR AGORA
@@ -353,6 +377,7 @@ export default function Home() {
             href={PURCHASE_LINK}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleParticipateClick}
             className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 mb-6 md:mb-8 rounded-lg"
           >
             PARTICIPAR AGORA
