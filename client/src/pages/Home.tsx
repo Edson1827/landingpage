@@ -125,7 +125,9 @@ export default function Home() {
 
             <div className="relative">
               <img 
-                src="/hero-kit-new.webp" 
+                src="/hero-kit-800.webp" 
+                srcSet="/hero-kit-400.webp 400w, /hero-kit-800.webp 800w, /hero-kit-1200.webp 1200w"
+                sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"
                 alt="Kit dos Sonhos - Hilux Top + Apzão Completo" 
                 className="rounded-2xl shadow-2xl shadow-primary/20 w-full"
                 fetchPriority="high"
@@ -249,7 +251,7 @@ export default function Home() {
             {/* Ganhador 1 - Diogo Aguiar */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
-                src="/ganhador2.jpg" 
+                src="/ganhador2.webp" 
                 alt="Diogo Aguiar - Ganhador S10" 
                 className="w-full h-48 md:h-64 object-cover object-top"
                 loading="lazy"
@@ -272,7 +274,7 @@ export default function Home() {
             {/* Ganhador 2 - Anicrer e Família */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
               <img 
-                src="/ganhador1.jpg" 
+                src="/ganhador1.webp" 
                 alt="Anicrer e Família - Ganhadores R$ 80.000" 
                 className="w-full h-48 md:h-64 object-cover"
                 loading="lazy"
@@ -295,7 +297,7 @@ export default function Home() {
             {/* Ganhador 3 - Fernando de Souza */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform sm:col-span-2 md:col-span-1">
               <img 
-                src="/dinheiro-100reais.jpg" 
+                src="/dinheiro-100reais.webp" 
                 alt="Fernando de Souza - Ganhador R$ 90.000" 
                 className="w-full h-48 md:h-64 object-cover"
                 loading="lazy"
