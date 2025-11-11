@@ -420,10 +420,52 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black py-6 md:py-8">
-        <div className="container text-center text-muted-foreground text-xs md:text-sm">
-          <p className="mb-2">© 2024 92 Projects - Todos os direitos reservados</p>
-          <p>Sorteio autorizado sob licença 8543.07/2025</p>
+      <footer className="bg-black py-8 md:py-12">
+        <div className="container">
+          {/* Logos */}
+          <div className="flex justify-center mb-6 md:mb-8">
+            <img 
+              src="/logos-legal.png" 
+              alt="LOTEP - Loterias e N Connection Company"
+              className="h-8 md:h-12 w-auto object-contain"
+            />
+          </div>
+
+          {/* Texto Legal */}
+          <div className="max-w-4xl mx-auto text-center text-muted-foreground text-xs md:text-sm leading-relaxed space-y-3 md:space-y-4 px-4">
+            <p>
+              Este bilhete de loteria está autorizado com base no termo de autorização descrito no regulamento da promoção. 
+              Antes de contratar, consulte o Regulamento do produto. 
+              <strong className="text-primary"> É proibida a venda para menores de 18 anos.</strong>
+            </p>
+            
+            <p>
+              Os sorteios e entrega dos prémios serão realizados de acordo com os critérios estabelecidos neste site, nos termos seguintes: 
+              O adquirente concorrerá em todos os sorteios previstos no bilhete digital emitido, mesmo sendo contemplado em alguns deles.
+            </p>
+            
+            <p>
+              Ao contribuir, o titular do BILHETE Digital concorda desde já e sem ônus a utilização de seu nome, sua voz e imagem para a divulgação desta campanha social.
+            </p>
+            
+            <p>
+              Confira o resultado dos sorteios e as condições de participação em{' '}
+              <a 
+                href="https://92projects.com/termos-de-uso" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                https://92projects.com/termos-de-uso
+              </a>
+            </p>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center text-muted-foreground text-xs md:text-sm mt-8 md:mt-10 pt-6 md:pt-8 border-t border-muted-foreground/20">
+            <p className="mb-2">© 2024 92 Projects - Todos os direitos reservados</p>
+            <p>Sorteio autorizado sob licença 8543.07/2025</p>
+          </div>
         </div>
       </footer>
     </div>

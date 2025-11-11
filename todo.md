@@ -138,13 +138,18 @@
 - [x] Testar no PageSpeed após correções (Score: 76/100)
 
 ## Melhorias PageSpeed (Sem Alterar Visual)
-- [ ] Acessibilidade: Adicionar aria-labels em botões e links
-- [ ] Acessibilidade: Melhorar alt text das imagens
-- [ ] SEO: Adicionar meta description
-- [ ] SEO: Adicionar meta tags Open Graph
-- [ ] SEO: Adicionar structured data (JSON-LD)
-- [ ] Práticas: Adicionar meta tags de segurança (CSP, X-Frame-Options)
-- [ ] Práticas: Adicionar HTTPS headers
-- [ ] Desempenho: Comprimir imagens mais agressivamente
-- [ ] Desempenho: Minificar CSS/JS adicional
-- [ ] Testar no PageSpeed após melhorias
+- [x] Acessibilidade: Adicionar aria-labels em botões e links
+- [x] Acessibilidade: Melhorar alt text das imagens
+- [x] SEO: Adicionar meta description
+- [x] SEO: Adicionar meta tags Open Graph
+- [x] SEO: Adicionar structured data (JSON-LD)
+- [x] Práticas: Adicionar meta tags de segurança (CSP, X-Frame-Options)
+- [x] Práticas: Adicionar HTTPS headers
+- [x] Desempenho: Comprimir imagens mais agressivamente
+- [x] Desempenho: Minificar CSS/JS adicional
+- [x] Testar no PageSpeed após melhorias
+
+## Rodapé Legal
+- [x] Adicionar logos LOTEP e N Connection no rodapé
+- [x] Adicionar texto legal completo no rodapé
+- [x] Otimizar rodapé para mobile
