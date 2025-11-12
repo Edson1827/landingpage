@@ -157,4 +157,10 @@
 ## Facebook Pixel - Simplificar Eventos
 - [x] Remover eventos personalizados do Facebook Pixel (ViewContent, AddToCart, InitiateCheckout)
 - [x] Manter apenas evento PageView
+- [x] Fazer push para GitHub
+
+## Facebook Pixel - Adicionar InitiateCheckout
+- [x] Adicionar evento InitiateCheckout nos botões PARTICIPAR AGORA
+- [x] Manter evento PageView
 - [ ] Fazer push para GitHub
+- [ ] Verificar deploy na Vercel
