@@ -35,16 +35,9 @@ export default function Home() {
     });
   };
 
-  // Facebook Pixel - InitiateCheckout Event
+  // Função removida - Facebook Pixel mantido apenas com PageView
   const handleParticipateClick = () => {
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout', {
-        content_name: 'Kit Mudança de Vida',
-        content_category: 'Rifa',
-        value: 0.99,
-        currency: 'BRL'
-      });
-    }
+    // Evento removido conforme solicitação do usuário
   };
 
   const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';

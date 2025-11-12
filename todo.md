@@ -153,3 +153,8 @@
 - [x] Adicionar logos LOTEP e N Connection no rodapé
 - [x] Adicionar texto legal completo no rodapé
 - [x] Otimizar rodapé para mobile
+
+## Facebook Pixel - Simplificar Eventos
+- [x] Remover eventos personalizados do Facebook Pixel (ViewContent, AddToCart, InitiateCheckout)
+- [x] Manter apenas evento PageView
+- [ ] Fazer push para GitHub
