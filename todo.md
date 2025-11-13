@@ -162,5 +162,6 @@
 ## Facebook Pixel - Adicionar InitiateCheckout
 - [x] Adicionar evento InitiateCheckout nos botões PARTICIPAR AGORA
 - [x] Manter evento PageView
-- [ ] Fazer push para GitHub
-- [ ] Verificar deploy na Vercel
+- [x] Fazer push para GitHub
+- [x] Verificar deploy na Vercel
+- [x] Confirmar otimizações de performance mobile
