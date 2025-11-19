@@ -165,3 +165,12 @@
 - [x] Fazer push para GitHub
 - [x] Verificar deploy na Vercel
 - [x] Confirmar otimizações de performance mobile
+
+## TikTok Pixel - Instalação e Configuração
+- [x] Instalar TikTok Pixel no index.html
+- [x] Configurar evento ViewContent no Home.tsx
+- [x] Configurar evento InitiateCheckout nos botões
+- [x] Ajustar valor do Facebook Pixel para R$ 9,90
+- [ ] Configurar evento CompletePayment (futuro)
+- [ ] Fazer push para GitHub
+- [ ] Testar com TikTok Pixel Helper
