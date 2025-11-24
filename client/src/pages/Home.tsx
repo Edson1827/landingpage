@@ -273,11 +273,11 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {/* Ganhador 1 - Diogo Aguiar */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="/ganhador2.webp" 
-                alt="Diogo Aguiar, ganhador da Camionete S10 na campanha #1 em Campo Grande - MS" 
+            <img 
+              loading="lazy"
+              src="/ganhador2.webp" 
+              alt="Diogo Aguiar, ganhador da Camionete S10 na campanha #1 em Campo Grande - MS"
                 className="w-full h-48 md:h-64 object-cover object-top"
-                loading="lazy"
                 decoding="async"
               />
               <div className="p-4 md:p-6">
@@ -296,11 +296,11 @@ export default function Home() {
 
             {/* Ganhador 2 - Anicrer e Família */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="/ganhador1.webp" 
-                alt="Anicrer e Família, ganhadores de R$ 80.000 no PIX na campanha #2 em Araçatuba - SP" 
+            <img 
+              loading="lazy"
+              src="/ganhador1.webp" 
+              alt="Anicrer e Família, ganhadores de R$ 80.000 no PIX na campanha #2 em Araçatuba - SP"
                 className="w-full h-48 md:h-64 object-cover"
-                loading="lazy"
                 decoding="async"
               />
               <div className="p-4 md:p-6">
@@ -319,11 +319,11 @@ export default function Home() {
 
             {/* Ganhador 3 - Fernando de Souza */}
             <div className="bg-card/50 rounded-2xl overflow-hidden hover:scale-105 transition-transform sm:col-span-2 md:col-span-1">
-              <img 
-                src="/dinheiro-100reais.webp" 
-                alt="Fernando de Souza, ganhador de R$ 90.000 no PIX na campanha #3 em Brasília - DF" 
+            <img 
+              loading="lazy"
+              src="/dinheiro-100reais.webp" 
+              alt="Fernando de Souza, ganhador de R$ 90.000 no PIX na campanha #3 em Brasília - DF"
                 className="w-full h-48 md:h-64 object-cover"
-                loading="lazy"
                 decoding="async"
               />
               <div className="p-4 md:p-6">
@@ -445,9 +445,10 @@ export default function Home() {
         <div className="container">
           {/* Logos */}
           <div className="flex justify-center mb-6 md:mb-8">
-            <img 
-              src="/logos-legal.png" 
-              alt="LOTEP - Loterias e N Connection Company"
+          <img 
+            loading="lazy"
+            src="/logos-legal.png" 
+            alt="LOTEP - Loterias e N Connection Company"
               className="h-8 md:h-12 w-auto object-contain"
             />
           </div>

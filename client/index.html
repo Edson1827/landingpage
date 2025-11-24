@@ -80,10 +80,12 @@
     <!-- TikTok Pixel Code End -->
     
     <!-- Preconnect for Performance Optimization -->
+    <link rel="preconnect" href="https://92projects.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://analytics.tiktok.com" />
+    <link rel="dns-prefetch" href="https://92projects.com" />
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="/hero-kit-800.webp" as="image" type="image/webp" fetchpriority="high" />
@@ -98,6 +100,7 @@
     <script type="module" src="/src/main.tsx"></script>
     <script
       defer
+      async
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
       data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>

@@ -172,5 +172,13 @@
 - [x] Configurar evento InitiateCheckout nos botões
 - [x] Ajustar valor do Facebook Pixel para R$ 9,90
 - [ ] Configurar evento CompletePayment (futuro)
-- [ ] Fazer push para GitHub
+- [x] Fazer push para GitHub
 - [ ] Testar com TikTok Pixel Helper
+
+## Otimização Landing Page (76% → 95%)
+- [x] Analisar código atual e identificar gargalos
+- [x] Otimizar imagens (lazy loading, compressão)
+- [x] Otimizar scripts (async, defer)
+- [x] Preload recursos críticos (92projects.com)
+- [ ] Testar performance
+- [ ] Fazer push para GitHub
