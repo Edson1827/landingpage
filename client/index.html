@@ -1,91 +1,509 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <link rel="icon" type="image/png" href="%VITE_APP_LOGO%" />
-    <link rel="apple-touch-icon" href="%VITE_APP_LOGO%" />
-    <title>Kit Mudança de Vida | 92 Projects - Concorra a Hilux + Apzão por R$ 0,99</title>
-    <meta name="description" content="Participe da 4ª Edição do Kit Mudança de Vida! Concorra a uma Hilux SRV + Apartamento Completo por apenas R$ 0,99 o bilhete. Já entregamos mais de R$ 300 mil em prêmios. Licença 8543.07/2025." />
-    <meta name="keywords" content="rifa, kit mudança de vida, hilux, apartamento, 92 projects, sorteio, loteria federal" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="92 Projects - Kit Mudança de Vida"/>
+    <meta property="og:title" content="Kit Mudança de Vida - 4ª Edição"/>
+    <meta property="og:description" content="Hilux SRV 4x4 + Apartamento ou R$ 400 mil no PIX. Licença 8543.07/2025"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="/hero-kit-800.webp"/>
+    <meta property="og:locale" content="pt_BR"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Kit Mudança de Vida - 4ª Edição"/>
+    <meta name="twitter:description" content="Hilux SRV 4x4 + Apartamento ou R$ 400 mil no PIX"/>
+    <meta name="twitter:image" content="/hero-kit-800.webp"/>
+    <meta name="theme-color" content="#ffdf00"/>
+    <title>Kit Mudança de Vida - 4ª Edição | 92 Projects</title>
     
-    <!-- Security Headers -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://92projects.com.br/" />
-    <meta property="og:title" content="Kit Mudança de Vida | 92 Projects - Concorra a Hilux + Apzão por R$ 0,99" />
-    <meta property="og:description" content="Participe da 4ª Edição! Concorra a Hilux SRV + Apartamento Completo por R$ 0,99. Já entregamos +R$ 300 mil em prêmios." />
-    <meta property="og:image" content="https://92projects.com.br/hero-kit-1200.webp" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://92projects.com.br/" />
-    <meta property="twitter:title" content="Kit Mudança de Vida | 92 Projects" />
-    <meta property="twitter:description" content="Concorra a Hilux SRV + Apartamento Completo por R$ 0,99!" />
-    <meta property="twitter:image" content="https://92projects.com.br/hero-kit-1200.webp" />
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Kit Mudança de Vida - 92 Projects",
-      "url": "https://92projects.com.br/",
-      "description": "Participe da 4ª Edição do Kit Mudança de Vida! Concorra a uma Hilux SRV + Apartamento Completo por apenas R$ 0,99 o bilhete.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "92 Projects",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://92projects.com.br/logo-92projects.webp"
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      }
-    }
-    </script>
-    
-    <!-- Facebook Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '155982193859504');
-      fbq('track', 'PageView');
-    </script>
-    <!-- End Facebook Pixel Code -->
-    
-    <!-- Preconnect for Performance Optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/hero-kit-800.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2" as="font" type="font/woff2" crossorigin />
-  </head>
-  <body>
-    <!-- Facebook Pixel noscript (must be in body) -->
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=155982193859504&ev=PageView&noscript=1"
-    /></noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+        
+        body {
+            font-family: 'League Spartan', 'Helvetica', Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(22, 22, 22, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+        
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header img {
+            height: 48px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        header img:hover {
+            opacity: 0.8;
+        }
+        
+        header a {
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        
+        header a:hover {
+            color: #ffdf00;
+        }
+        
+        header svg {
+            width: 32px;
+            height: 32px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, #000000 0%, #161616 100%);
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+        
+        .hero-text .highlight {
+            color: #ffdf00;
+        }
+        
+        .hero-text p {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #e2e2e2;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: rgba(255, 223, 0, 0.2);
+            color: #ffdf00;
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .badges {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .info-badge {
+            background-color: rgba(255, 223, 0, 0.1);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffdf00 0%, #ffd700 100%);
+            color: #000000;
+            font-size: 24px;
+            font-weight: 700;
+            padding: 24px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(255, 223, 0, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(255, 223, 0, 0.6);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(255, 223, 0, 0.2);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #161616 0%, #000000 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #919191;
+            margin-bottom: 48px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 223, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 40px;
+        }
+        
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+        
+        .feature-card p {
+            color: #919191;
+            font-size: 16px;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: #000000;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background-color: #ffdf00;
+            color: #000000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        
+        .step h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .step p {
+            color: #919191;
+            font-size: 16px;
+        }
+        
+        /* Winners Section */
+        .winners {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #000000 0%, #161616 100%);
+        }
+        
+        .winners-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        
+        .winner-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .winner-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .winner-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .winner-info {
+            padding: 24px;
+            text-align: center;
+        }
+        
+        .winner-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .winner-info p {
+            color: #919191;
+            font-size: 14px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 48px 0;
+            background-color: #161616;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #919191;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        footer a {
+            color: #ffdf00;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .hero-text p {
+                font-size: 18px;
+            }
+            
+            .features-grid,
+            .steps-grid,
+            .winners-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .cta-button {
+                font-size: 20px;
+                padding: 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="/logo-92projects.webp" alt="92 Projects" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <a href="https://instagram.com/92.projects" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">🏆 4ª EDIÇÃO</span>
+                    <h1>
+                        KIT MUDANÇA DE VIDA OU <span class="highlight">R$ 400 MIL</span> NO PIX
+                    </h1>
+                    <p>Pacote promocional a partir de <strong class="highlight">R$ 0,99</strong> por bilhete</p>
+                    <p>✨ Você escolhe o prêmio! ✨</p>
+                    
+                    <div class="badges">
+                        <div class="info-badge">✅ Licença 8543.07/2025</div>
+                        <div class="info-badge">💰 + de 300k Entregues</div>
+                    </div>
+                    
+                    <a href="https://92projects.com/kitmudancadevida" target="_blank" rel="noopener noreferrer" class="cta-button">
+                        PARTICIPAR AGORA
+                    </a>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="/hero-kit-800.webp" alt="Kit Mudança de Vida - Hilux SRV 4x4 + Apartamento" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">POR QUE <span class="highlight">PARTICIPAR?</span></h2>
+            <p class="section-subtitle">Sua vida pode mudar com apenas R$ 0,99</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>CASA PRÓPRIA</h3>
+                    <p>Realize o sonho da <strong class="highlight">liberdade financeira</strong> com um apartamento quitado</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <h3>HILUX SRV TOP</h3>
+                    <p>Dirija a <strong>Hilux dos seus sonhos</strong> e impressione a família</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>MUDANÇA DE VIDA</h3>
+                    <p>Junte-se aos <strong>3 ganhadores</strong> que já transformaram suas vidas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">COMO <span class="highlight">FUNCIONA?</span></h2>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Escolha Seus Bilhetes</h3>
+                    <p>Selecione quantos bilhetes deseja (10, 25, 50 ou 75). Quanto mais bilhetes, mais chances!</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pagamento via PIX</h3>
+                    <p>Pagamento instantâneo e seguro. Você recebe seus números automaticamente!</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Aguarde o Sorteio</h3>
+                    <p>Sorteio pela Loteria Federal. Transparente e auditado!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Winners Section -->
+    <section class="winners">
+        <div class="container">
+            <h2 class="section-title">NOSSOS <span class="highlight">GANHADORES</span></h2>
+            <p class="section-subtitle">Pessoas reais que mudaram de vida</p>
+            
+            <div class="winners-grid">
+                <div class="winner-card">
+                    <img src="/ganhador1.webp" alt="Ganhador 1" loading="lazy">
+                    <div class="winner-info">
+                        <h3>1ª Edição</h3>
+                        <p>Levou para casa o prêmio dos sonhos</p>
+                    </div>
+                </div>
+                
+                <div class="winner-card">
+                    <img src="/ganhador2.webp" alt="Ganhador 2" loading="lazy">
+                    <div class="winner-info">
+                        <h3>2ª Edição</h3>
+                        <p>Mudou de vida com apenas R$ 0,99</p>
+                    </div>
+                </div>
+                
+                <div class="winner-card">
+                    <img src="/ganhador3.webp" alt="Ganhador 3" loading="lazy">
+                    <div class="winner-info">
+                        <h3>3ª Edição</h3>
+                        <p>Realizou o sonho da casa própria</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>92 Projects</strong> - Todos os direitos reservados</p>
+            <p>Licença: 8543.07/2025</p>
+            <p>Siga-nos no <a href="https://instagram.com/92.projects" target="_blank" rel="noopener noreferrer">Instagram @92.projects</a></p>
+        </div>
+    </footer>
+</body>
 </html>
