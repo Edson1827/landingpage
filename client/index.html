@@ -86,11 +86,21 @@
             min-height: 700px;
             display: flex;
             align-items: center;
-            background-image: url('/hero-kit-800.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            object-fit: cover;
         }
         
         .hero::before {
@@ -441,6 +451,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/hero-video.mp4" type="video/mp4">
+        </video>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
