@@ -98,7 +98,7 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(0.8);
             z-index: 0;
             object-fit: cover;
         }
@@ -180,9 +180,9 @@
             justify-content: center;
             background: linear-gradient(135deg, #ffdf00 0%, #ffd700 100%);
             color: #000000;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 700;
-            padding: 20px 40px;
+            padding: 24px 60px;
             border-radius: 8px;
             text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -210,49 +210,7 @@
             margin-bottom: 48px;
         }
         
-        /* How It Works */
-        .how-it-works {
-            padding: 80px 0;
-            background-color: #000000;
-        }
-        
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .step {
-            text-align: center;
-        }
-        
-        .step-number {
-            width: 64px;
-            height: 64px;
-            background-color: #ffdf00;
-            color: #000000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 32px;
-            font-weight: 700;
-        }
-        
-        .step h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
-        
-        .step p {
-            color: #919191;
-            font-size: 16px;
-        }
-        
-/* Winners Section - Carousel */
+        /* Winners Section - Carousel */
         .winners {
             padding: 80px 0;
             background: linear-gradient(180deg, #000000 0%, #161616 100%);
@@ -390,7 +348,6 @@
                 font-size: 18px;
             }
             
-            .steps-grid,
             .winners-grid {
                 grid-template-columns: 1fr;
             }
@@ -478,33 +435,6 @@
                 </div>
                 
 
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">COMO <span class="highlight">FUNCIONA?</span></h2>
-            
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Escolha Seus Bilhetes</h3>
-                    <p>Selecione quantos bilhetes deseja (10, 25, 50 ou 75). Quanto mais bilhetes, mais chances!</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Pagamento via PIX</h3>
-                    <p>Pagamento instantâneo e seguro. Você recebe seus números automaticamente!</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Aguarde o Sorteio</h3>
-                    <p>Sorteio pela Loteria Federal. Transparente e auditado!</p>
-                </div>
             </div>
         </div>
     </section>
