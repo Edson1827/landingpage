@@ -185,12 +185,7 @@
         }
         
 
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: linear-gradient(180deg, #161616 0%, #000000 100%);
-        }
-        
+        /* Section Titles */
         .section-title {
             text-align: center;
             font-size: 48px;
@@ -203,47 +198,6 @@
             font-size: 20px;
             color: #919191;
             margin-bottom: 48px;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-        
-        .feature-card {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 16px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 223, 0, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 40px;
-        }
-        
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-            color: #ffffff;
-        }
-        
-        .feature-card p {
-            color: #919191;
-            font-size: 16px;
         }
         
         /* How It Works */
@@ -426,7 +380,6 @@
                 font-size: 18px;
             }
             
-            .features-grid,
             .steps-grid,
             .winners-grid {
                 grid-template-columns: 1fr;
@@ -516,34 +469,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">POR QUE <span class="highlight">PARTICIPAR?</span></h2>
-            <p class="section-subtitle">Sua vida pode mudar com apenas R$ 0,99</p>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏠</div>
-                    <h3>CASA PRÓPRIA</h3>
-                    <p>Realize o sonho da <strong class="highlight">liberdade financeira</strong> com um apartamento quitado</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🚗</div>
-                    <h3>HILUX SRV TOP</h3>
-                    <p>Dirija a <strong>Hilux dos seus sonhos</strong> e impressione a família</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>MUDANÇA DE VIDA</h3>
-                    <p>Junte-se aos <strong>3 ganhadores</strong> que já transformaram suas vidas</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- How It Works -->
     <section class="how-it-works">
         <div class="container">
@@ -574,8 +499,7 @@
 <!-- Winners Section -->
     <section class="winners">
         <div class="container">
-            <h2 class="section-title">NOSSOS <span class="highlight">GANHADORES</span></h2>
-            <p class="section-subtitle">Pessoas reais que mudaram de vida</p>
+            <h2 class="section-title"><span class="highlight">SEJA UM DOS NOSSOS GANHADORES!</span></h2>
             
             <div class="carousel-container">
                 <button class="carousel-nav prev" onclick="moveCarousel(-1)">‹</button>
