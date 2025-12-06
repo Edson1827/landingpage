@@ -182,3 +182,10 @@
 - [x] Preload recursos críticos (92projects.com)
 - [ ] Testar performance
 - [ ] Fazer push para GitHub
+
+## Otimizações ROI 4x - Landing Page + TikTok Ads + Bridge Page
+- [x] Adicionar preço na hero section (R$ 9,90 destacado)
+- [x] Melhorar seção ganhadores (fotos + comprovantes + depoimentos)
+- [x] Pesquisar solução para TikTok Ads (cloaker/contorno)
+- [x] Criar bridge page zero fricção (/bridge)
+- [ ] Fazer push para GitHub

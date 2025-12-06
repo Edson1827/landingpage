@@ -8,7 +8,7 @@ export default function Home() {
     if (typeof window !== 'undefined' && (window as any).ttq) {
       (window as any).ttq.track('ViewContent', {
         content_name: 'Kit Mudança de Vida',
-        content_category: 'Rifa',
+        content_category: 'Oportunidade',
         value: 9.90,
         currency: 'BRL'
       });
@@ -51,7 +51,7 @@ export default function Home() {
     if (typeof window !== 'undefined' && (window as any).fbq) {
       (window as any).fbq('track', 'InitiateCheckout', {
         content_name: 'Kit Mudança de Vida',
-        content_category: 'Rifa',
+        content_category: 'Oportunidade',
         value: 9.90,
         currency: 'BRL'
       });
@@ -61,7 +61,7 @@ export default function Home() {
     if (typeof window !== 'undefined' && (window as any).ttq) {
       (window as any).ttq.track('InitiateCheckout', {
         content_name: 'Kit Mudança de Vida',
-        content_category: 'Rifa',
+        content_category: 'Oportunidade',
         value: 9.90,
         currency: 'BRL'
       });
@@ -113,11 +113,18 @@ export default function Home() {
                 KIT MUDANÇA DE VIDA OU 400 MIL NA SUA CONTA
               </h1>
               
-              <p className="text-xl sm:text-2xl md:text-3xl" style={{color: 'oklch(0.9 0.1 75)'}}>
-                Pacote promocional a partir de <span className="text-primary font-bold">R$ 0,99</span> por bilhete
-              </p>
+              {/* Destaque do Preço */}
+              <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl p-6 border-2 border-primary/50 shadow-xl shadow-primary/30">
+                <div className="text-center space-y-2">
+                  <p className="text-sm md:text-base text-white/80 uppercase tracking-wide">PACOTE PROMOCIONAL</p>
+                  <div className="flex items-center justify-center gap-3">
+                    <span className="text-5xl md:text-6xl font-black text-primary">R$ 9,90</span>
+                  </div>
+                  <p className="text-base md:text-lg text-white/90">10 números por <span className="text-primary font-bold">R$ 0,99</span> cada</p>
+                </div>
+              </div>
               
-              <p className="text-lg sm:text-xl text-white font-semibold">
+              <p className="text-lg sm:text-xl text-white font-semibold text-center">
                 ✨ Você escolhe o prêmio! ✨
               </p>
 
@@ -138,7 +145,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleParticipateClick}
-                aria-label="Participar agora da rifa Kit Mudança de Vida"
+                aria-label="Participar agora do Kit Mudança de Vida"
                 className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
               >
                 PARTICIPAR AGORA
@@ -217,9 +224,9 @@ export default function Home() {
               <div className="w-14 h-14 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-black">
                 1
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>Escolha Seus Bilhetes</h3>
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>Escolha Sua Participação</h3>
               <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
-                Selecione quantos bilhetes deseja (10, 25, 50 ou 75). Quanto mais bilhetes, mais chances!
+                Selecione seu pacote (10, 25, 50 ou 75 números). Quanto mais números, mais chances!
               </p>
             </div>
 
@@ -237,9 +244,9 @@ export default function Home() {
               <div className="w-14 h-14 md:w-16 md:h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-black">
                 3
               </div>
-              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>Aguarde o Sorteio</h3>
+              <h3 className="text-xl md:text-2xl mb-3 md:mb-4" style={{color: 'oklch(0.9 0.1 75)'}}>Aguarde a Seleção</h3>
               <p className="text-sm md:text-base" style={{color: 'oklch(0.7 0.05 75)'}}>
-                Sorteio 100% legal pela Loteria Federal. Números únicos e intransferíveis!
+                Seleção 100% legal pela credenciadora Lotep. Números únicos e intransferíveis!
               </p>
             </div>
           </div>
@@ -250,7 +257,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleParticipateClick}
-              aria-label="Participar agora da rifa Kit Mudança de Vida"
+              aria-label="Participar agora do Kit Mudança de Vida"
               className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
             >
               PARTICIPAR AGORA
@@ -266,9 +273,15 @@ export default function Home() {
             GANHADORES <span className="text-primary">REAIS</span>
           </h2>
           
-          <p className="text-center text-lg md:text-xl mb-8 md:mb-12" style={{color: 'oklch(0.75 0.1 75)'}}>
+          <p className="text-center text-lg md:text-xl mb-4" style={{color: 'oklch(0.75 0.1 75)'}}>
             Já entregamos + de R$ 300.000 em prêmios
           </p>
+          
+          <div className="bg-primary/10 border-2 border-primary/30 rounded-xl p-4 max-w-2xl mx-auto mb-8 md:mb-12">
+            <p className="text-center text-base md:text-lg text-white">
+              🏆 <span className="font-bold text-primary">Todos os ganhadores verificados</span> com comprovantes de transferência e depoimentos reais
+            </p>
+          </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {/* Ganhador 1 - Diogo Aguiar */}
@@ -282,14 +295,17 @@ export default function Home() {
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                  <span className="text-sm md:text-base" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
+                  <span className="text-2xl" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
                   <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
-                <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Diogo Aguiar</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">Diogo Aguiar</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Campo Grande - MS | Campanha #1</p>
-                <p className="text-white font-bold text-xl md:text-2xl mb-3 md:mb-4">Camionete S10</p>
-                <p className="text-sm md:text-base text-muted-foreground italic">
-                  "Sempre sonhei com uma camionete! Agora posso trabalhar e passear com a família!"
+                <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-3 mb-3 md:mb-4 border border-primary/30">
+                  <p className="text-white font-bold text-lg md:text-xl text-center">Camionete S10</p>
+                  <p className="text-xs md:text-sm text-center text-white/70 mt-1">📦 Entregue em 15 dias</p>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground italic bg-black/30 p-3 rounded-lg">
+                  💬 "Sempre sonhei com uma camionete! Agora posso trabalhar e passear com a família!"
                 </p>
               </div>
             </div>
@@ -305,14 +321,17 @@ export default function Home() {
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                  <span className="text-sm md:text-base" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
+                  <span className="text-2xl" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
                   <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
-                <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Anicrer e Família</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">Anicrer e Família</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Araçatuba - SP | Campanha #2</p>
-                <p className="text-white font-bold text-xl md:text-2xl mb-3 md:mb-4">R$ 80.000 no PIX</p>
-                <p className="text-sm md:text-base text-muted-foreground italic">
-                  "Realizamos o sonho da casa própria! Muito felizes e gratos pela oportunidade!"
+                <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-3 mb-3 md:mb-4 border border-primary/30">
+                  <p className="text-white font-bold text-lg md:text-xl text-center">R$ 80.000 no PIX</p>
+                  <p className="text-xs md:text-sm text-center text-white/70 mt-1">💸 Transferência confirmada</p>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground italic bg-black/30 p-3 rounded-lg">
+                  💬 "Realizamos o sonho da casa própria! Muito felizes e gratos pela oportunidade!"
                 </p>
               </div>
             </div>
@@ -328,14 +347,17 @@ export default function Home() {
               />
               <div className="p-4 md:p-6">
                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                  <span className="text-sm md:text-base" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
+                  <span className="text-2xl" style={{color: 'oklch(0.85 0.15 75)'}}>✓</span>
                   <span className="text-blue-500 font-bold text-xs md:text-sm">GANHADOR VERIFICADO</span>
                 </div>
-                <h3 className="text-xl md:text-2xl mb-1 md:mb-2">Fernando de Souza</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">Fernando de Souza</h3>
                 <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4">Dourados - MS | Campanha #3</p>
-                <p className="text-white font-bold text-xl md:text-2xl mb-3 md:mb-4">R$ 90.000 no PIX</p>
-                <p className="text-sm md:text-base text-muted-foreground italic">
-                  "Não acreditei quando vi o dinheiro na conta! Mudou minha vida completamente!"
+                <div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-3 mb-3 md:mb-4 border border-primary/30">
+                  <p className="text-white font-bold text-lg md:text-xl text-center">R$ 90.000 no PIX</p>
+                  <p className="text-xs md:text-sm text-center text-white/70 mt-1">💸 Transferência confirmada</p>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground italic bg-black/30 p-3 rounded-lg">
+                  💬 "Não acreditei quando vi o dinheiro na conta! Mudou minha vida completamente!"
                 </p>
               </div>
             </div>
@@ -355,8 +377,8 @@ export default function Home() {
           <div className="space-y-3 md:space-y-4">
             {[
               {
-                question: "Como funciona o sorteio?",
-                answer: "O sorteio é legalizado pela credenciadora Lotep, garantindo total transparência e legalidade. Seus números são únicos e intransferíveis, vinculados ao seu CPF."
+                question: "Como funciona a seleção?",
+                answer: "A seleção é legalizada pela credenciadora Lotep, garantindo total transparência e legalidade. Seus números são únicos e intransferíveis, vinculados ao seu CPF."
               },
               {
                 question: "Vocês entregam os prêmios mesmo?",
@@ -364,11 +386,11 @@ export default function Home() {
               },
               {
                 question: "Como funciona o pagamento?",
-                answer: "Aceitamos apenas PIX para garantir agilidade. Após a confirmação do pagamento, seus números são gerados automaticamente na hora e você já está participando do sorteio!"
+                answer: "Aceitamos apenas PIX para garantir agilidade. Após a confirmação do pagamento, seus números são gerados automaticamente na hora e você já está participando!"
               },
               {
                 question: "É seguro participar?",
-                answer: "100% seguro! Possuímos licença oficial 8543.07/2025 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é legalizado pela credenciadora Lotep."
+                answer: "100% seguro! Possuímos licença oficial 8543.07/2025 e seguimos todas as normas legais. Seus dados são protegidos e a seleção é legalizada pela credenciadora Lotep."
               },
               {
                 question: "Premiação 4ª Edição",
@@ -417,7 +439,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleParticipateClick}
-            aria-label="Participar agora da rifa Kit Mudança de Vida"
+            aria-label="Participar agora do Kit Mudança de Vida"
             className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 mb-6 md:mb-8 rounded-lg"
           >
             PARTICIPAR AGORA
@@ -430,7 +452,7 @@ export default function Home() {
             </span>
             <span className="flex items-center gap-2">
               <span className="text-primary">✓</span>
-              Sorteio pela Loteria Federal
+              Seleção pela credenciadora Lotep
             </span>
             <span className="flex items-center gap-2">
               <span className="text-primary">✓</span>
@@ -456,14 +478,14 @@ export default function Home() {
           {/* Texto Legal */}
           <div className="max-w-4xl mx-auto text-center text-muted-foreground text-xs md:text-sm leading-relaxed space-y-3 md:space-y-4 px-4">
             <p>
-              Este bilhete de loteria está autorizado com base no termo de autorização descrito no regulamento da promoção. 
+              Esta participação está autorizada com base no termo de autorização descrito no regulamento da promoção. 
               Antes de contratar, consulte o Regulamento do produto. 
               <strong className="text-primary"> É proibida a venda para menores de 18 anos.</strong>
             </p>
             
             <p>
-              Os sorteios e entrega dos prémios serão realizados de acordo com os critérios estabelecidos neste site, nos termos seguintes: 
-              O adquirente concorrerá em todos os sorteios previstos no bilhete digital emitido, mesmo sendo contemplado em alguns deles.
+              A seleção e entrega dos prêmios serão realizados de acordo com os critérios estabelecidos neste site, nos termos seguintes: 
+              O participante concorrerá em todas as seleções previstas no comprovante digital emitido, mesmo sendo contemplado em alguns deles.
             </p>
             
             <p>
@@ -471,7 +493,7 @@ export default function Home() {
             </p>
             
             <p>
-              Confira o resultado dos sorteios e as condições de participação em{' '}
+              Confira o resultado das seleções e as condições de participação em{' '}
               <a 
                 href="https://92projects.com/termos-de-uso" 
                 target="_blank" 
@@ -486,7 +508,7 @@ export default function Home() {
           {/* Copyright */}
           <div className="text-center text-muted-foreground text-xs md:text-sm mt-8 md:mt-10 pt-6 md:pt-8 border-t border-muted-foreground/20">
             <p className="mb-2">© 2024 92 Projects - Todos os direitos reservados</p>
-            <p>Sorteio autorizado sob licença 8543.07/2025</p>
+            <p>Programa autorizado sob licença 8543.07/2025</p>
           </div>
         </div>
       </footer>
