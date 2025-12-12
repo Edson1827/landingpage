@@ -80,10 +80,10 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-20 md:pt-28 pb-12 md:pb-16">
+      <section className="pt-16 md:pt-20 pb-8 md:pb-12">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-4 md:space-y-6">
+            <div className="space-y-3 md:space-y-4">
               <div className="inline-block bg-primary/20 px-4 py-2 rounded-full mb-2">
                 <span className="text-primary font-bold text-sm md:text-base">🏆 4ª EDIÇÃO</span>
               </div>
@@ -101,15 +101,16 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-3 md:gap-4">
-                <div className="bg-secondary/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
-                  <span className="text-xl md:text-2xl">✅</span>
-                  <span className="font-bold whitespace-nowrap">Licença 8543.07/2025</span>
-                </div>
-                
                 <div className="bg-accent/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
                   <span className="text-xl md:text-2xl">💰</span>
                   <span className="font-bold whitespace-nowrap">+ de 300k Entregues</span>
                 </div>
+              </div>
+
+              {/* Licença LOTEP acima do botão */}
+              <div className="bg-secondary/10 rounded-lg px-4 md:px-5 py-3 flex items-center justify-center gap-2 border border-primary/30">
+                <span className="text-2xl md:text-3xl">✅</span>
+                <span className="font-bold text-base md:text-lg" style={{color: 'oklch(0.85 0.15 75)'}}>Licença LOTEP 8543.07/2025</span>
               </div>
 
               <a
