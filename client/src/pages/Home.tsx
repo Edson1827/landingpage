@@ -2,6 +2,31 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  // Contador regressivo para 14/01/2025
+  useEffect(() => {
+    const targetDate = new Date('2025-01-14T23:59:59').getTime();
+    
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      
+      if (distance > 0) {
+        setCountdown({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    };
+    
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const observerOptions = {
@@ -87,41 +112,64 @@ export default function Home() {
               <div className="inline-block bg-primary/20 px-4 py-2 rounded-full mb-2">
                 <span className="text-primary font-bold text-sm md:text-base">🏆 4ª EDIÇÃO</span>
               </div>
+
+              {/* Contador Regressivo */}
+              <div className="bg-gradient-to-r from-red-600 to-red-500 rounded-xl p-4 md:p-5 shadow-2xl">
+                <p className="text-center text-white font-bold text-sm md:text-base mb-2">⏰ SORTEIO EM:</p>
+                <div className="grid grid-cols-4 gap-2 md:gap-3">
+                  <div className="bg-black/30 rounded-lg p-2 md:p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-white">{countdown.days}</div>
+                    <div className="text-xs md:text-sm text-white/80">DIAS</div>
+                  </div>
+                  <div className="bg-black/30 rounded-lg p-2 md:p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-white">{countdown.hours}</div>
+                    <div className="text-xs md:text-sm text-white/80">HORAS</div>
+                  </div>
+                  <div className="bg-black/30 rounded-lg p-2 md:p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-white">{countdown.minutes}</div>
+                    <div className="text-xs md:text-sm text-white/80">MIN</div>
+                  </div>
+                  <div className="bg-black/30 rounded-lg p-2 md:p-3 text-center">
+                    <div className="text-2xl md:text-3xl font-bold text-white">{countdown.seconds}</div>
+                    <div className="text-xs md:text-sm text-white/80">SEG</div>
+                  </div>
+                </div>
+              </div>
               
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight" style={{color: 'oklch(0.85 0.15 75)'}}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight" style={{color: 'oklch(0.85 0.15 75)'}}>
                 KIT MUDANÇA DE VIDA OU 400 MIL NA SUA CONTA
               </h1>
               
-              <p className="text-xl sm:text-2xl md:text-3xl" style={{color: 'oklch(0.9 0.1 75)'}}>
+              <p className="text-lg sm:text-xl md:text-2xl" style={{color: 'oklch(0.9 0.1 75)'}}>
                 Pacote promocional a partir de <span className="text-primary font-bold">R$ 0,99</span> por bilhete
               </p>
               
-              <p className="text-lg sm:text-xl text-white font-semibold">
+              <p className="text-base sm:text-lg text-white font-semibold">
                 ✨ Você escolhe o prêmio! ✨
               </p>
 
               <div className="flex flex-wrap gap-3 md:gap-4">
+                <div className="bg-secondary/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
+                  <span className="text-xl md:text-2xl">✅</span>
+                  <span className="font-bold whitespace-nowrap">LTP - PRC: 2025/01438</span>
+                </div>
+                
                 <div className="bg-accent/10 rounded-lg px-3 md:px-4 py-2 flex items-center gap-2 text-sm md:text-base">
                   <span className="text-xl md:text-2xl">💰</span>
                   <span className="font-bold whitespace-nowrap">+ de 300k Entregues</span>
                 </div>
               </div>
 
-              {/* Licença LOTEP acima do botão */}
-              <div className="bg-secondary/10 rounded-lg px-4 md:px-5 py-3 flex items-center justify-center gap-2 border border-primary/30">
-                <span className="text-2xl md:text-3xl">✅</span>
-                <span className="font-bold text-base md:text-lg" style={{color: 'oklch(0.85 0.15 75)'}}>Licença LOTEP 8543.07/2025</span>
-              </div>
-
+              {/* Botão CTA fixo no mobile */}
               <a
                 href="https://92projects.com/kitmudancadevida"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleParticipateClick}
                 aria-label="Participar agora da rifa Kit Mudança de Vida"
-                className="inline-flex items-center justify-center w-full sm:w-auto bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-xl md:text-2xl px-12 md:px-16 py-6 md:py-7 hover:scale-105 transition-transform shadow-2xl shadow-primary/40 rounded-lg"
+                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 active:scale-95 transition-transform shadow-2xl shadow-primary/40 rounded-xl"
               >
-                PARTICIPAR AGORA
+                🚀 PARTICIPAR AGORA
               </a>
             </div>
 
@@ -348,7 +396,7 @@ export default function Home() {
               },
               {
                 question: "É seguro participar?",
-                answer: "100% seguro! Possuímos licença oficial 8543.07/2025 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é legalizado pela credenciadora Lotep."
+                answer: "100% seguro! Possuímos licença oficial LTP - PRC: 2025/01438 e seguimos todas as normas legais. Seus dados são protegidos e o sorteio é legalizado pela credenciadora Lotep."
               },
               {
                 question: "Premiação 4ª Edição",
@@ -414,7 +462,7 @@ export default function Home() {
             </span>
             <span className="flex items-center gap-2">
               <span className="text-primary">✓</span>
-              Licença 8543.07/2025
+              LTP - PRC: 2025/01438
             </span>
           </div>
         </div>
@@ -465,7 +513,7 @@ export default function Home() {
           {/* Copyright */}
           <div className="text-center text-muted-foreground text-xs md:text-sm mt-8 md:mt-10 pt-6 md:pt-8 border-t border-muted-foreground/20">
             <p className="mb-2">© 2024 92 Projects - Todos os direitos reservados</p>
-            <p>Sorteio autorizado sob licença 8543.07/2025</p>
+            <p>Sorteio autorizado sob licença LTP - PRC: 2025/01438</p>
           </div>
         </div>
       </footer>
