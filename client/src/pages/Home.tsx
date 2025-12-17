@@ -160,82 +160,16 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Botão CTA fixo no mobile */}
-              {/* Pacotes de Preços */}
-              <div className="grid gap-3 md:gap-4">
-                {/* Pacote Básico */}
-                <div className="bg-card/30 rounded-xl p-4 md:p-5 border border-white/10 hover:border-primary/50 transition-all">
-                  <div className="flex items-center justify-between mb-2">
-                    <div>
-                      <h3 className="text-lg md:text-xl font-bold text-white">Pacote Básico</h3>
-                      <p className="text-sm text-white/70">1 número da sorte</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl md:text-3xl font-bold text-primary">R$ 0,99</div>
-                    </div>
-                  </div>
-                  <a
-                    href="https://92projects.com/kitmudancadevida"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={handleParticipateClick}
-                    className="block w-full bg-white/10 hover:bg-white/20 text-white font-semibold text-center py-3 rounded-lg transition-all"
-                  >
-                    Escolher Básico
-                  </a>
-                </div>
-
-                {/* Pacote Popular - DESTAQUE */}
-                <div className="bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl p-4 md:p-5 border-2 border-primary relative hover:scale-[1.02] transition-all">
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-black px-4 py-1 rounded-full text-xs md:text-sm font-bold">
-                    🔥 MAIS VENDIDO
-                  </div>
-                  <div className="flex items-center justify-between mb-2">
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-white">Pacote Popular</h3>
-                      <p className="text-sm text-white/90">23 números da sorte</p>
-                      <p className="text-xs text-primary font-semibold">R$ 0,86 por número</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-white/70 line-through">R$ 22,77</div>
-                      <div className="text-3xl md:text-4xl font-bold text-primary">R$ 19,90</div>
-                    </div>
-                  </div>
-                  <a
-                    href="https://92projects.com/kitmudancadevida"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={handleParticipateClick}
-                    className="block w-full bg-primary hover:bg-primary/90 text-black font-bold text-center py-4 rounded-lg transition-all text-lg"
-                  >
-                    🚀 ESCOLHER POPULAR
-                  </a>
-                </div>
-
-                {/* Pacote Premium */}
-                <div className="bg-card/30 rounded-xl p-4 md:p-5 border border-white/10 hover:border-primary/50 transition-all">
-                  <div className="flex items-center justify-between mb-2">
-                    <div>
-                      <h3 className="text-lg md:text-xl font-bold text-white">Pacote Premium</h3>
-                      <p className="text-sm text-white/70">50 números da sorte</p>
-                      <p className="text-xs text-primary font-semibold">R$ 0,80 por número - Melhor custo!</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-white/70 line-through">R$ 49,50</div>
-                      <div className="text-2xl md:text-3xl font-bold text-primary">R$ 39,90</div>
-                    </div>
-                  </div>
-                  <a
-                    href="https://92projects.com/kitmudancadevida"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={handleParticipateClick}
-                    className="block w-full bg-white/10 hover:bg-white/20 text-white font-semibold text-center py-3 rounded-lg transition-all"
-                  >
-                    Escolher Premium
-                  </a>
-                </div>
-              </div>
+              <a
+                href="https://92projects.com/kitmudancadevida"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleParticipateClick}
+                aria-label="Participar agora da rifa Kit Mudança de Vida"
+                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-primary to-primary/80 text-black font-bold text-lg md:text-xl px-8 md:px-12 py-5 md:py-6 hover:scale-105 active:scale-95 transition-transform shadow-2xl shadow-primary/40 rounded-xl"
+              >
+                🚀 PARTICIPAR AGORA
+              </a>
             </div>
 
             <div className="relative">
