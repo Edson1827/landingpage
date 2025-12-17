@@ -71,8 +71,8 @@ export default function Home() {
           alt="Kit Mudança de Vida" 
           className="w-full h-auto object-cover"
         />
-        {/* Badge "Adquira Já" Flutuante */}
-        <div className="absolute bottom-4 left-4 bg-green-600 text-white px-4 py-1 rounded text-sm font-bold uppercase shadow-lg">
+        {/* Badge "Adquira Já" Flutuante (Piscando) */}
+        <div className="absolute bottom-4 left-4 animate-pulse-green text-white px-3 py-1 rounded text-xs font-bold uppercase shadow-lg">
           Adquira Já!
         </div>
       </div>
@@ -87,10 +87,10 @@ export default function Home() {
           LTP - PRC: 2025/01438
         </p>
 
-        {/* Barra "Meus bilhetes" */}
-        <div className="flex items-center justify-center gap-2 text-white mb-6 cursor-pointer">
+        {/* Barra "Meus bilhetes" (Estilo Sombra) */}
+        <div className="bg-[#1e293b] py-3 flex items-center justify-center gap-2 text-white mb-6 cursor-pointer shadow-lg">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          <span className="font-medium">Meus bilhetes</span>
+          <span className="font-medium uppercase tracking-wide">Meus bilhetes</span>
         </div>
 
         {/* Preço Unitário Destaque */}
@@ -202,8 +202,8 @@ export default function Home() {
           Quanto mais títulos, mais chances de ganhar!
         </div>
         
-        {/* Grid de Seleção Mobile */}
-        <div className="grid grid-cols-2 gap-2 px-2 mb-2">
+        {/* Grid de Seleção Mobile (3 Colunas conforme print) */}
+        <div className="grid grid-cols-3 gap-2 px-2 mb-2">
           {PACKS.slice(0, 3).map((pack) => (
             <div 
               key={pack.id}
@@ -230,8 +230,8 @@ export default function Home() {
           ))}
         </div>
         
-        {/* Segunda linha de opções (menores) */}
-        <div className="grid grid-cols-2 gap-2 px-2 mb-3">
+        {/* Segunda linha de opções (3 Colunas conforme print) */}
+        <div className="grid grid-cols-3 gap-2 px-2 mb-3">
           {PACKS.slice(3, 6).map((pack) => (
             <div 
               key={pack.id}
