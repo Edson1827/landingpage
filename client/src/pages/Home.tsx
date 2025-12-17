@@ -65,34 +65,35 @@ export default function Home() {
         </button>
       </header>
 
-      {/* Hero Image Full Width */}
+      {/* Hero Image Full Width com Overlay de Conteúdo */}
       <div className="w-full relative">
         <img 
           src="/hero-hilux-new.jpg" 
           alt="Kit Mudança de Vida" 
           className="w-full h-auto object-cover"
         />
-      </div>
-
-      <div className="container px-4 pt-4">
-        {/* Badge "Adquira Já" Verde (Estilo Hudema) */}
-        <div className="inline-block bg-[#22c55e] text-white px-3 py-1 rounded text-xs font-bold uppercase mb-2">
-          Adquira Já!
-        </div>
-
-        {/* Título Principal (Alinhado à Esquerda como no print) */}
-        <h1 className="text-xl md:text-2xl font-medium uppercase leading-tight mb-1 text-white text-left">
-          KIT MUDANÇA DE VIDA - HILUX SRV + APARTAMENTO
-        </h1>
         
-        {/* Licença (Cinza, logo abaixo do título) */}
-        <p className="text-gray-500 text-[10px] mb-4 text-left uppercase">
-          LTP - PRC: 2025/01438
-        </p>
+        {/* Overlay Gradiente para legibilidade */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end px-4 pb-4">
+          {/* Badge "Adquira Já" Verde (Estilo Hudema) */}
+          <div className="inline-block self-start bg-[#22c55e] text-white px-3 py-1 rounded text-[10px] font-bold uppercase mb-2 shadow-lg">
+            Adquira Já!
+          </div>
+
+          {/* Título Principal (Com Sombra Leve) */}
+          <h1 className="text-xl md:text-2xl font-medium uppercase leading-tight mb-1 text-white text-left drop-shadow-md">
+            KIT MUDANÇA DE VIDA - HILUX SRV + APARTAMENTO
+          </h1>
+          
+          {/* Licença (Cinza Claro, logo abaixo do título) */}
+          <p className="text-gray-400 text-[10px] text-left uppercase drop-shadow-sm">
+            LTP - PRC: 2025/01438
+          </p>
+        </div>
       </div>
 
-      {/* Barra "Meus bilhetes" (Full Width, Fundo Preto/Cinza Escuro) */}
-      <div className="w-full bg-[#0f172a] border-t border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-4 cursor-pointer">
+      {/* Barra "Meus bilhetes" (Full Width, Sombra Escura) */}
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-4 cursor-pointer shadow-2xl relative z-10">
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
         <span className="font-medium text-sm">Meus bilhetes</span>
       </div>
