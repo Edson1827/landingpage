@@ -49,7 +49,7 @@ export default function Home() {
   const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-32">
+    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-48">
       {/* Header Hudema Style */}
       <header className="bg-black py-4 px-4 flex justify-between items-center border-b border-white/10">
         <img 
@@ -203,7 +203,7 @@ export default function Home() {
         </div>
         
         {/* Grid de Seleção Mobile */}
-        <div className="grid grid-cols-3 gap-2 px-2 mb-2">
+        <div className="grid grid-cols-2 gap-2 px-2 mb-2">
           {PACKS.slice(0, 3).map((pack) => (
             <div 
               key={pack.id}
@@ -231,7 +231,7 @@ export default function Home() {
         </div>
         
         {/* Segunda linha de opções (menores) */}
-        <div className="grid grid-cols-3 gap-2 px-2 mb-3">
+        <div className="grid grid-cols-2 gap-2 px-2 mb-3">
           {PACKS.slice(3, 6).map((pack) => (
             <div 
               key={pack.id}
