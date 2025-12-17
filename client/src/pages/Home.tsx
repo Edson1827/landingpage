@@ -3,8 +3,8 @@ import { Trophy, ChevronDown, Minus, Plus, ShoppingCart, Menu, X } from "lucide-
 
 export default function Home() {
   const [isPrizesModalOpen, setIsPrizesModalOpen] = useState(false);
-  const [selectedPack, setSelectedPack] = useState<number | null>(null);// Default to popular pack
-  
+  const [selectedPack, setSelectedPack] = useState<number | null>(100); // Default to popular pack (100)
+
   // Pacotes de Bilhetes (Preços Hudema Style)
   const PACKS = [
     { id: 1, count: 23, price: 6.90, popular: false },
@@ -51,16 +51,16 @@ export default function Home() {
   const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-48">
+    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-[340px] md:pb-48">
       {/* Header Hudema Style */}
-      <header className="bg-black py-4 px-4 flex justify-between items-center border-b border-white/10">
+      <header className="bg-black py-3 px-4 flex justify-between items-center border-b border-white/10 sticky top-0 z-30">
         <img 
           src="/logo-92projects.webp" 
           alt="92 Projects" 
-          className="h-8 w-auto object-contain"
+          className="h-6 md:h-8 w-auto object-contain"
         />
-        <button className="text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button className="text-white p-1">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
@@ -71,18 +71,18 @@ export default function Home() {
         <img 
           src="/hero-hilux-new.jpg" 
           alt="Kit Mudança de Vida" 
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover min-h-[250px]"
         />
         
         {/* Overlay Gradiente para legibilidade */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end px-4 pb-4">
           {/* Badge "Adquira Já" Verde (Estilo Hudema) */}
-          <div className="inline-block self-start bg-[#22c55e] text-white px-3 py-1 rounded text-[10px] font-bold uppercase mb-2 shadow-lg">
+          <div className="inline-block self-start bg-[#22c55e] text-white px-3 py-1 rounded text-[10px] font-bold uppercase mb-2 shadow-lg animate-pulse">
             Adquira Já!
           </div>
 
           {/* Título Principal (Com Sombra Leve) */}
-          <h1 className="text-xl md:text-2xl font-medium uppercase leading-tight mb-1 text-white text-left drop-shadow-md">
+          <h1 className="text-lg md:text-2xl font-medium uppercase leading-tight mb-1 text-white text-left drop-shadow-md">
             Kit Dos Sonhos HILLUX SRV + APARTAMENTO 100% MOBILIADO OU R$ 400 MIL
           </h1>
           
@@ -94,15 +94,15 @@ export default function Home() {
       </div>
 
       {/* Barra "Meus bilhetes" (Full Width, Sombra Escura) */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-4 cursor-pointer shadow-2xl relative z-10">
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-4 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
         <span className="font-medium text-sm">Meus bilhetes</span>
       </div>
 
-      <div className="container px-2">
+      <div className="container px-3 md:px-4 max-w-md mx-auto">
 
         {/* Preço Unitário Centralizado (Pílula Preta) */}
-        <div className="flex justify-center mb-3">
+        <div className="flex justify-center mb-4">
           <div className="bg-black px-6 py-2 rounded-full border border-white/10 flex items-center gap-2 shadow-lg">
             <span className="text-gray-400 text-xs uppercase font-bold">Por apenas</span>
             <span className="text-white text-xl font-black">R$ 0,30</span>
@@ -112,26 +112,24 @@ export default function Home() {
         {/* Botão "Prêmios" Cinza Largo (Estilo Hudema) */}
         <button 
           onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-4"
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3.5 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-6 touch-manipulation"
         >
           <Trophy className="w-5 h-5" />
           Prêmios
         </button>
 
         {/* Frase Motivacional (Estilo Hudema) */}
-        <p className="text-center text-gray-400 text-sm mb-4">
+        <p className="text-center text-gray-400 text-sm mb-4 font-medium">
           Quanto mais títulos, mais chances de ganhar!
         </p>
 
         {/* Botões Flutuantes (Grupo e WhatsApp) - Lado Direito conforme print */}
-        <div className="fixed bottom-24 right-4 flex flex-col gap-2 z-40">
-          <a href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-4 py-2 rounded shadow-lg font-bold flex items-center gap-2 text-sm hover:bg-[#20bd5a] transition-colors">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            Grupo
+        <div className="fixed bottom-[280px] right-3 flex flex-col gap-3 z-40">
+          <a href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:bg-[#20bd5a] transition-transform active:scale-95">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           </a>
-          <a href="https://wa.me/5567998406793" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-4 py-2 rounded shadow-lg font-bold flex items-center gap-2 text-sm hover:bg-[#20bd5a] transition-colors">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            WhatsApp
+          <a href="https://wa.me/5567998406793" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:bg-[#20bd5a] transition-transform active:scale-95">
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           </a>
         </div>
 
@@ -142,7 +140,7 @@ export default function Home() {
               {/* Botão Fechar */}
               <button 
                 onClick={() => setIsPrizesModalOpen(false)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -166,7 +164,8 @@ export default function Home() {
                 <div className="border-t border-dashed border-gray-600 my-4"></div>
 
                 {/* Lista de Prêmios */}
-                <div className="space-y-4">                  <div className="flex items-start gap-3">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
                     <span className="text-[#25d366] font-bold text-4xl leading-none">1º</span>
                     <div>
                       <p className="text-[#25d366] font-medium text-lg leading-tight">
@@ -192,40 +191,20 @@ export default function Home() {
               </div>
             </div>
           </div>
-        )}        <div className="flex flex-col gap-3 mb-8">
-          <a 
-            href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-[#25d366] hover:bg-[#20bd5a] text-white font-bold text-lg py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg transition-colors uppercase"
-          >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            Grupo
-          </a>
-          
-          <a 
-            href="https://wa.me/5567998406793" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="bg-[#25d366] hover:bg-[#20bd5a] text-white font-bold text-lg py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg transition-colors uppercase"
-          >
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            WhatsApp
-          </a>
-        </div>
+        )}
 
         {/* Redes Sociais (Ícones Menores) */}
         <div className="flex justify-center gap-4 mb-8">
-          <a href="#" className="w-10 h-10 bg-[#3b5998] rounded-full flex items-center justify-center text-white">
+          <a href="#" className="w-10 h-10 bg-[#3b5998] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
-          <a href="#" className="w-10 h-10 bg-[#1da1f2] rounded-full flex items-center justify-center text-white">
+          <a href="#" className="w-10 h-10 bg-[#1da1f2] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
           </a>
-          <a href="#" className="w-10 h-10 bg-[#0088cc] rounded-full flex items-center justify-center text-white">
+          <a href="#" className="w-10 h-10 bg-[#0088cc] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
           </a>
-          <a href="#" className="w-10 h-10 bg-[#25d366] rounded-full flex items-center justify-center text-white">
+          <a href="#" className="w-10 h-10 bg-[#25d366] rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
           </a>
         </div>
@@ -243,22 +222,22 @@ export default function Home() {
       </div>
 
       {/* Sticky Footer - Seletor de Bilhetes e Compra */}
-      <div className="fixed bottom-0 left-0 right-0 bg-[#0f172a] border-t border-white/10 z-50">
-        <div className="p-2 text-center text-gray-400 text-xs">
+      <div className="fixed bottom-0 left-0 right-0 bg-[#0f172a] border-t border-white/10 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+        <div className="p-2 text-center text-gray-400 text-xs font-medium">
           Quanto mais títulos, mais chances de ganhar!
         </div>
         
         {/* Grid de Seleção Mobile (3 Colunas - Estilo Hudema) */}
-        <div className="grid grid-cols-3 gap-2 px-2 mb-3">
+        <div className="grid grid-cols-3 gap-2 px-3 mb-3 max-w-md mx-auto">
           {PACKS.map((pack) => (
             <div 
               key={pack.id}
               onClick={() => handlePackSelect(pack.count)}
               className={`
-                relative rounded-lg p-3 text-center cursor-pointer border transition-all h-20 flex flex-col justify-center items-center
+                relative rounded-lg p-2 text-center cursor-pointer border transition-all h-[72px] flex flex-col justify-center items-center touch-manipulation
                 ${selectedPack === pack.count 
                   ? 'bg-green-100 border-green-500' 
-                  : 'bg-black border-white/10'}
+                  : 'bg-black border-white/10 active:bg-white/5'}
               `}
             >
               {pack.popular && (
@@ -266,10 +245,10 @@ export default function Home() {
                   Mais popular
                 </div>
               )}
-              <div className={`text-2xl font-black leading-none mb-1 ${selectedPack === pack.count ? 'text-black' : 'text-white'}`}>
+              <div className={`text-xl font-black leading-none mb-0.5 ${selectedPack === pack.count ? 'text-black' : 'text-white'}`}>
                 +{pack.count}
               </div>
-              <div className={`text-[9px] font-bold uppercase tracking-wider ${selectedPack === pack.count ? 'text-green-700' : 'text-gray-400'}`}>
+              <div className={`text-[8px] font-bold uppercase tracking-wider ${selectedPack === pack.count ? 'text-green-700' : 'text-gray-400'}`}>
                 SELECIONAR
               </div>
             </div>
@@ -277,27 +256,27 @@ export default function Home() {
         </div>
 
         {/* Contador Manual */}
-        <div className="flex items-center justify-between px-4 mb-3">
+        <div className="flex items-center justify-between px-4 mb-3 max-w-md mx-auto">
           <button 
-            className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white"
+            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation"
             onClick={() => {
               const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
               if (currentIndex > 0) setSelectedPack(PACKS[currentIndex - 1].count);
             }}
           >
-            -
+            <Minus className="w-5 h-5" />
           </button>
-          <div className="bg-[#1e293b] border border-white/10 rounded px-12 py-2 text-white font-bold">
+          <div className="bg-[#1e293b] border border-white/10 rounded px-12 py-2.5 text-white font-bold min-w-[140px] text-center">
             {selectedPack}
           </div>
           <button 
-            className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white"
+            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation"
             onClick={() => {
               const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
               if (currentIndex < PACKS.length - 1) setSelectedPack(PACKS[currentIndex + 1].count);
             }}
           >
-            +
+            <Plus className="w-5 h-5" />
           </button>
         </div>
 
@@ -307,11 +286,11 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleParticipateClick}
-          className="block bg-green-600 text-white font-bold text-lg uppercase py-4 px-4 flex items-center justify-between hover:bg-green-500 transition-colors"
+          className="block bg-green-600 text-white font-bold text-lg uppercase py-4 px-4 flex items-center justify-between hover:bg-green-500 active:bg-green-700 transition-colors max-w-md mx-auto"
         >
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+          <div className="flex items-center gap-3">
+            <div className="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
             </div>
             <span>Quero participar</span>
           </div>
