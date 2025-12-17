@@ -13,13 +13,15 @@ export default function Home() {
     { id: 6, count: 500, price: 150.00, popular: false },
   ];
 
-  // Cotas Premiadas (Roletas Instantâneas)
+  // Cotas Premiadas (Dados Reais 92Projects)
   const INSTANT_PRIZES = [
-    { id: 1, name: "ROLETA INSTANTÂNEA", status: "Disponível" },
-    { id: 2, name: "ROLETA INSTANTÂNEA", status: "Disponível" },
-    { id: 3, name: "ROLETA INSTANTÂNEA", status: "Disponível" },
-    { id: 4, name: "ROLETA INSTANTÂNEA", status: "Disponível" },
-    { id: 5, name: "ROLETA INSTANTÂNEA", status: "Disponível" },
+    { id: 1, name: "IPHONE 17 PRO MAX", status: "Disponível", ticket: "1234567" },
+    { id: 2, name: "1 ANO DE SALÁRIO", status: "Disponível", ticket: "1827954" },
+    { id: 3, name: "50 MIL NO PIX", status: "Disponível", ticket: "Roleta" },
+    { id: 4, name: "JBL BOOMBOX 4", status: "Disponível", ticket: "Roleta" },
+    { id: 5, name: "R$ 1.000,00 NO PIX", status: "Disponível", ticket: "1234563" },
+    { id: 6, name: "R$ 1.000,00 NO PIX", status: "Disponível", ticket: "2207782" },
+    { id: 7, name: "R$ 1.000,00 NO PIX", status: "Disponível", ticket: "3214117" },
   ];
 
   const handlePackSelect = (count: number) => {
@@ -128,9 +130,12 @@ export default function Home() {
 
           <div className="space-y-2">
             {INSTANT_PRIZES.map((prize) => (
-              <div key={prize.id} className="bg-[#1e293b] p-3 rounded flex justify-between items-center border-l-4 border-gray-500">
-                <span className="font-bold text-sm md:text-base">{prize.name}</span>
-                <span className="text-gray-400 text-sm">{prize.status}</span>
+              <div key={prize.id} className="bg-[#1e293b] p-3 rounded flex justify-between items-center border-l-4 border-gray-500 hover:bg-[#2d3b4f] transition-colors cursor-default">
+                <div className="flex flex-col">
+                  <span className="font-black text-sm md:text-base text-white uppercase">{prize.name}</span>
+                  {prize.ticket !== "Roleta" && <span className="text-[10px] text-gray-500 font-mono">Bilhete: {prize.ticket}</span>}
+                </div>
+                <span className="text-green-500 text-xs font-bold uppercase bg-green-500/10 px-2 py-1 rounded">{prize.status}</span>
               </div>
             ))}
           </div>
