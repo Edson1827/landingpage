@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Trophy, ChevronDown, Minus, Plus, ShoppingCart, Menu, X } from "lucide-react";
 
 export default function Home() {
-  const [showPremiosModal, setShowPremiosModal] = useState(false);
+  const [isPrizesModalOpen, setIsPrizesModalOpen] = useState(false);
   const [selectedPack, setSelectedPack] = useState<number | null>(null);// Default to popular pack
   
   // Pacotes de Bilhetes (Preços Hudema Style)
@@ -109,12 +110,13 @@ export default function Home() {
         </div>
 
         {/* Botão "Prêmios" Cinza Largo (Estilo Hudema) */}
-        <div 
-          onClick={() => setShowPremiosModal(true)}
-          className="w-full bg-[#475569] text-white text-center py-3 rounded font-bold uppercase tracking-wide flex items-center justify-center gap-2 text-sm mb-4 cursor-pointer hover:bg-[#64748b] transition-colors shadow-lg border-b-4 border-[#334155]"
+        <button 
+          onClick={() => setIsPrizesModalOpen(true)}
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-6"
         >
-          <span className="text-lg">🏆</span> Prêmios
-        </div>
+          <Trophy className="w-5 h-5" />
+          Prêmios
+        </button>
 
         {/* Botões Flutuantes (Grupo e WhatsApp) */}
         <div className="fixed bottom-24 right-4 flex flex-col gap-2 z-40">
@@ -128,49 +130,45 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Modal de Prêmios */}
-        {showPremiosModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setShowPremiosModal(false)}>
-            <div className="bg-[#1e293b] w-full max-w-md rounded-xl overflow-hidden shadow-2xl border border-white/10" onClick={e => e.stopPropagation()}>
-              <div className="bg-[#0f172a] p-4 flex items-center justify-between border-b border-white/5">
-                <h3 className="text-white font-bold text-lg flex items-center gap-2">
-                  <span className="text-xl">🏆</span> Lista de Prêmios
-                </h3>
-                <button onClick={() => setShowPremiosModal(false)} className="text-gray-400 hover:text-white">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
-              </div>
-              
-              <div className="p-4 max-h-[60vh] overflow-y-auto space-y-3">
-                {/* Banner Promocional dentro do Modal */}
-                <div className="bg-gradient-to-r from-green-600 to-emerald-500 p-3 rounded-lg mb-4 text-center shadow-lg">
-                  <p className="text-white text-sm mb-1">A cada</p>
-                  <p className="text-white text-2xl font-black uppercase">100 Bilhetes</p>
-                  <p className="text-white text-sm mb-2">por R$ 30,00</p>
-                  <div className="bg-white/20 rounded px-3 py-1 inline-block">
-                    <p className="text-white font-bold uppercase text-sm">Recebe 2 Roletas 🎯</p>
+        {/* Modal de Prêmios (Estilo Hudema Limpo) */}
+        {isPrizesModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setIsPrizesModalOpen(false)}>
+            <div className="bg-[#1e293b] w-full max-w-md rounded-xl shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
+              {/* Botão Fechar */}
+              <button 
+                onClick={() => setIsPrizesModalOpen(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              <div className="p-6">
+                <div className="flex gap-4 mb-6">
+                  {/* Ícone Troféu Dourado */}
+                  <div className="shrink-0">
+                    <Trophy className="w-12 h-12 text-yellow-500 drop-shadow-lg" />
                   </div>
-                  <p className="text-white/80 text-[10px] mt-1">2 chance(s) de contemplação nas Roletas Instantâneas</p>
+                  
+                  <div>
+                    <h2 className="text-2xl font-bold text-white mb-2">Prêmios</h2>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Esses são os prêmios no sorteio <strong className="text-white">Kit Dos Sonhos HILLUX SRV + APARTAMENTO</strong>
+                    </p>
+                  </div>
                 </div>
 
-                <h4 className="text-gray-400 text-xs font-bold uppercase mb-2">Roletas Instantâneas</h4>
-                <div className="space-y-2">
-                  {INSTANT_PRIZES.map((prize) => (
-                    <div key={prize.id} className="bg-[#0f172a] p-3 rounded flex justify-between items-center border border-white/5">
-                      <div className="flex flex-col">
-                        <span className="font-black text-sm text-white uppercase">{prize.name}</span>
-                        {prize.ticket !== "Roleta" && <span className="text-[10px] text-gray-500 font-mono">Bilhete: {prize.ticket}</span>}
-                      </div>
-                      <span className="text-green-500 text-xs font-bold uppercase bg-green-500/10 px-2 py-1 rounded">{prize.status}</span>
-                    </div>
-                  ))}
+                {/* Linha Divisória Pontilhada */}
+                <div className="border-t border-dashed border-gray-600 my-4"></div>
+
+                {/* Lista de Prêmios */}
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-3xl font-black text-[#22c55e]">1º</span>
+                    <p className="text-[#22c55e] font-medium text-lg leading-tight pt-1">
+                      HILLUX SRV 4x4 TURBO DIESEL + APARTAMENTO 100% MOBILIADO OU R$ 400 MIL NO PIX
+                    </p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="p-4 bg-[#0f172a] border-t border-white/5">
-                <button onClick={() => setShowPremiosModal(false)} className="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-3 rounded-lg transition-colors">
-                  FECHAR
-                </button>
               </div>
             </div>
           </div>
