@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [selectedPack, setSelectedPack] = useState<number | null>(100); // Default to popular pack
+  const [showPremiosModal, setShowPremiosModal] = useState(false);
+  const [selectedPack, setSelectedPack] = useState<number | null>(null);// Default to popular pack
   
   // Pacotes de Bilhetes (Preços Hudema Style)
   const PACKS = [
@@ -77,73 +78,85 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container px-4 pt-6">
-        {/* Título Principal */}
-        <h1 className="text-2xl md:text-3xl font-black uppercase leading-tight mb-2">
+      <div className="container px-2 pt-2">
+        {/* Título Principal Compacto */}
+        <h1 className="text-lg md:text-2xl font-black uppercase leading-tight mb-1 text-center">
           KIT MUDANÇA DE VIDA - HILUX SRV + APARTAMENTO
         </h1>
         
-        <p className="text-gray-400 text-sm mb-6">
+        <p className="text-gray-400 text-[10px] mb-2 text-center">
           LTP - PRC: 2025/01438
         </p>
 
-        {/* Barra "Meus bilhetes" (Estilo Sombra) */}
-        <div className="bg-[#1e293b] py-3 flex items-center justify-center gap-2 text-white mb-6 cursor-pointer shadow-lg">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          <span className="font-medium uppercase tracking-wide">Meus bilhetes</span>
+        {/* Barra "Meus bilhetes" Compacta */}
+        <div className="bg-[#1e293b] py-2 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-lg rounded">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+          <span className="font-bold text-sm uppercase tracking-wide">Meus bilhetes</span>
         </div>
 
-        {/* Preço Unitário Destaque */}
-        <div className="bg-[#1e293b] rounded-lg p-3 text-center mb-6 border border-white/5">
-          <p className="text-gray-400 text-sm mb-1">Por apenas</p>
-          <div className="bg-black inline-block px-6 py-2 rounded text-2xl font-black text-white">
+        {/* Preço Unitário Super Compacto */}
+        <div className="flex items-center justify-center gap-2 mb-2 bg-[#1e293b] p-1 rounded border border-white/5">
+          <span className="text-gray-400 text-xs">Por apenas</span>
+          <div className="bg-black px-3 py-1 rounded text-lg font-black text-white">
             R$ 0,30
           </div>
         </div>
 
-        {/* Barra "Prêmios" */}
-        <div className="bg-[#334155] text-white text-center py-3 rounded-t-lg font-bold uppercase tracking-wide flex items-center justify-center gap-2">
-          <span className="text-xl">🏆</span> Prêmios
+        {/* Botão "Prêmios" (Abre Modal) */}
+        <div 
+          onClick={() => setShowPremiosModal(true)}
+          className="bg-[#334155] text-white text-center py-2 rounded-lg font-bold uppercase tracking-wide flex items-center justify-center gap-2 text-sm mb-4 cursor-pointer hover:bg-[#475569] transition-colors shadow-lg"
+        >
+          <span className="text-base">🏆</span> Prêmios
         </div>
 
-        {/* Banner Promocional Verde */}
-        <div className="bg-gradient-to-r from-green-600 to-emerald-500 p-4 rounded-b-lg mb-8 text-center">
-          <p className="text-white text-sm mb-1">A cada</p>
-          <p className="text-white text-2xl font-black uppercase">100 Bilhetes</p>
-          <p className="text-white text-sm mb-2">por R$ 30,00</p>
-          <div className="bg-white/20 rounded px-3 py-1 inline-block">
-            <p className="text-white font-bold uppercase text-sm">Recebe 2 Roletas 🎯</p>
-          </div>
-          <p className="text-white/80 text-[10px] mt-1">2 chance(s) de contemplação nas Roletas Instantâneas</p>
-        </div>
-
-        {/* Seção Roletas Instantâneas (Lista) */}
-        <div className="mb-8">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-bold flex items-center gap-2">
-              <span className="text-red-500 text-2xl">🎯</span> Roletas Instantâneas
-            </h3>
-            <span className="bg-[#1e293b] text-green-500 px-3 py-1 rounded border border-green-500/30 text-sm font-bold">
-              0 / 5
-            </span>
-          </div>
-
-          <div className="space-y-2">
-            {INSTANT_PRIZES.map((prize) => (
-              <div key={prize.id} className="bg-[#1e293b] p-3 rounded flex justify-between items-center border-l-4 border-gray-500 hover:bg-[#2d3b4f] transition-colors cursor-default">
-                <div className="flex flex-col">
-                  <span className="font-black text-sm md:text-base text-white uppercase">{prize.name}</span>
-                  {prize.ticket !== "Roleta" && <span className="text-[10px] text-gray-500 font-mono">Bilhete: {prize.ticket}</span>}
-                </div>
-                <span className="text-green-500 text-xs font-bold uppercase bg-green-500/10 px-2 py-1 rounded">{prize.status}</span>
+        {/* Modal de Prêmios */}
+        {showPremiosModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setShowPremiosModal(false)}>
+            <div className="bg-[#1e293b] w-full max-w-md rounded-xl overflow-hidden shadow-2xl border border-white/10" onClick={e => e.stopPropagation()}>
+              <div className="bg-[#0f172a] p-4 flex items-center justify-between border-b border-white/5">
+                <h3 className="text-white font-bold text-lg flex items-center gap-2">
+                  <span className="text-xl">🏆</span> Lista de Prêmios
+                </h3>
+                <button onClick={() => setShowPremiosModal(false)} className="text-gray-400 hover:text-white">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
               </div>
-            ))}
+              
+              <div className="p-4 max-h-[60vh] overflow-y-auto space-y-3">
+                {/* Banner Promocional dentro do Modal */}
+                <div className="bg-gradient-to-r from-green-600 to-emerald-500 p-3 rounded-lg mb-4 text-center shadow-lg">
+                  <p className="text-white text-sm mb-1">A cada</p>
+                  <p className="text-white text-2xl font-black uppercase">100 Bilhetes</p>
+                  <p className="text-white text-sm mb-2">por R$ 30,00</p>
+                  <div className="bg-white/20 rounded px-3 py-1 inline-block">
+                    <p className="text-white font-bold uppercase text-sm">Recebe 2 Roletas 🎯</p>
+                  </div>
+                  <p className="text-white/80 text-[10px] mt-1">2 chance(s) de contemplação nas Roletas Instantâneas</p>
+                </div>
+
+                <h4 className="text-gray-400 text-xs font-bold uppercase mb-2">Roletas Instantâneas</h4>
+                <div className="space-y-2">
+                  {INSTANT_PRIZES.map((prize) => (
+                    <div key={prize.id} className="bg-[#0f172a] p-3 rounded flex justify-between items-center border border-white/5">
+                      <div className="flex flex-col">
+                        <span className="font-black text-sm text-white uppercase">{prize.name}</span>
+                        {prize.ticket !== "Roleta" && <span className="text-[10px] text-gray-500 font-mono">Bilhete: {prize.ticket}</span>}
+                      </div>
+                      <span className="text-green-500 text-xs font-bold uppercase bg-green-500/10 px-2 py-1 rounded">{prize.status}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="p-4 bg-[#0f172a] border-t border-white/5">
+                <button onClick={() => setShowPremiosModal(false)} className="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-3 rounded-lg transition-colors">
+                  FECHAR
+                </button>
+              </div>
+            </div>
           </div>
-          
-          <button className="w-full text-center text-green-500 font-bold mt-4 text-sm flex items-center justify-center gap-1">
-            Mostrar Mais <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-          </button>
-        </div>
+        )}
 
         {/* Botões de Comunidade e Suporte (Estilo Hudema) */}
         <div className="flex flex-col gap-3 mb-8">
