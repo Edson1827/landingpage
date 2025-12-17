@@ -112,11 +112,16 @@ export default function Home() {
         {/* Botão "Prêmios" Cinza Largo (Estilo Hudema) */}
         <button 
           onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-6"
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-4"
         >
           <Trophy className="w-5 h-5" />
           Prêmios
         </button>
+
+        {/* Frase Motivacional (Estilo Hudema) */}
+        <p className="text-center text-gray-400 text-sm mb-4">
+          Quanto mais títulos, mais chances de ganhar!
+        </p>
 
         {/* Botões Flutuantes (Grupo e WhatsApp) */}
         <div className="fixed bottom-24 right-4 flex flex-col gap-2 z-40">
