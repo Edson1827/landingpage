@@ -202,8 +202,8 @@ export default function Home() {
           Quanto mais títulos, mais chances de ganhar!
         </div>
         
-        {/* Grid de Seleção Mobile (3 Colunas conforme print) */}
-        <div className="grid grid-cols-3 gap-2 px-2 mb-2">
+        {/* Grid de Seleção Mobile (2 Colunas - Padrão Original) */}
+        <div className="grid grid-cols-2 gap-2 px-2 mb-2">
           {PACKS.slice(0, 3).map((pack) => (
             <div 
               key={pack.id}
@@ -230,8 +230,8 @@ export default function Home() {
           ))}
         </div>
         
-        {/* Segunda linha de opções (3 Colunas conforme print) */}
-        <div className="grid grid-cols-3 gap-2 px-2 mb-3">
+        {/* Segunda linha de opções (2 Colunas - Padrão Original) */}
+        <div className="grid grid-cols-2 gap-2 px-2 mb-3">
           {PACKS.slice(3, 6).map((pack) => (
             <div 
               key={pack.id}
