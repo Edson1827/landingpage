@@ -72,33 +72,38 @@ export default function Home() {
           alt="Kit Mudança de Vida" 
           className="w-full h-auto object-cover"
         />
-        {/* Badge "Adquira Já" Flutuante (Piscando) */}
-        <div className="absolute bottom-4 left-4 animate-pulse-green text-white px-3 py-1 rounded text-xs font-bold uppercase shadow-lg">
-          Adquira Já!
-        </div>
       </div>
 
-      <div className="container px-2 pt-2">
-        {/* Título Principal Compacto */}
-        <h1 className="text-lg md:text-2xl font-black uppercase leading-tight mb-1 text-center">
+      <div className="container px-4 pt-4">
+        {/* Badge "Adquira Já" Verde (Estilo Hudema) */}
+        <div className="inline-block bg-[#22c55e] text-white px-3 py-1 rounded text-xs font-bold uppercase mb-2">
+          Adquira Já!
+        </div>
+
+        {/* Título Principal (Alinhado à Esquerda como no print) */}
+        <h1 className="text-xl md:text-2xl font-medium uppercase leading-tight mb-1 text-white text-left">
           KIT MUDANÇA DE VIDA - HILUX SRV + APARTAMENTO
         </h1>
         
-        <p className="text-gray-400 text-[10px] mb-2 text-center">
+        {/* Licença (Cinza, logo abaixo do título) */}
+        <p className="text-gray-500 text-[10px] mb-4 text-left uppercase">
           LTP - PRC: 2025/01438
         </p>
+      </div>
 
-        {/* Barra "Meus bilhetes" Compacta */}
-        <div className="bg-[#1e293b] py-2 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-lg rounded">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-          <span className="font-bold text-sm uppercase tracking-wide">Meus bilhetes</span>
-        </div>
+      {/* Barra "Meus bilhetes" (Full Width, Fundo Preto/Cinza Escuro) */}
+      <div className="w-full bg-[#0f172a] border-t border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-4 cursor-pointer">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+        <span className="font-medium text-sm">Meus bilhetes</span>
+      </div>
+
+      <div className="container px-2">
 
         {/* Preço Unitário Centralizado (Pílula Preta) */}
         <div className="flex justify-center mb-3">
           <div className="bg-black px-6 py-2 rounded-full border border-white/10 flex items-center gap-2 shadow-lg">
             <span className="text-gray-400 text-xs uppercase font-bold">Por apenas</span>
-            <span className="text-white text-xl font-black">R$ 0,99</span>
+            <span className="text-white text-xl font-black">R$ 0,30</span>
           </div>
         </div>
 
