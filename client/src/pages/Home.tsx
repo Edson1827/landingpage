@@ -82,7 +82,7 @@ export default function Home() {
 
           {/* Título Principal (Com Sombra Leve) */}
           <h1 className="text-xl md:text-2xl font-medium uppercase leading-tight mb-1 text-white text-left drop-shadow-md">
-            KIT MUDANÇA DE VIDA - HILUX SRV + APARTAMENTO
+            Kit Dos Sonhos HILLUX SRV + APARTAMENTO 100% MOBILIADO OU R$ 400 MIL
           </h1>
           
           {/* Licença (Cinza Claro, logo abaixo do título) */}
