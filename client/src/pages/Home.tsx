@@ -93,7 +93,7 @@ export default function Home() {
       </div>
 
       {/* Barra "Meus bilhetes" */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-4 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
         <ShoppingCart className="w-4 h-4" />
         <span className="font-medium text-sm uppercase tracking-wide">Meus bilhetes</span>
       </div>
@@ -101,7 +101,7 @@ export default function Home() {
       <div className="container px-2 max-w-md mx-auto">
 
         {/* Preço Unitário Centralizado */}
-        <div className="flex justify-center items-center gap-3 mb-4">
+        <div className="flex justify-center items-center gap-3 mb-2">
           <span className="text-gray-300 text-sm font-medium">Por apenas</span>
           <div className="bg-black px-4 py-1.5 rounded-lg border border-white/10 shadow-lg">
             <span className="text-white text-lg font-black">R$ 0,30</span>
@@ -183,9 +183,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleParticipateClick}
-          className="w-full bg-[#10b981] text-white font-bold text-lg uppercase h-14 px-6 flex items-center justify-between hover:bg-[#059669] active:bg-[#047857] transition-colors rounded-lg mb-6 shadow-lg border-b-4 border-[#047857] active:border-b-0 active:translate-y-1"
+          className="w-full bg-[#10b981] text-white font-bold text-base sm:text-lg uppercase h-14 px-4 flex items-center justify-between hover:bg-[#059669] active:bg-[#047857] transition-colors rounded-lg mb-6 shadow-lg border-b-4 border-[#047857] active:border-b-0 active:translate-y-1 whitespace-nowrap"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
             </div>
