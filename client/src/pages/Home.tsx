@@ -286,7 +286,10 @@ export default function Home() {
               <div className="p-6">
                 <div className="flex gap-4 mb-6">
                   <div className="shrink-0">
-                    <Ticket className="w-12 h-12 text-green-500 drop-shadow-lg" />
+                    <div className="relative">
+                      <Ticket className="w-12 h-12 text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]" />
+                      <div className="absolute inset-0 bg-yellow-200 blur-xl opacity-20 animate-pulse"></div>
+                    </div>
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-white mb-2">Cotas Premiadas</h2>
