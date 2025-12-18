@@ -123,7 +123,7 @@ export default function Home() {
         </p>
 
         {/* Grid de Seleção Mobile (3 Colunas) */}
-        <div className="grid grid-cols-3 gap-3 mb-4">
+        <div className="grid grid-cols-3 gap-2 mb-4">
           {PACKS.map((pack) => (
             <div 
               key={pack.id}
@@ -140,7 +140,7 @@ export default function Home() {
                   Mais popular
                 </div>
               )}
-              <div className={`text-3xl font-black leading-none mb-1 ${selectedPack === pack.count ? 'text-black' : 'text-white'}`}>
+              <div className={`text-3xl font-extrabold leading-none mb-1 ${selectedPack === pack.count ? 'text-black' : 'text-white'}`}>
                 +{pack.count}
               </div>
               <div className={`text-[9px] font-bold uppercase tracking-wider ${selectedPack === pack.count ? 'text-green-800' : 'text-gray-400'}`}>
