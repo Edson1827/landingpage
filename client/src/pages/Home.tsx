@@ -5,6 +5,7 @@ export default function Home() {
   const [isPrizesModalOpen, setIsPrizesModalOpen] = useState(false);
   const [isCotasModalOpen, setIsCotasModalOpen] = useState(false);
   const [isGiroModalOpen, setIsGiroModalOpen] = useState(false); // Used for Cotas Premiadas details if needed
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false); // Accordion state
   const [selectedPack, setSelectedPack] = useState<number | null>(23); // Default to 23 tickets
 
   // Pacotes de Bilhetes (Preços Hudema Style)
@@ -200,7 +201,104 @@ export default function Home() {
           <span>R$ {getSelectedPrice()}</span>
         </a>
 
-        
+        {/* Descrição/Regulamento Accordion */}
+        <div className="mb-6">
+          <button 
+            onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
+            className="w-full bg-[#1e293b] hover:bg-[#334155] text-[#10b981] font-bold py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-all border border-white/5 shadow-lg"
+          >
+            <div className={`bg-[#10b981] p-1 rounded transition-transform duration-300 ${isDescriptionOpen ? 'rotate-180' : ''}`}>
+              <ChevronDown className="w-4 h-4 text-black" />
+            </div>
+            <span className="text-lg">Descrição/Regulamento</span>
+          </button>
+
+          <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isDescriptionOpen ? 'max-h-[2000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+            <div className="bg-[#1e293b] rounded-lg p-5 border border-white/5 text-left shadow-xl">
+              
+              {/* Hilux Section */}
+              <div className="mb-6">
+                <h3 className="text-[#10b981] font-bold text-lg mb-3 uppercase border-b border-white/10 pb-2">HILLUX SRV TOP</h3>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#10b981] rounded-full"></span>Pneus Yokohama 285/75//17</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#10b981] rounded-full"></span>Lifit de Suspenção</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#10b981] rounded-full"></span>Difusor de escape gringo</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#10b981] rounded-full"></span>Ponteira 5"</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#10b981] rounded-full"></span>Stage 2</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#10b981] rounded-full"></span>ShiftPower</li>
+                  <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#10b981] rounded-full"></span>Espaçadores AVM 32mm</li>
+                </ul>
+              </div>
+
+              {/* Apartamento Section */}
+              <div className="mb-6">
+                <h3 className="text-[#10b981] font-bold text-lg mb-3 uppercase border-b border-white/10 pb-2">Apartamento 40mts com 1 quarto</h3>
+                <p className="text-gray-300 text-sm mb-3 italic">
+                  Apê com mobília planejada há poucos metros da avenida Afonso Pena - Campo Grande - Ms. Móveis 100% planejados.
+                </p>
+                
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <span className="text-white font-bold block mb-1">Sala de Estar:</span>
+                    <p className="text-gray-400 pl-2 border-l-2 border-[#10b981]/30">Sofá 3 lugares, TV 60", Ar condicionado 18.000 BTUs, Wi-fi, Iluminação LED.</p>
+                  </div>
+                  <div>
+                    <span className="text-white font-bold block mb-1">Cozinha:</span>
+                    <p className="text-gray-400 pl-2 border-l-2 border-[#10b981]/30">Mesa 4 cadeiras, Forno grill elétrico, Bancada com pia em mármore, Micro-ondas, Frigobar, Adega resfriada, geladeira duplex, Iluminação LED.</p>
+                  </div>
+                  <div>
+                    <span className="text-white font-bold block mb-1">Varanda:</span>
+                    <p className="text-gray-400 pl-2 border-l-2 border-[#10b981]/30">Com vista dos principais pontos da capital, duas cadeiras, Iluminação LED.</p>
+                  </div>
+                  <div>
+                    <span className="text-white font-bold block mb-1">Quarto:</span>
+                    <p className="text-gray-400 pl-2 border-l-2 border-[#10b981]/30">Cama King Size, Ar condicionado 12.000 BTUs, TV 48", Iluminação LED.</p>
+                  </div>
+                  <div>
+                    <span className="text-white font-bold block mb-1">Closet:</span>
+                    <p className="text-gray-400 pl-2 border-l-2 border-[#10b981]/30">Portas de vidro, Gavetas anti-impacto, Iluminação LED.</p>
+                  </div>
+                  <div>
+                    <span className="text-white font-bold block mb-1">Lavabo personalizado.</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Top Compradores Section */}
+              <div className="mb-6">
+                <h3 className="text-[#10b981] font-bold text-lg mb-3 uppercase border-b border-white/10 pb-2">Top Compradores</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex justify-between items-center bg-black/20 p-2 rounded">
+                    <span className="text-gray-300">1º Lugar</span>
+                    <span className="text-[#fbbf24] font-bold">CRF 230cc</span>
+                  </li>
+                  <li className="flex justify-between items-center bg-black/20 p-2 rounded">
+                    <span className="text-gray-300">2º Lugar</span>
+                    <span className="text-[#fbbf24] font-bold">Iphone 17 Pro Max</span>
+                  </li>
+                  <li className="flex justify-between items-center bg-black/20 p-2 rounded">
+                    <span className="text-gray-300">3º Lugar</span>
+                    <span className="text-[#fbbf24] font-bold">5 MIL no PIX</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Regulamento Link */}
+              <div className="pt-4 border-t border-white/10 text-center">
+                <a 
+                  href="/RegulamentoGeralLS.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-bold text-sm uppercase transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                  Ver Regulamento Completo
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
 
         {/* Botões Flutuantes (Grupo e WhatsApp) */}
         <div className="fixed bottom-[100px] right-0 flex flex-col gap-2 z-40 items-end">
@@ -371,7 +469,6 @@ export default function Home() {
             Este título de loteria está autorizado com base no processo LTP-PRC-2025/01438, registrado pela empresa 92 Projects. Consulte o regulamento completo do produto disponível no site. A comercialização é proibida para menores de 18 anos, em conformidade com a legislação vigente. Sorteios e Entrega dos Prêmios: Todos os sorteios e a entrega dos prêmios serão realizados conforme os critérios estabelecidos no regulamento. Participação em Múltiplos Sorteios: O adquirente do bilhete digital participará de todos os sorteios previstos, mesmo que já tenha sido contemplado anteriormente. Autorização de Uso de Imagem: Ao adquirir o bilhete, o titular autoriza, sem custo adicional, o uso de seu nome, voz e imagem para a divulgação da campanha social associada à promoção.
           </p>
           
-          <a href="#" className="text-blue-600 font-bold text-sm uppercase">REGULAMENTO</a>
         </div>
       </div>
     </div>
