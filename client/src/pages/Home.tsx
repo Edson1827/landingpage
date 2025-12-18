@@ -5,7 +5,7 @@ export default function Home() {
   const [isPrizesModalOpen, setIsPrizesModalOpen] = useState(false);
   const [isCotasModalOpen, setIsCotasModalOpen] = useState(false);
   const [isGiroModalOpen, setIsGiroModalOpen] = useState(false); // Used for Cotas Premiadas details if needed
-  const [selectedPack, setSelectedPack] = useState<number | null>(100); // Default to popular pack (100)
+  const [selectedPack, setSelectedPack] = useState<number | null>(23); // Default to 23 tickets
 
   // Pacotes de Bilhetes (Preços Hudema Style)
   const PACKS = [
@@ -54,8 +54,8 @@ export default function Home() {
     }
   };
 
-  // Placeholder para links de checkout
-  const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
+  // Dynamic Checkout Link based on selected quantity
+  const PURCHASE_LINK = `https://92projects.com/kitmudancadevida/checkout?numbers_quantity=${selectedPack}`;
 
   return (
     <div className="min-h-screen bg-[#0f172a] font-['Montserrat',sans-serif] pb-24">
