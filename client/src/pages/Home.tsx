@@ -52,7 +52,7 @@ export default function Home() {
   const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-24">
+    <div className="min-h-screen bg-[#0f172a] font-['Montserrat',sans-serif] pb-24">
       {/* Header Hudema Style */}
       <header className="bg-black py-3 px-4 flex justify-between items-center border-b border-white/10 sticky top-0 z-30 h-14">
         <img 
@@ -111,7 +111,7 @@ export default function Home() {
         {/* Botão "Prêmios" Cinza Largo */}
         <button 
           onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-bold py-2.5 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-3 touch-manipulation"
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-bold py-2.5 rounded flex items-center justify-center gap-2 shadow-lg border-b-[4px] border-[#1f2937] active:border-b-0 active:translate-y-1 transition-all mb-3 touch-manipulation"
         >
           <Trophy className="w-5 h-5" />
           <span className="text-base uppercase">Prêmios</span>
@@ -183,7 +183,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleParticipateClick}
-          className="w-full bg-[#10b981] text-white font-bold text-base sm:text-lg uppercase h-14 px-4 flex items-center justify-between hover:bg-[#059669] active:bg-[#047857] transition-colors rounded-lg mb-6 shadow-lg border-b-4 border-[#047857] active:border-b-0 active:translate-y-1 whitespace-nowrap"
+          className="w-full bg-[#10b981] text-white font-bold text-base sm:text-lg uppercase h-14 px-4 flex items-center justify-between hover:bg-[#059669] active:bg-[#047857] transition-colors rounded-lg mb-6 shadow-xl border-b-[4px] border-[#065f46] active:border-b-0 active:translate-y-1 whitespace-nowrap"
         >
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
