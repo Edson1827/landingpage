@@ -95,9 +95,9 @@ export default function Home() {
         />
         
         {/* Overlay Gradiente */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent flex flex-col justify-end px-4 pb-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent flex flex-col justify-end px-4 pb-2">
           {/* Badge "Adquira Já" Verde */}
-          <div className="inline-block self-start bg-[#22c55e] text-white px-3 py-1 rounded text-[10px] font-bold uppercase mb-2 shadow-lg animate-pulse">
+          <div className="inline-block self-start bg-[#22c55e] text-white px-2 py-0.5 rounded text-[10px] font-bold uppercase mb-1 shadow-lg animate-pulse">
             Adquira Já!
           </div>
 
@@ -114,7 +114,7 @@ export default function Home() {
       </div>
 
       {/* Barra "Meus bilhetes" */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2.5 flex items-center justify-center gap-2 text-white mb-0 cursor-pointer shadow-[0_4px_10px_rgba(0,0,0,0.8)] relative z-10 active:bg-[#1e293b] transition-colors">
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-1.5 flex items-center justify-center gap-2 text-white mb-0 cursor-pointer shadow-[0_4px_10px_rgba(0,0,0,0.8)] relative z-10 active:bg-[#1e293b] transition-colors">
         <ShoppingCart className="w-4 h-4" />
         <span className="font-medium text-sm uppercase tracking-wide">Meus bilhetes</span>
       </div>
@@ -122,7 +122,7 @@ export default function Home() {
       <div className="container px-2 max-w-md mx-auto">
 
         {/* Preço Unitário Centralizado */}
-        <div className="flex justify-center items-center gap-2 pt-3 pb-2">
+        <div className="flex justify-center items-center gap-2 pt-1 pb-2">
           <span className="text-gray-300 text-xs font-medium">Por apenas</span>
           <div className="bg-black px-3 py-1 rounded-lg border border-white/10 shadow-sm">
             <span className="text-white text-base font-black">R$ 0,30</span>
