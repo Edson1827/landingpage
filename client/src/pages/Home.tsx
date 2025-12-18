@@ -112,7 +112,7 @@ export default function Home() {
       </div>
 
       {/* Barra "Meus bilhetes" */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2.5 flex items-center justify-center gap-2 text-white mb-0 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2.5 flex items-center justify-center gap-2 text-white mb-0 cursor-pointer shadow-[0_10px_40px_-5px_rgba(0,0,0,0.9)] relative z-10 active:bg-[#1e293b] transition-colors">
         <ShoppingCart className="w-4 h-4" />
         <span className="font-medium text-sm uppercase tracking-wide">Meus bilhetes</span>
       </div>
