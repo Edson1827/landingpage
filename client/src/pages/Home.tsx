@@ -6,16 +6,16 @@ export default function Home() {
   const [isCotasModalOpen, setIsCotasModalOpen] = useState(false);
   const [isGiroModalOpen, setIsGiroModalOpen] = useState(false); // Used for Cotas Premiadas details if needed
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false); // Accordion state
-  const [selectedPack, setSelectedPack] = useState<number | null>(23); // Default to 23 tickets
+  const [ticketQuantity, setTicketQuantity] = useState<number>(23); // Default to 23 tickets
 
-  // Pacotes de Bilhetes (Preços Hudema Style)
+  // Pacotes de Bilhetes (Agora funcionam como botões de adicionar)
   const PACKS = [
-    { id: 1, count: 23, price: 6.90, popular: false },
-    { id: 2, count: 50, price: 15.00, popular: false },
-    { id: 3, count: 100, price: 30.00, popular: true }, // Mais Popular
-    { id: 4, count: 150, price: 45.00, popular: false },
-    { id: 5, count: 200, price: 60.00, popular: false },
-    { id: 6, count: 500, price: 150.00, popular: false },
+    { id: 1, count: 23, popular: false },
+    { id: 2, count: 50, popular: false },
+    { id: 3, count: 100, popular: true }, // Mais Popular
+    { id: 4, count: 150, popular: false },
+    { id: 5, count: 200, popular: false },
+    { id: 6, count: 500, popular: false },
   ];
 
   // Dados Reais para Cotas Premiadas (Bilhetes Premiados)
@@ -35,12 +35,17 @@ export default function Home() {
   ];
 
   const handlePackSelect = (count: number) => {
-    setSelectedPack(count);
+    // Lógica de ADICIONAR quantidade (Build Your Own Package)
+    // Se o usuário clicar, adiciona ao total atual, respeitando o limite de 5000
+    setTicketQuantity(prev => {
+      const newQuantity = prev + count;
+      return newQuantity > 5000 ? 5000 : newQuantity;
+    });
   };
 
   const getSelectedPrice = () => {
-    const pack = PACKS.find(p => p.count === selectedPack);
-    return pack ? pack.price.toFixed(2).replace('.', ',') : '0,00';
+    // Preço universal: R$ 0,30 por bilhete
+    return (ticketQuantity * 0.30).toFixed(2).replace('.', ',');
   };
 
   // Facebook Pixel - InitiateCheckout Event
@@ -49,14 +54,14 @@ export default function Home() {
       (window as any).fbq('track', 'InitiateCheckout', {
         content_name: 'Kit Mudança de Vida',
         content_category: 'Rifa',
-        value: PACKS.find(p => p.count === selectedPack)?.price || 0,
+        value: ticketQuantity * 0.30,
         currency: 'BRL'
       });
     }
   };
 
   // Dynamic Checkout Link based on selected quantity
-  const PURCHASE_LINK = `https://92projects.com/kitmudancadevida/checkout?numbers_quantity=${selectedPack}`;
+  const PURCHASE_LINK = `https://92projects.com/kitmudancadevida/checkout?numbers_quantity=${ticketQuantity}`;
 
   return (
     <div className="min-h-screen bg-[#0f172a] font-['Montserrat',sans-serif] pb-24">
@@ -129,55 +134,50 @@ export default function Home() {
           Quanto mais títulos, mais chances de ganhar!
         </p>
 
-        {/* Grid de Seleção Mobile (3 Colunas) */}
+        {/* Grid de Seleção Mobile (3 Colunas) - Agora ADICIONA quantidade */}
         <div className="grid grid-cols-3 gap-2 mb-4">
           {PACKS.map((pack) => (
             <div 
               key={pack.id}
               onClick={() => handlePackSelect(pack.count)}
-              className={`
-                relative rounded-xl p-2 text-center cursor-pointer border transition-all h-24 flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden
-                ${selectedPack === pack.count 
-                  ? 'bg-[#d1fae5] border-green-500' // Verde claro vibrante (Menta) quando selecionado
-                  : 'bg-black border-white/10 active:bg-white/5'} // Preto profundo quando não
-              `}
+              className="relative rounded-xl p-2 text-center cursor-pointer border transition-all h-24 flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden bg-black border-white/10 active:bg-white/5 active:scale-95"
             >
               {pack.popular && (
                 <div className="absolute top-0 inset-x-0 bg-[#10b981] text-white text-[8px] font-bold py-0.5 uppercase tracking-wide">
                   Mais popular
                 </div>
               )}
-              <div className={`text-3xl font-extrabold leading-none mb-1 ${selectedPack === pack.count ? 'text-black' : 'text-white'}`}>
+              <div className="text-3xl font-extrabold leading-none mb-1 text-white">
                 +{pack.count}
               </div>
-              <div className={`text-[9px] font-bold uppercase tracking-wider ${selectedPack === pack.count ? 'text-green-800' : 'text-gray-400'}`}>
-                SELECIONAR
+              <div className="text-[9px] font-bold uppercase tracking-wider text-gray-400">
+                ADICIONAR
               </div>
             </div>
           ))}
         </div>
 
-        {/* Contador Manual - Linha Separada */}
+        {/* Contador Manual - Linha Separada (Ajuste Fino de 1 em 1) */}
         <div className="flex items-center justify-between gap-4 mb-4">
           <button 
             className="w-12 h-12 rounded-full border-2 border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation bg-[#1e293b]"
             onClick={() => {
-              const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
-              if (currentIndex > 0) setSelectedPack(PACKS[currentIndex - 1].count);
+              // Diminui de 1 em 1, respeitando o mínimo de 23
+              setTicketQuantity(prev => prev > 23 ? prev - 1 : 23);
             }}
           >
             <Minus className="w-6 h-6" />
           </button>
           
           <div className="flex-1 bg-[#1e293b] border border-white/10 rounded-lg h-12 flex items-center justify-center text-white font-bold text-xl shadow-inner">
-            {selectedPack}
+            {ticketQuantity}
           </div>
           
           <button 
             className="w-12 h-12 rounded-full border-2 border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation bg-[#1e293b]"
             onClick={() => {
-              const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
-              if (currentIndex < PACKS.length - 1) setSelectedPack(PACKS[currentIndex + 1].count);
+              // Aumenta de 1 em 1, respeitando o máximo de 5000
+              setTicketQuantity(prev => prev < 5000 ? prev + 1 : 5000);
             }}
           >
             <Plus className="w-6 h-6" />
