@@ -102,7 +102,7 @@ export default function Home() {
           </div>
 
           {/* Título Principal */}
-          <h1 className="text-sm md:text-xl font-bold uppercase leading-tight mb-1 text-white text-left drop-shadow-[0_4px_4px_rgba(0,0,0,1)]">
+          <h1 className="text-[12px] md:text-xl font-bold uppercase leading-tight mb-1 text-white text-left drop-shadow-[0_4px_4px_rgba(0,0,0,1)]">
             KIT DOS SONHOS HILUX SRV + APARTAMENTO 100% MOBILIADO OU 400 MIL NO PIX
           </h1>
           
