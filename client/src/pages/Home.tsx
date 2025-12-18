@@ -55,80 +55,80 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-[380px] md:pb-48">
       {/* Header Hudema Style */}
-      <header className="bg-black py-3 px-4 flex justify-between items-center border-b border-white/10 sticky top-0 z-30">
+      <header className="bg-black py-2 px-4 flex justify-between items-center border-b border-white/10 sticky top-0 z-30 h-12">
         <img 
           src="/logo-92projects.webp" 
           alt="92 Projects" 
-          className="h-6 md:h-8 w-auto object-contain"
+          className="h-5 md:h-7 w-auto object-contain"
         />
         <button className="text-white p-1">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
       </header>
 
-      {/* Hero Image Full Width com Overlay de Conteúdo */}
+      {/* Hero Image Full Width com Overlay de Conteúdo - Altura Reduzida para Mobile */}
       <div className="w-full relative">
         <img 
           src="/hero-hilux-new.jpg" 
           alt="Kit Mudança de Vida" 
-          className="w-full h-auto object-cover min-h-[250px]"
+          className="w-full h-auto object-cover max-h-[45vh] md:max-h-[60vh]"
         />
         
         {/* Overlay Gradiente para legibilidade */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end px-4 pb-4">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end px-4 pb-3">
           {/* Badge "Adquira Já" Verde (Estilo Hudema) */}
-          <div className="inline-block self-start bg-[#22c55e] text-white px-3 py-1 rounded text-[10px] font-bold uppercase mb-2 shadow-lg animate-pulse">
+          <div className="inline-block self-start bg-[#22c55e] text-white px-2.5 py-0.5 rounded text-[9px] font-bold uppercase mb-1.5 shadow-lg animate-pulse">
             Adquira Já!
           </div>
 
           {/* Título Principal (Com Sombra Leve) */}
-          <h1 className="text-lg md:text-2xl font-medium uppercase leading-tight mb-1 text-white text-left drop-shadow-md">
+          <h1 className="text-base md:text-2xl font-medium uppercase leading-tight mb-0.5 text-white text-left drop-shadow-md">
             Kit Dos Sonhos HILLUX SRV + APARTAMENTO 100% MOBILIADO OU R$ 400 MIL
           </h1>
           
           {/* Licença (Cinza Claro, logo abaixo do título) */}
-          <p className="text-gray-400 text-[10px] text-left uppercase drop-shadow-sm">
+          <p className="text-gray-400 text-[9px] text-left uppercase drop-shadow-sm">
             LTP - PRC: 2025/01438
           </p>
         </div>
       </div>
 
-      {/* Barra "Meus bilhetes" (Full Width, Sombra Escura) */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-        <span className="font-medium text-sm">Meus bilhetes</span>
+      {/* Barra "Meus bilhetes" (Full Width, Sombra Escura) - Compacta */}
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2.5 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+        <span className="font-medium text-xs uppercase tracking-wide">Meus bilhetes</span>
       </div>
 
       <div className="container px-3 md:px-4 max-w-md mx-auto">
 
-        {/* Preço Unitário Centralizado (Pílula Preta) */}
-        <div className="flex justify-center mb-3">
-          <div className="bg-black px-6 py-1.5 rounded-full border border-white/10 flex items-center gap-2 shadow-lg">
-            <span className="text-gray-400 text-xs uppercase font-bold">Por apenas</span>
-            <span className="text-white text-lg font-black">R$ 0,30</span>
+        {/* Preço Unitário Centralizado (Pílula Preta) - Compacto */}
+        <div className="flex justify-center mb-2">
+          <div className="bg-black px-5 py-1 rounded-full border border-white/10 flex items-center gap-2 shadow-lg">
+            <span className="text-gray-400 text-[10px] uppercase font-bold">Por apenas</span>
+            <span className="text-white text-base font-black">R$ 0,30</span>
           </div>
         </div>
 
-        {/* Botão "Prêmios" Cinza Largo (Estilo Hudema) */}
+        {/* Botão "Prêmios" Cinza Largo (Estilo Hudema) - Compacto */}
         <button 
           onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-4 touch-manipulation"
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-2.5 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-3 touch-manipulation"
         >
-          <Trophy className="w-5 h-5" />
-          Prêmios
+          <Trophy className="w-4 h-4" />
+          <span className="text-sm uppercase font-bold">Prêmios</span>
         </button>
 
         {/* Frase Motivacional (Estilo Hudema) */}
-        <p className="text-center text-gray-400 text-xs mb-3 font-medium">
+        <p className="text-center text-gray-400 text-[10px] mb-2 font-medium">
           Quanto mais títulos, mais chances de ganhar!
         </p>
 
         {/* Botões Flutuantes (Grupo e WhatsApp) - Estilo Retangular Hudema */}
         <div className="fixed bottom-[320px] right-0 flex flex-col gap-2 z-40 items-end">
-          <a href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-4 py-2 rounded-l-lg shadow-lg font-bold flex items-center gap-2 text-sm hover:bg-[#20bd5a] transition-colors">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <a href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-3 py-1.5 rounded-l-lg shadow-lg font-bold flex items-center gap-1.5 text-xs hover:bg-[#20bd5a] transition-colors">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             Grupo
           </a>
           <a href="https://wa.me/5567998406793" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-4 py-2 rounded-l-lg shadow-lg font-bold flex items-center gap-2 text-sm hover:bg-[#20bd5a] transition-colors">
