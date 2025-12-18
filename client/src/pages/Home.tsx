@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Trophy, ChevronDown, Minus, Plus, ShoppingCart, Menu, X } from "lucide-react";
+import { Trophy, ChevronDown, Minus, Plus, ShoppingCart, Menu, X, Ticket, Gift } from "lucide-react";
 
 export default function Home() {
   const [isPrizesModalOpen, setIsPrizesModalOpen] = useState(false);
+  const [isWinnersModalOpen, setIsWinnersModalOpen] = useState(false);
+  const [isLuckySpinModalOpen, setIsLuckySpinModalOpen] = useState(false);
   const [selectedPack, setSelectedPack] = useState<number | null>(100); // Default to popular pack (100)
 
   // Pacotes de Bilhetes (Preços Hudema Style)
@@ -51,7 +53,7 @@ export default function Home() {
   const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-[340px] md:pb-48">
+    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-[380px] md:pb-48">
       {/* Header Hudema Style */}
       <header className="bg-black py-3 px-4 flex justify-between items-center border-b border-white/10 sticky top-0 z-30">
         <img 
@@ -94,7 +96,7 @@ export default function Home() {
       </div>
 
       {/* Barra "Meus bilhetes" (Full Width, Sombra Escura) */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-4 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-3 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
         <span className="font-medium text-sm">Meus bilhetes</span>
       </div>
@@ -102,34 +104,36 @@ export default function Home() {
       <div className="container px-3 md:px-4 max-w-md mx-auto">
 
         {/* Preço Unitário Centralizado (Pílula Preta) */}
-        <div className="flex justify-center mb-4">
-          <div className="bg-black px-6 py-2 rounded-full border border-white/10 flex items-center gap-2 shadow-lg">
+        <div className="flex justify-center mb-3">
+          <div className="bg-black px-6 py-1.5 rounded-full border border-white/10 flex items-center gap-2 shadow-lg">
             <span className="text-gray-400 text-xs uppercase font-bold">Por apenas</span>
-            <span className="text-white text-xl font-black">R$ 0,30</span>
+            <span className="text-white text-lg font-black">R$ 0,30</span>
           </div>
         </div>
 
         {/* Botão "Prêmios" Cinza Largo (Estilo Hudema) */}
         <button 
           onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3.5 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-6 touch-manipulation"
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-3 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-4 touch-manipulation"
         >
           <Trophy className="w-5 h-5" />
           Prêmios
         </button>
 
         {/* Frase Motivacional (Estilo Hudema) */}
-        <p className="text-center text-gray-400 text-sm mb-4 font-medium">
+        <p className="text-center text-gray-400 text-xs mb-3 font-medium">
           Quanto mais títulos, mais chances de ganhar!
         </p>
 
-        {/* Botões Flutuantes (Grupo e WhatsApp) - Lado Direito conforme print */}
-        <div className="fixed bottom-[280px] right-3 flex flex-col gap-3 z-40">
-          <a href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:bg-[#20bd5a] transition-transform active:scale-95">
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        {/* Botões Flutuantes (Grupo e WhatsApp) - Estilo Retangular Hudema */}
+        <div className="fixed bottom-[320px] right-0 flex flex-col gap-2 z-40 items-end">
+          <a href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-4 py-2 rounded-l-lg shadow-lg font-bold flex items-center gap-2 text-sm hover:bg-[#20bd5a] transition-colors">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Grupo
           </a>
-          <a href="https://wa.me/5567998406793" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white w-12 h-12 rounded-full shadow-xl flex items-center justify-center hover:bg-[#20bd5a] transition-transform active:scale-95">
-            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <a href="https://wa.me/5567998406793" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-4 py-2 rounded-l-lg shadow-lg font-bold flex items-center gap-2 text-sm hover:bg-[#20bd5a] transition-colors">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            WhatsApp
           </a>
         </div>
 
@@ -137,7 +141,6 @@ export default function Home() {
         {isPrizesModalOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setIsPrizesModalOpen(false)}>
             <div className="bg-[#1e293b] w-full max-w-md rounded-xl shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
-              {/* Botão Fechar */}
               <button 
                 onClick={() => setIsPrizesModalOpen(false)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2"
@@ -147,11 +150,9 @@ export default function Home() {
 
               <div className="p-6">
                 <div className="flex gap-4 mb-6">
-                  {/* Ícone Troféu Dourado */}
                   <div className="shrink-0">
                     <Trophy className="w-12 h-12 text-yellow-500 drop-shadow-lg" />
                   </div>
-                  
                   <div>
                     <h2 className="text-2xl font-bold text-white mb-2">Prêmios</h2>
                     <p className="text-gray-300 text-sm leading-relaxed">
@@ -159,11 +160,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-
-                {/* Linha Divisória Pontilhada */}
                 <div className="border-t border-dashed border-gray-600 my-4"></div>
-
-                {/* Lista de Prêmios */}
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <span className="text-[#25d366] font-bold text-4xl leading-none">1º</span>
@@ -174,20 +171,85 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        )}
 
-                {/* Seção Roletas Instantâneas (Girar) */}
-                <div className="mt-6 pt-6 border-t border-white/10">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-8 h-8 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
-                    </div>
-                    <h3 className="text-white font-bold text-lg">Roletas Instantâneas</h3>
+        {/* Modal Bilhetes Premiados */}
+        {isWinnersModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setIsWinnersModalOpen(false)}>
+            <div className="bg-[#1e293b] w-full max-w-md rounded-xl shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
+              <button 
+                onClick={() => setIsWinnersModalOpen(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <div className="p-6">
+                <div className="flex gap-4 mb-6">
+                  <div className="shrink-0">
+                    <Ticket className="w-12 h-12 text-blue-500 drop-shadow-lg" />
                   </div>
-                  <p className="text-gray-400 text-sm">
-                    Ao comprar seus bilhetes, você ganha giros para tentar a sorte na hora e ganhar prêmios instantâneos!
-                  </p>
+                  <div>
+                    <h2 className="text-2xl font-bold text-white mb-2">Bilhetes Premiados</h2>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Confira os números da sorte que valem prêmios instantâneos!
+                    </p>
+                  </div>
                 </div>
+                <div className="border-t border-dashed border-gray-600 my-4"></div>
+                <div className="space-y-3 max-h-[300px] overflow-y-auto pr-2">
+                  {INSTANT_PRIZES.map((prize) => (
+                    <div key={prize.id} className="bg-black/30 p-3 rounded border border-white/5 flex justify-between items-center">
+                      <div>
+                        <p className="text-white font-bold text-sm">{prize.name}</p>
+                        <p className="text-gray-400 text-xs">Bilhete: {prize.ticket}</p>
+                      </div>
+                      <span className="text-[#25d366] text-xs font-bold bg-[#25d366]/10 px-2 py-1 rounded">
+                        {prize.status}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
+        {/* Modal Giro da Sorte */}
+        {isLuckySpinModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setIsLuckySpinModalOpen(false)}>
+            <div className="bg-[#1e293b] w-full max-w-md rounded-xl shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
+              <button 
+                onClick={() => setIsLuckySpinModalOpen(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <div className="p-6">
+                <div className="flex gap-4 mb-6">
+                  <div className="shrink-0">
+                    <Gift className="w-12 h-12 text-purple-500 drop-shadow-lg" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-white mb-2">Giro da Sorte</h2>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Prêmios exclusivos que você pode ganhar na roleta instantânea!
+                    </p>
+                  </div>
+                </div>
+                <div className="border-t border-dashed border-gray-600 my-4"></div>
+                <div className="space-y-3">
+                  <div className="bg-purple-500/10 p-4 rounded border border-purple-500/20 text-center">
+                    <p className="text-purple-400 font-bold text-lg mb-1">50 MIL NO PIX</p>
+                    <p className="text-gray-400 text-xs">Prêmio Máximo da Roleta</p>
+                  </div>
+                  <div className="bg-purple-500/10 p-4 rounded border border-purple-500/20 text-center">
+                    <p className="text-purple-400 font-bold text-lg mb-1">JBL BOOMBOX 4</p>
+                    <p className="text-gray-400 text-xs">Prêmio Especial</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -286,7 +348,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleParticipateClick}
-          className="block bg-green-600 text-white font-bold text-lg uppercase py-4 px-4 flex items-center justify-between hover:bg-green-500 active:bg-green-700 transition-colors max-w-md mx-auto"
+          className="block bg-green-600 text-white font-bold text-lg uppercase py-4 px-4 flex items-center justify-between hover:bg-green-500 active:bg-green-700 transition-colors max-w-md mx-auto mb-3"
         >
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center">
@@ -296,6 +358,24 @@ export default function Home() {
           </div>
           <span>R$ {getSelectedPrice()}</span>
         </a>
+
+        {/* Botões de Informação Extra (Abaixo do botão de compra) */}
+        <div className="grid grid-cols-2 gap-2 px-3 max-w-md mx-auto pb-2">
+          <button 
+            onClick={() => setIsWinnersModalOpen(true)}
+            className="bg-[#1e293b] border border-white/10 rounded-lg p-3 flex flex-col items-center justify-center gap-1 active:bg-[#334155] transition-colors"
+          >
+            <Ticket className="w-6 h-6 text-blue-500" />
+            <span className="text-xs font-bold text-gray-300 uppercase">Bilhetes Premiados</span>
+          </button>
+          <button 
+            onClick={() => setIsLuckySpinModalOpen(true)}
+            className="bg-[#1e293b] border border-white/10 rounded-lg p-3 flex flex-col items-center justify-center gap-1 active:bg-[#334155] transition-colors"
+          >
+            <Gift className="w-6 h-6 text-purple-500" />
+            <span className="text-xs font-bold text-gray-300 uppercase">Giro da Sorte</span>
+          </button>
+        </div>
       </div>
     </div>
   );
