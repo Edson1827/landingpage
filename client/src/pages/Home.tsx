@@ -82,12 +82,12 @@ export default function Home() {
 
           {/* Título Principal */}
           <h1 className="text-lg md:text-3xl font-bold uppercase leading-tight mb-1 text-white text-left drop-shadow-md">
-            CAMARO V8 NITRO + JET SKI SEADOO GTI 130 NITRO
+            KIT DOS SONHOS HILUX SRV + APARTAMENTO 100% MOBILIADO OU 400 MIL NO PIX
           </h1>
           
           {/* Licença */}
           <p className="text-gray-400 text-[10px] text-left uppercase drop-shadow-sm">
-            LTP-PRC-2025/02316
+            LTP - PRC: 2025/01438
           </p>
         </div>
       </div>
