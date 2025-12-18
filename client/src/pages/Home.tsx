@@ -334,7 +334,10 @@ export default function Home() {
 
         {/* Rodapé Institucional */}
         <div className="text-center border-t border-white/10 pt-8 pb-4">
-          <img src="/logo-92projects.webp" alt="92 Projects" className="h-8 mx-auto mb-4 opacity-50 grayscale" />
+          <div className="flex justify-center items-center gap-4 mb-4 opacity-50 grayscale">
+            <img src="/logo-92projects.webp" alt="92 Projects" className="h-8" />
+            <img src="/lotep.png" alt="LOTEP" className="h-8" />
+          </div>
           
           <p className="text-gray-500 text-[10px] leading-relaxed mb-4 max-w-2xl mx-auto">
             Este título de loteria está autorizado com base no processo LTP-PRC-2025/01438, registrado pela empresa 92 Projects. Consulte o regulamento completo do produto disponível no site. A comercialização é proibida para menores de 18 anos, em conformidade com a legislação vigente. Sorteios e Entrega dos Prêmios: Todos os sorteios e a entrega dos prêmios serão realizados conforme os critérios estabelecidos no regulamento. Participação em Múltiplos Sorteios: O adquirente do bilhete digital participará de todos os sorteios previstos, mesmo que já tenha sido contemplado anteriormente. Autorização de Uso de Imagem: Ao adquirir o bilhete, o titular autoriza, sem custo adicional, o uso de seu nome, voz e imagem para a divulgação da campanha social associada à promoção.
