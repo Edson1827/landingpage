@@ -98,7 +98,7 @@ export default function Home() {
         <span className="font-medium text-sm uppercase tracking-wide">Meus bilhetes</span>
       </div>
 
-      <div className="container px-4 max-w-md mx-auto">
+      <div className="container px-2 max-w-md mx-auto">
 
         {/* Preço Unitário Centralizado */}
         <div className="flex justify-center items-center gap-3 mb-4">
@@ -129,7 +129,7 @@ export default function Home() {
               key={pack.id}
               onClick={() => handlePackSelect(pack.count)}
               className={`
-                relative rounded-xl p-2 text-center cursor-pointer border transition-all h-[80px] flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden
+                relative rounded-xl p-2 text-center cursor-pointer border transition-all h-24 flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden
                 ${selectedPack === pack.count 
                   ? 'bg-[#d1fae5] border-green-500' // Verde claro vibrante (Menta) quando selecionado
                   : 'bg-black border-white/10 active:bg-white/5'} // Preto profundo quando não
