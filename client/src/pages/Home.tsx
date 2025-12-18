@@ -199,7 +199,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleParticipateClick}
-          className="w-full bg-[#10b981] text-white font-bold text-base sm:text-lg uppercase h-14 px-4 flex items-center justify-between hover:bg-[#059669] active:bg-[#047857] transition-colors rounded-lg mb-6 shadow-xl border-b-[4px] border-[#065f46] active:border-b-0 active:translate-y-1 whitespace-nowrap"
+          className="w-full bg-[#10b981] text-white font-bold text-base sm:text-lg uppercase h-14 px-4 flex items-center justify-between hover:bg-[#059669] active:bg-[#047857] transition-colors rounded-lg mb-2 shadow-xl border-b-[4px] border-[#065f46] active:border-b-0 active:translate-y-1 whitespace-nowrap"
         >
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
@@ -211,15 +211,15 @@ export default function Home() {
         </a>
 
         {/* Descrição/Regulamento Accordion */}
-        <div className="mb-6">
+        <div className="mb-2">
           <button 
             onClick={() => setIsDescriptionOpen(!isDescriptionOpen)}
-            className="w-[90%] mx-auto bg-[#1e293b] hover:bg-[#334155] text-[#10b981] font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 transition-all border border-white/5 shadow-md"
+            className="w-full bg-[#1e293b] hover:bg-[#334155] text-[#10b981] font-bold py-1 px-4 rounded flex items-center justify-center gap-2 transition-all border border-white/5 shadow-sm text-xs"
           >
             <div className={`bg-[#10b981] p-1 rounded transition-transform duration-300 ${isDescriptionOpen ? 'rotate-180' : ''}`}>
               <ChevronDown className="w-4 h-4 text-black" />
             </div>
-            <span className="text-lg">Descrição/Regulamento</span>
+            <span className="text-xs uppercase tracking-wide">Descrição/Regulamento</span>
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isDescriptionOpen ? 'max-h-[2000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
