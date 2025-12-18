@@ -3,7 +3,8 @@ import { Trophy, ChevronDown, Minus, Plus, ShoppingCart, Menu, X, Ticket, Gift }
 
 export default function Home() {
   const [isPrizesModalOpen, setIsPrizesModalOpen] = useState(false);
-  const [isWinnersModalOpen, setIsWinnersModalOpen] = useState(false); // Used for Cotas Premiadas details if needed
+  const [isCotasModalOpen, setIsCotasModalOpen] = useState(false);
+  const [isGiroModalOpen, setIsGiroModalOpen] = useState(false); // Used for Cotas Premiadas details if needed
   const [selectedPack, setSelectedPack] = useState<number | null>(100); // Default to popular pack (100)
 
   // Pacotes de Bilhetes (Preços Hudema Style)
@@ -16,15 +17,20 @@ export default function Home() {
     { id: 6, count: 500, price: 150.00, popular: false },
   ];
 
-  // Cotas Premiadas (Dados Reais 92Projects - Visual Lista Escura)
-  const INSTANT_PRIZES = [
-    { id: 1, name: "IPHONE 17 PRO MAX", status: "Disponível", ticket: "1234567" },
-    { id: 2, name: "1 ANO DE SALÁRIO", status: "Disponível", ticket: "1827954" },
-    { id: 3, name: "50 MIL NO PIX", status: "Disponível", ticket: "Roleta" },
-    { id: 4, name: "JBL BOOMBOX 4", status: "Disponível", ticket: "Roleta" },
-    { id: 5, name: "R$ 1.000,00 NO PIX", status: "Disponível", ticket: "1234563" },
-    { id: 6, name: "R$ 1.000,00 NO PIX", status: "Disponível", ticket: "2207782" },
-    { id: 7, name: "R$ 1.000,00 NO PIX", status: "Disponível", ticket: "3214117" },
+  // Dados Reais para Cotas Premiadas (Bilhetes Premiados)
+  const COTAS_PREMIADAS = [
+    { id: 1, ticket: '1234563', name: '1000 no P1X', status: 'Disponível' },
+    { id: 2, ticket: '1234567', name: 'IPHONE 17 PRO MAX', status: 'Disponível' },
+    { id: 3, ticket: '1827954', name: '1 ANO DE SALÁRIO', status: 'Disponível' },
+    { id: 4, ticket: '2207782', name: '1000 no P1X', status: 'Disponível' },
+    { id: 5, ticket: '3214117', name: '1000 no P1X', status: 'Disponível' },
+  ];
+
+  // Dados Reais para Giro da Sorte (Roletas Instantâneas)
+  const GIRO_DA_SORTE = [
+    { id: 1, name: '50MIL NO P1X', status: 'Disponível' },
+    { id: 2, name: 'IPHONE 17 PRO MAX', status: 'Disponível' },
+    { id: 3, name: 'JBL BOMBOX 4', status: 'Disponível' },
   ];
 
   const handlePackSelect = (count: number) => {
@@ -108,13 +114,33 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Botão "Prêmios" Cinza Largo */}
+        {/* Botões Prêmios e Giro da Sorte */}
+        <div className="grid grid-cols-2 gap-2 mb-3">
+          <button 
+            onClick={() => setIsPrizesModalOpen(true)}
+            className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-bold py-2.5 rounded flex items-center justify-center gap-2 shadow-lg border-b-[4px] border-[#1f2937] active:border-b-0 active:translate-y-1 transition-all touch-manipulation"
+          >
+            <Trophy className="w-5 h-5" />
+            <span className="text-sm uppercase">Prêmios</span>
+          </button>
+          <button 
+            onClick={() => setIsCotasModalOpen(true)}
+            className="w-full bg-[#10b981] hover:bg-[#059669] text-white font-bold py-2.5 rounded flex items-center justify-center gap-2 shadow-lg border-b-[4px] border-[#047857] active:border-b-0 active:translate-y-1 transition-all touch-manipulation"
+          >
+            <Ticket className="w-5 h-5" />
+            <span className="text-sm uppercase">Cotas Premiadas</span>
+          </button>
+        </div>
+        
+        {/* Botão Giro da Sorte (Largura Total) */}
         <button 
-          onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-bold py-2.5 rounded flex items-center justify-center gap-2 shadow-lg border-b-[4px] border-[#1f2937] active:border-b-0 active:translate-y-1 transition-all mb-3 touch-manipulation"
+          onClick={() => setIsGiroModalOpen(true)}
+          className="w-full bg-[#fbbf24] hover:bg-[#f59e0b] text-black font-bold py-2.5 rounded flex items-center justify-center gap-2 shadow-lg border-b-[4px] border-[#d97706] active:border-b-0 active:translate-y-1 transition-all mb-3 touch-manipulation"
         >
-          <Trophy className="w-5 h-5" />
-          <span className="text-base uppercase">Prêmios</span>
+          <div className="w-5 h-5 rounded-full border-2 border-black flex items-center justify-center animate-spin-slow">
+            <span className="w-1 h-1 bg-black rounded-full"></span>
+          </div>
+          <span className="text-sm uppercase">Giro da Sorte</span>
         </button>
 
         {/* Frase Motivacional */}
@@ -194,35 +220,7 @@ export default function Home() {
           <span>R$ {getSelectedPrice()}</span>
         </a>
 
-        {/* Cotas Premiadas (Lista Estilo Hudema) */}
-        <div className="space-y-3 mb-8">
-          <div className="flex items-center gap-2 mb-2">
-             <Ticket className="w-5 h-5 text-yellow-500" />
-             <h3 className="text-white font-bold text-lg">Cotas Premiadas</h3>
-          </div>
-          
-          <div className="space-y-2">
-             {INSTANT_PRIZES.slice(0, 3).map((prize) => (
-               <div key={prize.id} className="w-full bg-[#1e293b] border border-white/10 rounded px-4 py-3 flex justify-between items-center">
-                  <div className="flex flex-col items-start">
-                    <span className="text-gray-300 font-bold text-sm uppercase bg-gray-700/50 px-2 py-1 rounded mb-1">{prize.name}</span>
-                    <span className="text-gray-500 text-xs">Bilhete: {prize.ticket}</span>
-                  </div>
-                  <span className="text-[#25d366] text-xs font-bold bg-[#25d366]/10 px-2 py-1 rounded border border-[#25d366]/20">
-                    {prize.status}
-                  </span>
-               </div>
-             ))}
-             
-             <button 
-               onClick={() => setIsWinnersModalOpen(true)}
-               className="w-full text-center text-[#10b981] font-bold text-sm py-2 flex items-center justify-center gap-1 hover:underline"
-             >
-               <ChevronDown className="w-4 h-4" />
-               Ver todas as cotas
-             </button>
-          </div>
-        </div>
+        
 
         {/* Botões Flutuantes (Grupo e WhatsApp) */}
         <div className="fixed bottom-[100px] right-0 flex flex-col gap-2 z-40 items-end">
@@ -275,12 +273,12 @@ export default function Home() {
           </div>
         )}
 
-        {/* Modal Cotas Premiadas (Lista Completa) */}
-        {isWinnersModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setIsWinnersModalOpen(false)}>
+        {/* Modal Cotas Premiadas */}
+        {isCotasModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setIsCotasModalOpen(false)}>
             <div className="bg-[#1e293b] w-full max-w-md rounded-xl shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
               <button 
-                onClick={() => setIsWinnersModalOpen(false)}
+                onClick={() => setIsCotasModalOpen(false)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2"
               >
                 <X className="w-6 h-6" />
@@ -288,22 +286,65 @@ export default function Home() {
               <div className="p-6">
                 <div className="flex gap-4 mb-6">
                   <div className="shrink-0">
-                    <Ticket className="w-12 h-12 text-blue-500 drop-shadow-lg" />
+                    <Ticket className="w-12 h-12 text-green-500 drop-shadow-lg" />
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-white mb-2">Cotas Premiadas</h2>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Confira os números da sorte que valem prêmios instantâneos!
+                      Bilhetes premiados que valem prêmios instantâneos!
                     </p>
                   </div>
                 </div>
                 <div className="border-t border-dashed border-gray-600 my-4"></div>
                 <div className="space-y-3 max-h-[300px] overflow-y-auto pr-2">
-                  {INSTANT_PRIZES.map((prize) => (
+                  {COTAS_PREMIADAS.map((prize) => (
                     <div key={prize.id} className="bg-black/30 p-3 rounded border border-white/5 flex justify-between items-center">
                       <div>
                         <p className="text-white font-bold text-sm">{prize.name}</p>
                         <p className="text-gray-400 text-xs">Bilhete: {prize.ticket}</p>
+                      </div>
+                      <span className="text-[#25d366] text-xs font-bold bg-[#25d366]/10 px-2 py-1 rounded">
+                        {prize.status}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Modal Giro da Sorte */}
+        {isGiroModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200" onClick={() => setIsGiroModalOpen(false)}>
+            <div className="bg-[#1e293b] w-full max-w-md rounded-xl shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
+              <button 
+                onClick={() => setIsGiroModalOpen(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors p-2"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <div className="p-6">
+                <div className="flex gap-4 mb-6">
+                  <div className="shrink-0">
+                    <div className="w-12 h-12 rounded-full border-4 border-yellow-500 flex items-center justify-center animate-spin-slow">
+                      <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-white mb-2">Giro da Sorte</h2>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Prêmios extras nas roletas instantâneas!
+                    </p>
+                  </div>
+                </div>
+                <div className="border-t border-dashed border-gray-600 my-4"></div>
+                <div className="space-y-3 max-h-[300px] overflow-y-auto pr-2">
+                  {GIRO_DA_SORTE.map((prize) => (
+                    <div key={prize.id} className="bg-black/30 p-3 rounded border border-white/5 flex justify-between items-center">
+                      <div>
+                        <p className="text-white font-bold text-sm">{prize.name}</p>
+                        <p className="text-yellow-500 text-xs font-bold">Roleta Instantânea</p>
                       </div>
                       <span className="text-[#25d366] text-xs font-bold bg-[#25d366]/10 px-2 py-1 rounded">
                         {prize.status}
