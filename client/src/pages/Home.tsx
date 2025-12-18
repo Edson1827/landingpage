@@ -101,7 +101,7 @@ export default function Home() {
       <div className="container px-2 max-w-md mx-auto">
 
         {/* Preço Unitário Centralizado */}
-        <div className="flex justify-center items-center gap-2 py-2">
+        <div className="flex justify-center items-center gap-2 pt-3 pb-2">
           <span className="text-gray-300 text-sm font-medium">Por apenas</span>
           <div className="bg-black px-4 py-1.5 rounded-lg border border-white/10 shadow-lg">
             <span className="text-white text-lg font-black">R$ 0,30</span>
@@ -111,14 +111,14 @@ export default function Home() {
         {/* Botão "Prêmios" Cinza Largo */}
         <button 
           onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-bold py-3 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-2 touch-manipulation"
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-bold py-2.5 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-3 touch-manipulation"
         >
           <Trophy className="w-5 h-5" />
           <span className="text-base uppercase">Prêmios</span>
         </button>
 
         {/* Frase Motivacional */}
-        <p className="text-center text-gray-400 text-xs mb-2 font-medium">
+        <p className="text-center text-gray-400 text-xs mb-1 font-medium">
           Quanto mais títulos, mais chances de ganhar!
         </p>
 
