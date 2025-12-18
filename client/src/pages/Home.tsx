@@ -53,7 +53,7 @@ export default function Home() {
   const PURCHASE_LINK = 'https://92projects.com/kitmudancadevida';
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-[380px] md:pb-48">
+    <div className="min-h-screen bg-[#0f172a] text-white font-sans pb-12">
       {/* Header Hudema Style */}
       <header className="bg-black py-2 px-4 flex justify-between items-center border-b border-white/10 sticky top-0 z-30 h-12">
         <img 
@@ -73,30 +73,30 @@ export default function Home() {
         <img 
           src="/hero-hilux-new.jpg" 
           alt="Kit Mudança de Vida" 
-          className="w-full h-auto object-cover max-h-[45vh] md:max-h-[60vh]"
+          className="w-full h-auto object-cover max-h-[35vh] md:max-h-[50vh]"
         />
         
         {/* Overlay Gradiente para legibilidade */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end px-4 pb-3">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end px-4 pb-2">
           {/* Badge "Adquira Já" Verde (Estilo Hudema) */}
-          <div className="inline-block self-start bg-[#22c55e] text-white px-2.5 py-0.5 rounded text-[9px] font-bold uppercase mb-1.5 shadow-lg animate-pulse">
+          <div className="inline-block self-start bg-[#22c55e] text-white px-2 py-0.5 rounded text-[9px] font-bold uppercase mb-1 shadow-lg animate-pulse">
             Adquira Já!
           </div>
 
           {/* Título Principal (Com Sombra Leve) */}
-          <h1 className="text-base md:text-2xl font-medium uppercase leading-tight mb-0.5 text-white text-left drop-shadow-md">
+          <h1 className="text-sm md:text-2xl font-medium uppercase leading-tight mb-0.5 text-white text-left drop-shadow-md">
             Kit Dos Sonhos HILLUX SRV + APARTAMENTO 100% MOBILIADO OU R$ 400 MIL
           </h1>
           
           {/* Licença (Cinza Claro, logo abaixo do título) */}
-          <p className="text-gray-400 text-[9px] text-left uppercase drop-shadow-sm">
+          <p className="text-gray-400 text-[8px] text-left uppercase drop-shadow-sm">
             LTP - PRC: 2025/01438
           </p>
         </div>
       </div>
 
       {/* Barra "Meus bilhetes" (Full Width, Sombra Escura) - Compacta */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2.5 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2 flex items-center justify-center gap-2 text-white mb-2 cursor-pointer shadow-2xl relative z-10 active:bg-[#1e293b] transition-colors">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
         <span className="font-medium text-xs uppercase tracking-wide">Meus bilhetes</span>
       </div>
@@ -114,7 +114,7 @@ export default function Home() {
         {/* Botão "Prêmios" Cinza Largo (Estilo Hudema) - Compacto */}
         <button 
           onClick={() => setIsPrizesModalOpen(true)}
-          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-2.5 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-3 touch-manipulation"
+          className="w-full bg-[#4b5563] hover:bg-[#374151] text-white font-medium py-2.5 rounded flex items-center justify-center gap-2 shadow-md border-b-4 border-[#374151] active:border-b-0 active:translate-y-1 transition-all mb-2 touch-manipulation"
         >
           <Trophy className="w-4 h-4" />
           <span className="text-sm uppercase font-bold">Prêmios</span>
@@ -125,15 +125,102 @@ export default function Home() {
           Quanto mais títulos, mais chances de ganhar!
         </p>
 
+        {/* Grid de Seleção Mobile (3 Colunas - Estilo Hudema) - AGORA NO FLUXO */}
+        <div className="grid grid-cols-3 gap-2 mb-3">
+          {PACKS.map((pack) => (
+            <div 
+              key={pack.id}
+              onClick={() => handlePackSelect(pack.count)}
+              className={`
+                relative rounded-lg p-1.5 text-center cursor-pointer border transition-all h-[60px] flex flex-col justify-center items-center touch-manipulation
+                ${selectedPack === pack.count 
+                  ? 'bg-green-100 border-green-500' 
+                  : 'bg-black border-white/10 active:bg-white/5'}
+              `}
+            >
+              {pack.popular && (
+                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[7px] font-bold px-1.5 py-0.5 rounded-full uppercase whitespace-nowrap z-10 shadow-sm">
+                  Mais popular
+                </div>
+              )}
+              <div className={`text-lg font-black leading-none mb-0.5 ${selectedPack === pack.count ? 'text-black' : 'text-white'}`}>
+                +{pack.count}
+              </div>
+              <div className={`text-[7px] font-bold uppercase tracking-wider ${selectedPack === pack.count ? 'text-green-700' : 'text-gray-400'}`}>
+                SELECIONAR
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contador Manual - AGORA NO FLUXO */}
+        <div className="flex items-center justify-between px-2 mb-3">
+          <button 
+            className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation"
+            onClick={() => {
+              const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
+              if (currentIndex > 0) setSelectedPack(PACKS[currentIndex - 1].count);
+            }}
+          >
+            <Minus className="w-4 h-4" />
+          </button>
+          <div className="bg-[#1e293b] border border-white/10 rounded px-8 py-2 text-white font-bold min-w-[120px] text-center text-sm">
+            {selectedPack}
+          </div>
+          <button 
+            className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation"
+            onClick={() => {
+              const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
+              if (currentIndex < PACKS.length - 1) setSelectedPack(PACKS[currentIndex + 1].count);
+            }}
+          >
+            <Plus className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Botão de Compra Final - AGORA NO FLUXO */}
+        <a
+          href={PURCHASE_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={handleParticipateClick}
+          className="block bg-green-600 text-white font-bold text-base uppercase py-3 px-4 flex items-center justify-between hover:bg-green-500 active:bg-green-700 transition-colors rounded-lg mb-3 shadow-lg"
+        >
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <span>Quero participar</span>
+          </div>
+          <span>R$ {getSelectedPrice()}</span>
+        </a>
+
+        {/* Botões de Informação Extra (Abaixo do botão de compra) - AGORA NO FLUXO */}
+        <div className="grid grid-cols-2 gap-2 mb-8">
+          <button 
+            onClick={() => setIsWinnersModalOpen(true)}
+            className="bg-[#1e293b] border border-white/10 rounded-lg p-3 flex flex-col items-center justify-center gap-1 active:bg-[#334155] transition-colors"
+          >
+            <Ticket className="w-5 h-5 text-blue-500" />
+            <span className="text-[10px] font-bold text-gray-300 uppercase">Bilhetes Premiados</span>
+          </button>
+          <button 
+            onClick={() => setIsLuckySpinModalOpen(true)}
+            className="bg-[#1e293b] border border-white/10 rounded-lg p-3 flex flex-col items-center justify-center gap-1 active:bg-[#334155] transition-colors"
+          >
+            <Gift className="w-5 h-5 text-purple-500" />
+            <span className="text-[10px] font-bold text-gray-300 uppercase">Giro da Sorte</span>
+          </button>
+        </div>
+
         {/* Botões Flutuantes (Grupo e WhatsApp) - Estilo Retangular Hudema */}
-        <div className="fixed bottom-[320px] right-0 flex flex-col gap-2 z-40 items-end">
+        <div className="fixed bottom-[100px] right-0 flex flex-col gap-2 z-40 items-end">
           <a href="https://chat.whatsapp.com/LZXRg9qGkVS3sfwFYYVHVB" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-3 py-1.5 rounded-l-lg shadow-lg font-bold flex items-center gap-1.5 text-xs hover:bg-[#20bd5a] transition-colors">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             Grupo
           </a>
           <a href="https://wa.me/5567998406793" target="_blank" rel="noopener noreferrer" className="bg-[#25d366] text-white px-4 py-2 rounded-l-lg shadow-lg font-bold flex items-center gap-2 text-sm hover:bg-[#20bd5a] transition-colors">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            WhatsApp
           </a>
         </div>
 
@@ -280,101 +367,6 @@ export default function Home() {
           </p>
           
           <a href="#" className="text-blue-600 font-bold text-sm uppercase">REGULAMENTO</a>
-        </div>
-      </div>
-
-      {/* Sticky Footer - Seletor de Bilhetes e Compra */}
-      <div className="fixed bottom-0 left-0 right-0 bg-[#0f172a] border-t border-white/10 z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
-        <div className="p-2 text-center text-gray-400 text-xs font-medium">
-          Quanto mais títulos, mais chances de ganhar!
-        </div>
-        
-        {/* Grid de Seleção Mobile (3 Colunas - Estilo Hudema) */}
-        <div className="grid grid-cols-3 gap-2 px-3 mb-3 max-w-md mx-auto">
-          {PACKS.map((pack) => (
-            <div 
-              key={pack.id}
-              onClick={() => handlePackSelect(pack.count)}
-              className={`
-                relative rounded-lg p-2 text-center cursor-pointer border transition-all h-[72px] flex flex-col justify-center items-center touch-manipulation
-                ${selectedPack === pack.count 
-                  ? 'bg-green-100 border-green-500' 
-                  : 'bg-black border-white/10 active:bg-white/5'}
-              `}
-            >
-              {pack.popular && (
-                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-[8px] font-bold px-2 py-0.5 rounded-full uppercase whitespace-nowrap z-10 shadow-sm">
-                  Mais popular
-                </div>
-              )}
-              <div className={`text-xl font-black leading-none mb-0.5 ${selectedPack === pack.count ? 'text-black' : 'text-white'}`}>
-                +{pack.count}
-              </div>
-              <div className={`text-[8px] font-bold uppercase tracking-wider ${selectedPack === pack.count ? 'text-green-700' : 'text-gray-400'}`}>
-                SELECIONAR
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Contador Manual */}
-        <div className="flex items-center justify-between px-4 mb-3 max-w-md mx-auto">
-          <button 
-            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation"
-            onClick={() => {
-              const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
-              if (currentIndex > 0) setSelectedPack(PACKS[currentIndex - 1].count);
-            }}
-          >
-            <Minus className="w-5 h-5" />
-          </button>
-          <div className="bg-[#1e293b] border border-white/10 rounded px-12 py-2.5 text-white font-bold min-w-[140px] text-center">
-            {selectedPack}
-          </div>
-          <button 
-            className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white active:bg-white/10 touch-manipulation"
-            onClick={() => {
-              const currentIndex = PACKS.findIndex(p => p.count === selectedPack);
-              if (currentIndex < PACKS.length - 1) setSelectedPack(PACKS[currentIndex + 1].count);
-            }}
-          >
-            <Plus className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Botão de Compra Final */}
-        <a
-          href={PURCHASE_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={handleParticipateClick}
-          className="block bg-green-600 text-white font-bold text-lg uppercase py-4 px-4 flex items-center justify-between hover:bg-green-500 active:bg-green-700 transition-colors max-w-md mx-auto mb-3"
-        >
-          <div className="flex items-center gap-3">
-            <div className="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center">
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-            </div>
-            <span>Quero participar</span>
-          </div>
-          <span>R$ {getSelectedPrice()}</span>
-        </a>
-
-        {/* Botões de Informação Extra (Abaixo do botão de compra) */}
-        <div className="grid grid-cols-2 gap-2 px-3 max-w-md mx-auto pb-2">
-          <button 
-            onClick={() => setIsWinnersModalOpen(true)}
-            className="bg-[#1e293b] border border-white/10 rounded-lg p-3 flex flex-col items-center justify-center gap-1 active:bg-[#334155] transition-colors"
-          >
-            <Ticket className="w-6 h-6 text-blue-500" />
-            <span className="text-xs font-bold text-gray-300 uppercase">Bilhetes Premiados</span>
-          </button>
-          <button 
-            onClick={() => setIsLuckySpinModalOpen(true)}
-            className="bg-[#1e293b] border border-white/10 rounded-lg p-3 flex flex-col items-center justify-center gap-1 active:bg-[#334155] transition-colors"
-          >
-            <Gift className="w-6 h-6 text-purple-500" />
-            <span className="text-xs font-bold text-gray-300 uppercase">Giro da Sorte</span>
-          </button>
         </div>
       </div>
     </div>
