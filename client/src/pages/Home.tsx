@@ -112,7 +112,7 @@ export default function Home() {
       </div>
 
       {/* Barra "Meus bilhetes" */}
-      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2.5 flex items-center justify-center gap-2 text-white mb-0 cursor-pointer shadow-[0_10px_40px_-5px_rgba(0,0,0,0.9)] relative z-10 active:bg-[#1e293b] transition-colors">
+      <div className="w-full bg-[#0f172a] border-b border-white/5 py-2.5 flex items-center justify-center gap-2 text-white mb-0 cursor-pointer shadow-[0_4px_10px_rgba(0,0,0,0.8)] relative z-10 active:bg-[#1e293b] transition-colors">
         <ShoppingCart className="w-4 h-4" />
         <span className="font-medium text-sm uppercase tracking-wide">Meus bilhetes</span>
       </div>
@@ -121,9 +121,9 @@ export default function Home() {
 
         {/* Preço Unitário Centralizado */}
         <div className="flex justify-center items-center gap-2 pt-3 pb-2">
-          <span className="text-gray-300 text-sm font-medium">Por apenas</span>
-          <div className="bg-black px-4 py-1.5 rounded-lg border border-white/10 shadow-lg">
-            <span className="text-white text-lg font-black">R$ 0,30</span>
+          <span className="text-gray-300 text-xs font-medium">Por apenas</span>
+          <div className="bg-black px-3 py-1 rounded-lg border border-white/10 shadow-sm">
+            <span className="text-white text-base font-black">R$ 0,30</span>
           </div>
         </div>
 
@@ -147,7 +147,7 @@ export default function Home() {
             <div 
               key={pack.id}
               onClick={() => handlePackSelect(pack.count)}
-              className="relative rounded-xl p-2 text-center cursor-pointer border transition-all h-24 flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden bg-black border-white/10 active:bg-white/5 active:scale-95"
+              className="relative rounded-xl p-2 text-center cursor-pointer border transition-all h-28 flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden bg-black border-white/10 active:bg-white/5 active:scale-95"
             >
               {pack.popular && (
                 <div className="absolute top-0 inset-x-0 bg-[#10b981] text-white text-[8px] font-bold py-0.5 uppercase tracking-wide">
