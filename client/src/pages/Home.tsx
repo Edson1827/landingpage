@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* Preço Unitário Centralizado */}
         <div className="flex justify-center items-center gap-2 pt-1 pb-2">
-          <span className="text-gray-300 text-xs font-medium">Por apenas</span>
+          <span className="text-white text-xs font-bold uppercase tracking-wide">Por apenas</span>
           <div className="bg-black px-3 py-1 rounded-lg border border-white/10 shadow-sm">
             <span className="text-white text-base font-black">R$ 0,30</span>
           </div>
