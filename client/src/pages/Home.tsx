@@ -142,12 +142,12 @@ export default function Home() {
         </p>
 
         {/* Grid de Seleção Mobile (3 Colunas) - Agora ADICIONA quantidade */}
-        <div className="grid grid-cols-3 gap-2 mb-4">
+        <div className="grid grid-cols-3 gap-1.5 mb-4">
           {PACKS.map((pack) => (
             <div 
               key={pack.id}
               onClick={() => handlePackSelect(pack.count)}
-              className="relative rounded-xl p-2 text-center cursor-pointer border transition-all h-28 flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden bg-black border-white/10 active:bg-white/5 active:scale-95"
+              className="relative rounded-xl p-2 text-center cursor-pointer border transition-all h-22 flex flex-col justify-center items-center touch-manipulation shadow-lg overflow-hidden bg-black border-white/10 active:bg-white/5 active:scale-95"
             >
               {pack.popular && (
                 <div className="absolute top-0 inset-x-0 bg-[#10b981] text-white text-[8px] font-bold py-0.5 uppercase tracking-wide">
