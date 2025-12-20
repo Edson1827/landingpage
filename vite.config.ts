@@ -4,9 +4,18 @@ import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "path";
 import { defineConfig } from "vite";
+import legacy from "@vitejs/plugin-legacy";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
+const plugins = [
+  react(),
+  tailwindcss(),
+  jsxLocPlugin(),
+  vitePluginManusRuntime(),
+  legacy({
+    targets: ["defaults", "not IE 11", "Android >= 5"],
+  }),
+];
 
 export default defineConfig({
   base: "/",
